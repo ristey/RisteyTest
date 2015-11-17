@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <ThingTemplates>
+        <ThingTemplate aspect.isExtension="true" baseThingTemplate="RemoteThing" description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" effectiveThingPackage="RemoteThing" homeMashup="" lastModifiedDate="2015-11-17T13:03:42.124-05:00" name="RemoteOPCDAThing" tags="" thingPackage="" valueStream="">
+            <Owner name="SuperUser" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <PropertyBindings/>
+            <RemotePropertyBindings>
+                <RemotePropertyBinding foldType="NONE" name="ConnectedToTagServer" pushThreshold="0.0" pushType="VALUE" sourceName="ConnectedToTagServer" timeout="0"/>
+            </RemotePropertyBindings>
+            <RemoteServiceBindings>
+                <RemoteServiceBinding enableQueue="false" name="Disconnect" sourceName="" timeout="0"/>
+                <RemoteServiceBinding enableQueue="false" name="AddItems" sourceName="" timeout="0"/>
+                <RemoteServiceBinding enableQueue="false" name="BrowseItems" sourceName="" timeout="0"/>
+                <RemoteServiceBinding enableQueue="false" name="BrowseGroups" sourceName="" timeout="0"/>
+                <RemoteServiceBinding enableQueue="false" name="Connect" sourceName="" timeout="0"/>
+                <RemoteServiceBinding enableQueue="false" name="GetConfiguration" sourceName="" timeout="0"/>
+                <RemoteServiceBinding enableQueue="false" name="RemoveItems" sourceName="" timeout="0"/>
+                <RemoteServiceBinding enableQueue="false" name="SetConfiguration" sourceName="" timeout="0"/>
+                <RemoteServiceBinding enableQueue="false" name="BrowseOpcServers" sourceName="" timeout="0"/>
+            </RemoteServiceBindings>
+            <RemoteEventBindings/>
+            <AlertConfigurations/>
+            <ThingShape>
+                <PropertyDefinitions>
+                    <PropertyDefinition aspect.cacheTime="-1.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="false" aspect.isPersistent="false" aspect.isReadOnly="true" baseType="BOOLEAN" category="" description="Is the remote thing connected to the opc server." isLocalOnly="false" name="ConnectedToTagServer" ordinal="2"/>
+                </PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition category="" description="Disconnect from the opc server" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="Disconnect">
+                        <ResultType baseType="NOTHING" description="" name="" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition category="" description="Add items to client" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="AddItems">
+                        <ResultType baseType="NOTHING" description="" name="" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition aspect.dataShape="OpcItems" baseType="INFOTABLE" description="" name="items" ordinal="0"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition category="" description="Browse the groups of a heirarchical namespace" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="BrowseGroups">
+                        <ResultType aspect.dataShape="OpcGroups" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition aspect.dataShape="OpcGroups" baseType="STRING" description="" name="filter" ordinal="1"/>
+                            <FieldDefinition aspect.dataShape="OpcGroups" baseType="STRING" description="" name="path" ordinal="0"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition category="" description="Browse the items of a heirarchical namespace" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="BrowseItems">
+                        <ResultType aspect.dataShape="OpcItems" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition aspect.dataShape="OpcItems" baseType="STRING" description="" name="filter" ordinal="1"/>
+                            <FieldDefinition aspect.dataShape="OpcItems" baseType="STRING" description="" name="path" ordinal="0"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition category="" description="Connect to the opc server" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="Connect">
+                        <ResultType baseType="NOTHING" description="" name="" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition category="" description="Get the item server settings" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetConfiguration">
+                        <ResultType aspect.dataShape="OpcSettings" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition category="" description="Remove items from client" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="RemoveItems">
+                        <ResultType baseType="NOTHING" description="" name="" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition aspect.dataShape="OpcItemNames" baseType="BOOLEAN" description="Set to true to force the removal even if the items are bound to properties on the server." name="forceRemove" ordinal="1"/>
+                            <FieldDefinition aspect.dataShape="OpcItemNames" baseType="INFOTABLE" description="" name="items" ordinal="0"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition category="" description="Set the item server settings" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="SetConfiguration">
+                        <ResultType baseType="NOTHING" description="" name="" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="BOOLEAN" description="" name="autoConnect" ordinal="4"/>
+                            <FieldDefinition baseType="STRING" description="" name="groupName" ordinal="1"/>
+                            <FieldDefinition baseType="INTEGER" description="" name="updateRate" ordinal="3"/>
+                            <FieldDefinition baseType="STRING" description="" name="serverName" ordinal="0"/>
+                            <FieldDefinition baseType="STRING" description="" name="itemDelimiter" ordinal="2"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition category="" description="Browse the list of opc servers" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="BrowseOpcServers">
+                        <ResultType aspect.dataShape="OpcServers" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition aspect.dataShape="OpcServers" baseType="STRING" description="" name="computerName" ordinal="0"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations/>
+                <Subscriptions/>
+            </ThingShape>
+            <ImplementedShapes/>
+            <SharedConfigurationTables/>
+            <InstanceDesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </InstanceDesignTimePermissions>
+            <InstanceRunTimePermissions/>
+            <InstanceVisibilityPermissions>
+                <Visibility/>
+            </InstanceVisibilityPermissions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated&#10;documentation : updated&#10;" timestamp="2014-05-01T15:20:33.007-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2015-11-17T13:03:42.124-05:00" user="SuperUser"/>
+            </ConfigurationChanges>
+        </ThingTemplate>
+    </ThingTemplates>
+</Entities>
