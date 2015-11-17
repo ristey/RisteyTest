@@ -1,0 +1,3433 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Mashups>
+        <Mashup aspect.isResponsive="true" aspect.mashupType="mashup" columns="0.0" description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" homeMashup="" lastModifiedDate="2015-11-17T12:08:22.373-05:00" name="ManageTrips" rows="0.0" tags="Applications:TripBuilder">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ParameterDefinitions/>
+            <Things>
+                <Thing>TripBuilderServices</Thing>
+            </Things>
+            <ThingShapes/>
+            <ThingTemplates>
+                <ThingTemplate>VehicleDeviceTemplate</ThingTemplate>
+            </ThingTemplates>
+            <mashupContent><![CDATA[{
+  "RunTimePermissions" : { },
+  "UI" : {
+    "Widgets" : [ {
+      "Widgets" : [ {
+        "Widgets" : [ {
+          "Widgets" : [ {
+            "Widgets" : [ {
+              "Widgets" : [ {
+                "Widgets" : [ {
+                  "Widgets" : [ {
+                    "Widgets" : [ ],
+                    "Properties" : {
+                      "Left" : 5,
+                      "Horizontal" : false,
+                      "BarStyle" : "DefaultDataFilterStyle",
+                      "ResponsiveLayout" : false,
+                      "ShowDataLoading" : true,
+                      "Z-index" : 9000,
+                      "__TypeDisplayName" : "Data Filter",
+                      "ColumnFormat" : "{\"avatar\":{\"baseType\":\"IMAGELINK\",\"description\":\"Avatar image\",\"name\":\"avatar\",\"aspects\":{},\"ordinal\":0},\"Color\":{\"sourceType\":\"Unknown\",\"category\":\"\",\"baseType\":\"STRING\",\"sourceName\":\"\",\"isLocalOnly\":false,\"description\":\"\",\"name\":\"Color\",\"aspects\":{\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"isReadOnly\":false,\"cacheTime\":0},\"ordinal\":0},\"description\":{\"sourceType\":\"Unknown\",\"category\":\"Metadata\",\"baseType\":\"STRING\",\"sourceName\":\"\",\"isLocalOnly\":true,\"description\":\"Thing description\",\"name\":\"description\",\"aspects\":{\"isPersistent\":false,\"isReadOnly\":true,\"isBuiltIn\":true},\"ordinal\":0},\"FirstName\":{\"sourceType\":\"Unknown\",\"category\":\"\",\"baseType\":\"STRING\",\"sourceName\":\"\",\"isLocalOnly\":false,\"description\":\"\",\"name\":\"FirstName\",\"aspects\":{\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"isReadOnly\":false,\"cacheTime\":0},\"ordinal\":0},\"homeMashup\":{\"baseType\":\"MASHUPNAME\",\"description\":\"Home mashup\",\"name\":\"homeMashup\",\"aspects\":{},\"ordinal\":0},\"isSystemObject\":{\"baseType\":\"BOOLEAN\",\"description\":\"Indicates if a system object or not\",\"name\":\"isSystemObject\",\"aspects\":{},\"ordinal\":0},\"LastName\":{\"sourceType\":\"Unknown\",\"category\":\"\",\"baseType\":\"STRING\",\"sourceName\":\"\",\"isLocalOnly\":false,\"description\":\"\",\"name\":\"LastName\",\"aspects\":{\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"isReadOnly\":false,\"cacheTime\":0},\"ordinal\":0},\"Make\":{\"sourceType\":\"Unknown\",\"category\":\"\",\"baseType\":\"STRING\",\"sourceName\":\"\",\"isLocalOnly\":false,\"description\":\"\",\"name\":\"Make\",\"aspects\":{\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"isReadOnly\":false,\"cacheTime\":0},\"ordinal\":0},\"Model\":{\"sourceType\":\"Unknown\",\"category\":\"\",\"baseType\":\"STRING\",\"sourceName\":\"\",\"isLocalOnly\":false,\"description\":\"\",\"name\":\"Model\",\"aspects\":{\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"isReadOnly\":false,\"cacheTime\":0},\"ordinal\":0},\"name\":{\"sourceType\":\"Unknown\",\"category\":\"Metadata\",\"baseType\":\"STRING\",\"sourceName\":\"\",\"isLocalOnly\":true,\"description\":\"Thing name\",\"name\":\"name\",\"aspects\":{\"isPersistent\":false,\"isReadOnly\":true,\"isBuiltIn\":true},\"ordinal\":0},\"tags\":{\"sourceType\":\"Unknown\",\"category\":\"Metadata\",\"baseType\":\"TAGS\",\"sourceName\":\"\",\"isLocalOnly\":true,\"description\":\"Thing Tags\",\"name\":\"tags\",\"aspects\":{\"tagType\":\"ModelTags\",\"isPersistent\":false,\"isReadOnly\":true,\"isBuiltIn\":true},\"ordinal\":0},\"thingTemplate\":{\"sourceType\":\"Unknown\",\"category\":\"Metadata\",\"baseType\":\"THINGTEMPLATENAME\",\"sourceName\":\"\",\"isLocalOnly\":true,\"description\":\"Thing Template\",\"name\":\"thingTemplate\",\"aspects\":{\"isPersistent\":false,\"isReadOnly\":true,\"isBuiltIn\":true},\"ordinal\":0},\"Year\":{\"sourceType\":\"Unknown\",\"category\":\"\",\"baseType\":\"STRING\",\"sourceName\":\"\",\"isLocalOnly\":false,\"description\":\"\",\"name\":\"Year\",\"aspects\":{\"isPersistent\":true,\"isLogged\":false,\"dataChangeType\":\"VALUE\",\"isReadOnly\":false,\"cacheTime\":0},\"ordinal\":0}}",
+                      "Type" : "datafilter",
+                      "Area" : "UI",
+                      "Top" : 55,
+                      "Visible" : true,
+                      "DisplayName" : "DataFilter-9",
+                      "Height" : 26,
+                      "AddButtonStyle" : "DefaultDataFilterAddButtonStyle",
+                      "Id" : "DataFilter-9",
+                      "Width" : 285
+                    }
+                  }, {
+                    "Widgets" : [ ],
+                    "Properties" : {
+                      "Left" : 5,
+                      "ListBackgroundStyle" : "DefaultListBackgroundStyle",
+                      "ShowDataLoading" : true,
+                      "Label" : "",
+                      "Alignment" : "left",
+                      "DropdownStyle" : "DefaultDropdownStyle",
+                      "DisplayField" : "LastName",
+                      "Visible" : true,
+                      "DisplayName" : "List-10",
+                      "Height" : 28,
+                      "ListItemSelectedStyle" : "DefaultListItemSelectedStyle",
+                      "Width" : 285,
+                      "DropdownButtonStyle" : "DefaultDropdownButtonStyle",
+                      "ListLabelStyle" : "DefaultWidgetLabelStyle",
+                      "ListItemHoverStyle" : "DefaultListItemHoverStyle",
+                      "ClearIfNoSelection" : false,
+                      "MultiSelect" : false,
+                      "__supportsLabel" : true,
+                      "ResponsiveLayout" : false,
+                      "Z-index" : 10,
+                      "HeightOfDropdownView" : 200,
+                      "View" : "dropdown",
+                      "__TypeDisplayName" : "List",
+                      "ListItemStyle" : "DefaultListItemStyle",
+                      "RowHeight" : 28,
+                      "NumberOfItemsInDropdownView" : 6,
+                      "Type" : "dhxlist",
+                      "Area" : "UI",
+                      "Top" : 20,
+                      "DropdownSelectedStyle" : "DefaultDropdownSelectedStyle",
+                      "Id" : "List-10",
+                      "ListItemAlternateStyle" : "DefaultListItemAlternateStyle",
+                      "AutoSelectFirstRow" : true
+                    }
+                  }, {
+                    "Widgets" : [ ],
+                    "Properties" : {
+                      "TextIfNoValue" : "",
+                      "Left" : 5,
+                      "ShowDataLoading" : true,
+                      "Label" : "Vehicle Color",
+                      "ValueDisplayLabelStyle" : "DefaultWidgetLabelStyle",
+                      "TextIfNoValueOffset" : 0,
+                      "Overflow" : "hidden",
+                      "Alignment" : "left",
+                      "TextIfNoValueStyle" : "DefaultValueDisplayNoTextStyle",
+                      "ImageScaling" : "width",
+                      "Visible" : true,
+                      "DisplayName" : "ValueDisplay-11",
+                      "Height" : 22,
+                      "VerticalAlignment" : "middle",
+                      "Width" : 140,
+                      "ValueDisplayStyle" : {
+                        "image" : "",
+                        "backgroundColor" : "",
+                        "textSize" : "xlarge",
+                        "lineStyle" : "solid",
+                        "displayString" : "",
+                        "fontEmphasisUnderline" : false,
+                        "fontEmphasisItalic" : false,
+                        "lineThickness" : 1,
+                        "lineColor" : "",
+                        "foregroundColor" : "#000000",
+                        "fontEmphasisBold" : true,
+                        "secondaryBackgroundColor" : ""
+                      },
+                      "ValueFormat" : {
+                        "renderer" : "STRING",
+                        "FormatString" : "full"
+                      },
+                      "__supportsLabel" : true,
+                      "BackgroundFill" : "content",
+                      "ResponsiveLayout" : false,
+                      "Z-index" : 10,
+                      "LabelAlignment" : "left",
+                      "ValueFormat_StateParameters" : [ ],
+                      "__TypeDisplayName" : "Value Display",
+                      "Type" : "valuedisplay",
+                      "Area" : "UI",
+                      "Top" : 195,
+                      "Id" : "ValueDisplay-11",
+                      "TextWrap" : true
+                    }
+                  }, {
+                    "Widgets" : [ ],
+                    "Properties" : {
+                      "TextIfNoValue" : "",
+                      "Left" : 5,
+                      "ShowDataLoading" : true,
+                      "Label" : "Vehicle Make",
+                      "ValueDisplayLabelStyle" : "DefaultWidgetLabelStyle",
+                      "TextIfNoValueOffset" : 0,
+                      "Overflow" : "hidden",
+                      "Alignment" : "left",
+                      "TextIfNoValueStyle" : "DefaultValueDisplayNoTextStyle",
+                      "ImageScaling" : "width",
+                      "Visible" : true,
+                      "DisplayName" : "ValueDisplay-12",
+                      "Height" : 22,
+                      "VerticalAlignment" : "middle",
+                      "Width" : 140,
+                      "ValueDisplayStyle" : {
+                        "image" : "",
+                        "backgroundColor" : "",
+                        "textSize" : "xlarge",
+                        "lineStyle" : "solid",
+                        "displayString" : "",
+                        "fontEmphasisUnderline" : false,
+                        "fontEmphasisItalic" : false,
+                        "lineThickness" : 1,
+                        "lineColor" : "",
+                        "foregroundColor" : "#000000",
+                        "fontEmphasisBold" : true,
+                        "secondaryBackgroundColor" : ""
+                      },
+                      "ValueFormat" : {
+                        "renderer" : "STRING",
+                        "FormatString" : "full"
+                      },
+                      "__supportsLabel" : true,
+                      "BackgroundFill" : "content",
+                      "ResponsiveLayout" : false,
+                      "Z-index" : 10,
+                      "LabelAlignment" : "left",
+                      "ValueFormat_StateParameters" : [ ],
+                      "__TypeDisplayName" : "Value Display",
+                      "Type" : "valuedisplay",
+                      "Area" : "UI",
+                      "Top" : 150,
+                      "Id" : "ValueDisplay-12",
+                      "TextWrap" : true
+                    }
+                  }, {
+                    "Widgets" : [ ],
+                    "Properties" : {
+                      "TextIfNoValue" : "",
+                      "Left" : 5,
+                      "ShowDataLoading" : true,
+                      "Label" : "Driver First Name",
+                      "ValueDisplayLabelStyle" : "DefaultWidgetLabelStyle",
+                      "TextIfNoValueOffset" : 0,
+                      "Overflow" : "hidden",
+                      "Alignment" : "left",
+                      "TextIfNoValueStyle" : "DefaultValueDisplayNoTextStyle",
+                      "ImageScaling" : "width",
+                      "Visible" : true,
+                      "DisplayName" : "ValueDisplay-13",
+                      "Height" : 22,
+                      "VerticalAlignment" : "middle",
+                      "Width" : 140,
+                      "ValueDisplayStyle" : {
+                        "image" : "",
+                        "backgroundColor" : "",
+                        "textSize" : "xlarge",
+                        "lineStyle" : "solid",
+                        "displayString" : "",
+                        "fontEmphasisUnderline" : false,
+                        "fontEmphasisItalic" : false,
+                        "lineThickness" : 1,
+                        "lineColor" : "",
+                        "foregroundColor" : "#000000",
+                        "fontEmphasisBold" : true,
+                        "secondaryBackgroundColor" : ""
+                      },
+                      "ValueFormat" : {
+                        "renderer" : "STRING",
+                        "FormatString" : "full"
+                      },
+                      "__supportsLabel" : true,
+                      "BackgroundFill" : "content",
+                      "ResponsiveLayout" : false,
+                      "Z-index" : 10,
+                      "LabelAlignment" : "left",
+                      "ValueFormat_StateParameters" : [ ],
+                      "__TypeDisplayName" : "Value Display",
+                      "Type" : "valuedisplay",
+                      "Area" : "UI",
+                      "Top" : 105,
+                      "Id" : "ValueDisplay-13",
+                      "TextWrap" : true
+                    }
+                  }, {
+                    "Widgets" : [ ],
+                    "Properties" : {
+                      "TextIfNoValue" : "",
+                      "Left" : 155,
+                      "ShowDataLoading" : true,
+                      "Label" : "Driver Last Name",
+                      "ValueDisplayLabelStyle" : "DefaultWidgetLabelStyle",
+                      "TextIfNoValueOffset" : 0,
+                      "Overflow" : "hidden",
+                      "Alignment" : "left",
+                      "TextIfNoValueStyle" : "DefaultValueDisplayNoTextStyle",
+                      "ImageScaling" : "width",
+                      "Visible" : true,
+                      "DisplayName" : "ValueDisplay-14",
+                      "Height" : 22,
+                      "VerticalAlignment" : "middle",
+                      "Width" : 140,
+                      "ValueDisplayStyle" : {
+                        "image" : "",
+                        "backgroundColor" : "",
+                        "textSize" : "xlarge",
+                        "lineStyle" : "solid",
+                        "displayString" : "",
+                        "fontEmphasisUnderline" : false,
+                        "fontEmphasisItalic" : false,
+                        "lineThickness" : 1,
+                        "lineColor" : "",
+                        "foregroundColor" : "#000000",
+                        "fontEmphasisBold" : true,
+                        "secondaryBackgroundColor" : ""
+                      },
+                      "ValueFormat" : {
+                        "renderer" : "STRING",
+                        "FormatString" : "full"
+                      },
+                      "__supportsLabel" : true,
+                      "BackgroundFill" : "content",
+                      "ResponsiveLayout" : false,
+                      "Z-index" : 10,
+                      "LabelAlignment" : "left",
+                      "ValueFormat_StateParameters" : [ ],
+                      "__TypeDisplayName" : "Value Display",
+                      "Type" : "valuedisplay",
+                      "Area" : "UI",
+                      "Top" : 105,
+                      "Id" : "ValueDisplay-14",
+                      "TextWrap" : true
+                    }
+                  }, {
+                    "Widgets" : [ ],
+                    "Properties" : {
+                      "TextIfNoValue" : "",
+                      "Left" : 155,
+                      "ShowDataLoading" : true,
+                      "Label" : "Vehicle Model",
+                      "ValueDisplayLabelStyle" : "DefaultWidgetLabelStyle",
+                      "TextIfNoValueOffset" : 0,
+                      "Overflow" : "hidden",
+                      "Alignment" : "left",
+                      "TextIfNoValueStyle" : "DefaultValueDisplayNoTextStyle",
+                      "ImageScaling" : "width",
+                      "Visible" : true,
+                      "DisplayName" : "ValueDisplay-15",
+                      "Height" : 22,
+                      "VerticalAlignment" : "middle",
+                      "Width" : 140,
+                      "ValueDisplayStyle" : {
+                        "image" : "",
+                        "backgroundColor" : "",
+                        "textSize" : "xlarge",
+                        "lineStyle" : "solid",
+                        "displayString" : "",
+                        "fontEmphasisUnderline" : false,
+                        "fontEmphasisItalic" : false,
+                        "lineThickness" : 1,
+                        "lineColor" : "",
+                        "foregroundColor" : "#000000",
+                        "fontEmphasisBold" : true,
+                        "secondaryBackgroundColor" : ""
+                      },
+                      "ValueFormat" : {
+                        "renderer" : "STRING",
+                        "FormatString" : "full"
+                      },
+                      "__supportsLabel" : true,
+                      "BackgroundFill" : "content",
+                      "ResponsiveLayout" : false,
+                      "Z-index" : 10,
+                      "LabelAlignment" : "left",
+                      "ValueFormat_StateParameters" : [ ],
+                      "__TypeDisplayName" : "Value Display",
+                      "Type" : "valuedisplay",
+                      "Area" : "UI",
+                      "Top" : 150,
+                      "Id" : "ValueDisplay-15",
+                      "TextWrap" : true
+                    }
+                  }, {
+                    "Widgets" : [ ],
+                    "Properties" : {
+                      "TextIfNoValue" : "",
+                      "Left" : 155,
+                      "ShowDataLoading" : true,
+                      "Label" : "Vehicle Year",
+                      "ValueDisplayLabelStyle" : "DefaultWidgetLabelStyle",
+                      "TextIfNoValueOffset" : 0,
+                      "Overflow" : "hidden",
+                      "Alignment" : "left",
+                      "TextIfNoValueStyle" : "DefaultValueDisplayNoTextStyle",
+                      "ImageScaling" : "width",
+                      "Visible" : true,
+                      "DisplayName" : "ValueDisplay-16",
+                      "Height" : 22,
+                      "VerticalAlignment" : "middle",
+                      "Width" : 140,
+                      "ValueDisplayStyle" : {
+                        "image" : "",
+                        "backgroundColor" : "",
+                        "textSize" : "xlarge",
+                        "lineStyle" : "solid",
+                        "displayString" : "",
+                        "fontEmphasisUnderline" : false,
+                        "fontEmphasisItalic" : false,
+                        "lineThickness" : 1,
+                        "lineColor" : "",
+                        "foregroundColor" : "#000000",
+                        "fontEmphasisBold" : true,
+                        "secondaryBackgroundColor" : ""
+                      },
+                      "ValueFormat" : {
+                        "renderer" : "STRING",
+                        "FormatString" : "full"
+                      },
+                      "__supportsLabel" : true,
+                      "BackgroundFill" : "content",
+                      "ResponsiveLayout" : false,
+                      "Z-index" : 10,
+                      "LabelAlignment" : "left",
+                      "ValueFormat_StateParameters" : [ ],
+                      "__TypeDisplayName" : "Value Display",
+                      "Type" : "valuedisplay",
+                      "Area" : "UI",
+                      "Top" : 195,
+                      "Id" : "ValueDisplay-16",
+                      "TextWrap" : true
+                    }
+                  } ],
+                  "Properties" : {
+                    "Left" : 60,
+                    "ResponsiveLayout" : true,
+                    "ShowDataLoading" : true,
+                    "Z-index" : 10,
+                    "Title" : "Driver Selection",
+                    "__TypeDisplayName" : "Fieldset",
+                    "FieldsetStyle" : "DefaultFieldsetStyle",
+                    "Type" : "fieldset",
+                    "Area" : "UI",
+                    "Top" : 70,
+                    "Visible" : true,
+                    "DisplayName" : "Fieldset-8",
+                    "Height" : 100,
+                    "Id" : "Fieldset-8",
+                    "Width" : 300,
+                    "FieldsetLabelStyle" : "DefaultFieldsetLabelStyle"
+                  }
+                } ],
+                "Properties" : {
+                  "MinHeight" : 0,
+                  "TabWidth" : 36,
+                  "BGImageRepeat" : "no-repeat",
+                  "ShowDataLoading" : true,
+                  "ShowExpandCollapseTab" : false,
+                  "ExpandCollapseTabLocation" : "outside",
+                  "Visible" : true,
+                  "TabExpandStyle" : "DefaultTabExpandStyle",
+                  "DisplayName" : "Column 1",
+                  "Style" : "DefaultContainerStyle",
+                  "BGImageSize" : "auto",
+                  "Overlay" : false,
+                  "Expanded" : true,
+                  "TabCollapseStyle" : "DefaultTabCollapseStyle",
+                  "OverlayIsTransparent" : false,
+                  "ResponsiveLayout" : true,
+                  "Z-index" : 10,
+                  "MinWidth" : 0,
+                  "TabOffset" : 0,
+                  "__TypeDisplayName" : "Container",
+                  "TabLocation" : "center",
+                  "Type" : "container",
+                  "Area" : "UI",
+                  "AnimateExpandCollapse" : true,
+                  "TabHeight" : 36,
+                  "Id" : "container-18"
+                }
+              }, {
+                "Widgets" : [ {
+                  "Widgets" : [ {
+                    "Widgets" : [ ],
+                    "Properties" : {
+                      "Left" : 10,
+                      "__supportsLabel" : true,
+                      "IntervalType" : "h",
+                      "ResponsiveLayout" : false,
+                      "ShowDataLoading" : true,
+                      "Label" : "",
+                      "Z-index" : 10,
+                      "DateOnly" : true,
+                      "InitializeWithCurrentDateTime" : true,
+                      "TabSequence" : 0,
+                      "__TypeDisplayName" : "Date Time Picker",
+                      "Type" : "datetimepicker",
+                      "Area" : "UI",
+                      "Top" : 20,
+                      "Visible" : true,
+                      "DisplayName" : "DateTimePicker-21",
+                      "Style" : "DefaultTimePickerStyle",
+                      "Height" : 28,
+                      "Id" : "DateTimePicker-21",
+                      "Width" : 135,
+                      "Interval" : 0
+                    }
+                  }, {
+                    "Widgets" : [ ],
+                    "Properties" : {
+                      "NavigationHoverStyle" : "DefaultNavigationHoverStyle",
+                      "Left" : 155,
+                      "ShowDataLoading" : true,
+                      "TargetWindow" : "popup",
+                      "ModalPopupOpacity" : 0.5,
+                      "ShowCloseButton" : true,
+                      "FixedPopupHeight" : 170,
+                      "Alignment" : "left",
+                      "IconAlignment" : "left",
+                      "Visible" : true,
+                      "DisplayName" : "Navigation-22",
+                      "Style" : "DefaultNavigationStyle",
+                      "Height" : 30,
+                      "Width" : 135,
+                      "PopupTitle" : "",
+                      "ShowMessageIfNoMashup" : false,
+                      "ClickOutsideToClose" : false,
+                      "MashupName" : "AddTrip",
+                      "ResponsiveLayout" : false,
+                      "PopupTitleStyle" : "DefaultPopupTitleStyle",
+                      "MashupParameters" : [ {
+                        "Description" : "",
+                        "BaseType" : "DATETIME",
+                        "ParmDef" : {
+                          "name" : "TripDate",
+                          "aspects" : {
+                            "ordinal" : "1"
+                          },
+                          "description" : "",
+                          "baseType" : "DATETIME",
+                          "ordinal" : 0
+                        },
+                        "ParameterName" : "TripDate"
+                      }, {
+                        "Description" : "",
+                        "BaseType" : "STRING",
+                        "ParmDef" : {
+                          "name" : "Vehicle",
+                          "aspects" : {
+                            "ordinal" : "0"
+                          },
+                          "description" : "",
+                          "baseType" : "STRING",
+                          "ordinal" : 0
+                        },
+                        "ParameterName" : "Vehicle"
+                      } ],
+                      "Z-index" : 10,
+                      "FixedPopupWidth" : 270,
+                      "Text" : "Add Trip",
+                      "RoundedCorners" : true,
+                      "__TypeDisplayName" : "Navigation",
+                      "MessageToShow" : "Mashup must be selected",
+                      "Type" : "navigation",
+                      "Area" : "UI",
+                      "Top" : 19,
+                      "Transparent" : false,
+                      "Id" : "Navigation-22",
+                      "NavigationActiveStyle" : "DefaultNavigationActiveStyle"
+                    }
+                  }, {
+                    "Widgets" : [ ],
+                    "Properties" : {
+                      "RowSelectedStyle" : "DefaultRowSelectedStyle",
+                      "IsEditable" : false,
+                      "GridInvalidFieldStyle" : "DefaultGridInvalidFieldStyle",
+                      "Left" : 10,
+                      "ShowDataLoading" : true,
+                      "GridHeaderStyle" : "DefaultGridHeaderStyle",
+                      "RowAlternateBackgroundStyle" : "DefaultRowAlternateBackgroundStyle",
+                      "RowFormat_StateParameters" : [ ],
+                      "GridBackgroundStyle" : "DefaultGridBackgroundStyle",
+                      "CellTextWrapping" : false,
+                      "RowBackgroundStyle" : "DefaultRowBackgroundStyle",
+                      "Visible" : true,
+                      "GridEditableFieldStyle" : "DefaultGridEditableFieldStyle",
+                      "DisplayName" : "Grid-23",
+                      "Height" : 95,
+                      "Width" : 350,
+                      "MultiSelect" : false,
+                      "CurrentScrollTop" : 0,
+                      "ResponsiveLayout" : false,
+                      "Z-index" : 10,
+                      "ShowAllColumns" : false,
+                      "__TypeDisplayName" : "Grid",
+                      "ScrollTop" : 0,
+                      "RowHeight" : 30,
+                      "ColumnFormat" : {
+                        "formatInfo" : [ {
+                          "ValidationMessage" : "",
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "ValidationExpression" : "",
+                          "Title" : "Priority",
+                          "FormatOptions" : {
+                            "renderer" : "DEFAULT",
+                            "formatInfo" : {
+                              "StateFormats" : [ {
+                                "stateName" : "fixed",
+                                "state" : ""
+                              } ],
+                              "StateDefinition" : "",
+                              "StateDefinitionType" : "fixed",
+                              "FieldName" : ""
+                            },
+                            "FormatString" : ""
+                          },
+                          "FieldName" : "Priority",
+                          "Width" : "auto"
+                        }, {
+                          "ValidationMessage" : "",
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "ValidationExpression" : "",
+                          "Title" : "Description",
+                          "FormatOptions" : {
+                            "renderer" : "STRING",
+                            "formatInfo" : {
+                              "StateFormats" : [ {
+                                "stateName" : "fixed",
+                                "state" : ""
+                              } ],
+                              "StateDefinition" : "",
+                              "StateDefinitionType" : "fixed",
+                              "FieldName" : ""
+                            },
+                            "FormatString" : "full"
+                          },
+                          "FieldName" : "Description",
+                          "Width" : "auto"
+                        }, {
+                          "ValidationMessage" : "",
+                          "Align" : "left",
+                          "AllowEdit" : false,
+                          "ValidationExpression" : "",
+                          "Title" : "Distance",
+                          "FormatOptions" : {
+                            "renderer" : "NUMBER",
+                            "formatInfo" : {
+                              "StateFormats" : [ {
+                                "stateName" : "fixed",
+                                "state" : ""
+                              } ],
+                              "StateDefinition" : "",
+                              "StateDefinitionType" : "fixed",
+                              "FieldName" : ""
+                            },
+                            "FormatString" : "0.00"
+                          },
+                          "FieldName" : "PlannedDistance",
+                          "Width" : "auto"
+                        } ]
+                      },
+                      "Type" : "dhxgrid",
+                      "Area" : "UI",
+                      "Top" : 55,
+                      "IsPrintLayout" : false,
+                      "Id" : "Grid-23",
+                      "RowHoverStyle" : "DefaultRowHoverStyle",
+                      "AutoSelectFirstRow" : true
+                    }
+                  }, {
+                    "Widgets" : [ ],
+                    "Properties" : {
+                      "Minimum" : 0,
+                      "Left" : 10,
+                      "ValueAlign" : "right",
+                      "ShowDataLoading" : true,
+                      "Label" : "Priority",
+                      "TabSequence" : 0,
+                      "Maximum" : 100,
+                      "ConstrainValue" : false,
+                      "Visible" : true,
+                      "DisplayName" : "NumericEntry-24",
+                      "Style" : "DefaultTextBoxStyle",
+                      "FixedDigits" : 0,
+                      "Height" : 24,
+                      "Width" : 50,
+                      "AllowDecimals" : false,
+                      "__supportsLabel" : true,
+                      "InnerShadow" : true,
+                      "ResponsiveLayout" : false,
+                      "Z-index" : 10,
+                      "LabelAlignment" : "left",
+                      "NumericEntryLabelStyle" : "DefaultWidgetLabelStyle",
+                      "__TypeDisplayName" : "Numeric Entry",
+                      "Type" : "numericentry",
+                      "Area" : "UI",
+                      "NumericEntryFocusStyle" : "DefaultFocusStyle",
+                      "Top" : 155,
+                      "AllowNegatives" : true,
+                      "Value" : 1,
+                      "Id" : "NumericEntry-24"
+                    }
+                  }, {
+                    "Widgets" : [ ],
+                    "Properties" : {
+                      "Left" : 75,
+                      "TextboxLabelStyle" : "DefaultWidgetLabelStyle",
+                      "ShowDataLoading" : true,
+                      "Label" : "Description",
+                      "TabSequence" : 0,
+                      "PlaceholderText" : "",
+                      "TextAlign" : "left",
+                      "Visible" : true,
+                      "DisplayName" : "Textbox-25",
+                      "Style" : "DefaultTextBoxStyle",
+                      "Height" : 24,
+                      "Width" : 285,
+                      "ReadOnly" : false,
+                      "__supportsLabel" : true,
+                      "InnerShadow" : true,
+                      "ResponsiveLayout" : false,
+                      "Z-index" : 10,
+                      "LabelAlignment" : "left",
+                      "Text" : "",
+                      "__TypeDisplayName" : "Textbox",
+                      "Type" : "textbox",
+                      "Area" : "UI",
+                      "DefaultTextboxFocusStyle" : "DefaultFocusStyle",
+                      "MaskInputCharacters" : false,
+                      "Top" : 155,
+                      "CursorPosition" : 0,
+                      "Id" : "Textbox-25"
+                    }
+                  }, {
+                    "Widgets" : [ ],
+                    "Properties" : {
+                      "Left" : 10,
+                      "CancelConfirmationButton" : "button2",
+                      "ShowDataLoading" : true,
+                      "Label" : "Update Trip",
+                      "FocusStyle" : "DefaultButtonFocusStyle",
+                      "TabSequence" : 0,
+                      "IconAlignment" : "left",
+                      "Visible" : true,
+                      "DisplayName" : "Button-26",
+                      "Style" : "DefaultButtonStyle",
+                      "Height" : 30,
+                      "DisabledStyle" : "DefaultButtonDisabledStyle",
+                      "Disabled" : false,
+                      "ConfirmationTitle" : "Confirm Action",
+                      "Width" : 135,
+                      "ResponsiveLayout" : false,
+                      "ConfirmationPrompt" : "Update Trip?",
+                      "Z-index" : 10,
+                      "ConfirmationButton1Label" : "Yes",
+                      "RoundedCorners" : true,
+                      "__TypeDisplayName" : "Button",
+                      "HoverStyle" : "DefaultButtonHoverStyle",
+                      "Type" : "button",
+                      "Area" : "UI",
+                      "Top" : 205,
+                      "DefaultConfirmationButton" : "button1",
+                      "ConfirmationRequired" : true,
+                      "Id" : "Button-26",
+                      "ConfirmationButton2Label" : "No",
+                      "ActiveStyle" : "DefaultButtonActiveStyle"
+                    }
+                  }, {
+                    "Widgets" : [ ],
+                    "Properties" : {
+                      "Left" : 155,
+                      "CancelConfirmationButton" : "button2",
+                      "ShowDataLoading" : true,
+                      "Label" : "Delete Trip",
+                      "FocusStyle" : "DefaultButtonFocusStyle",
+                      "TabSequence" : 0,
+                      "IconAlignment" : "left",
+                      "Visible" : true,
+                      "DisplayName" : "Button-27",
+                      "Style" : "DefaultButtonStyle",
+                      "Height" : 30,
+                      "DisabledStyle" : "DefaultButtonDisabledStyle",
+                      "Disabled" : false,
+                      "ConfirmationTitle" : "Confirm Action",
+                      "Width" : 135,
+                      "ResponsiveLayout" : false,
+                      "ConfirmationPrompt" : "Delete Trip?",
+                      "Z-index" : 10,
+                      "ConfirmationButton1Label" : "Yes",
+                      "RoundedCorners" : true,
+                      "__TypeDisplayName" : "Button",
+                      "HoverStyle" : "DefaultButtonHoverStyle",
+                      "Type" : "button",
+                      "Area" : "UI",
+                      "Top" : 205,
+                      "DefaultConfirmationButton" : "button1",
+                      "ConfirmationRequired" : true,
+                      "Id" : "Button-27",
+                      "ConfirmationButton2Label" : "No",
+                      "ActiveStyle" : "DefaultButtonActiveStyle"
+                    }
+                  } ],
+                  "Properties" : {
+                    "Left" : 30,
+                    "ResponsiveLayout" : true,
+                    "ShowDataLoading" : true,
+                    "Z-index" : 10,
+                    "Title" : "Trip Selection",
+                    "__TypeDisplayName" : "Fieldset",
+                    "FieldsetStyle" : "DefaultFieldsetStyle",
+                    "Type" : "fieldset",
+                    "Area" : "UI",
+                    "Top" : 85,
+                    "Visible" : true,
+                    "DisplayName" : "Fieldset-20",
+                    "Height" : 100,
+                    "Id" : "Fieldset-20",
+                    "Width" : 300,
+                    "FieldsetLabelStyle" : "DefaultFieldsetLabelStyle"
+                  }
+                } ],
+                "Properties" : {
+                  "MinHeight" : 0,
+                  "TabWidth" : 36,
+                  "BGImageRepeat" : "no-repeat",
+                  "ShowDataLoading" : true,
+                  "ShowExpandCollapseTab" : false,
+                  "ExpandCollapseTabLocation" : "outside",
+                  "Visible" : true,
+                  "TabExpandStyle" : "DefaultTabExpandStyle",
+                  "DisplayName" : "Column 2",
+                  "Style" : "DefaultContainerStyle",
+                  "BGImageSize" : "auto",
+                  "Overlay" : false,
+                  "Expanded" : true,
+                  "TabCollapseStyle" : "DefaultTabCollapseStyle",
+                  "OverlayIsTransparent" : false,
+                  "ResponsiveLayout" : true,
+                  "Z-index" : 10,
+                  "MinWidth" : 0,
+                  "TabOffset" : 0,
+                  "__TypeDisplayName" : "Container",
+                  "TabLocation" : "center",
+                  "Type" : "container",
+                  "Area" : "UI",
+                  "AnimateExpandCollapse" : true,
+                  "TabHeight" : 36,
+                  "Id" : "container-19"
+                }
+              } ],
+              "Properties" : {
+                "Left" : 95,
+                "IncludeSpacingInFixedAreas" : false,
+                "ShowDataLoading" : true,
+                "HeaderHeight" : 0,
+                "PctRow4" : 0,
+                "PctRow3" : 0,
+                "PctRow2" : 50,
+                "PctRow1" : 50,
+                "FooterHeight" : 0,
+                "PctRow8" : 0,
+                "PctRow7" : 0,
+                "PctRow6" : 0,
+                "PctRow5" : 0,
+                "Visible" : true,
+                "PctColumn5" : 1,
+                "RightSidebar" : false,
+                "DisplayName" : "Layout-17",
+                "LeftSidebar" : false,
+                "PctColumn6" : 1,
+                "PrintWidth" : 650,
+                "PctColumn3" : 1,
+                "PctColumn4" : 1,
+                "PctColumn1" : 45,
+                "PctColumn2" : 55,
+                "PrintMarginTopBottom" : 0.5,
+                "Rows" : 0,
+                "RightSidebarWidth" : 0,
+                "PrintMarginLeftRight" : 0.5,
+                "PctColumn7" : 1,
+                "ResponsiveLayout" : true,
+                "PctColumn8" : 1,
+                "Columns" : 2,
+                "Z-index" : 10,
+                "Spacing" : 0,
+                "Orientation" : "horizontal",
+                "__TypeDisplayName" : "Layout",
+                "Type" : "layout",
+                "Area" : "UI",
+                "LeftSidebarWidth" : 0,
+                "Header" : false,
+                "Top" : 110,
+                "IsPrintLayout" : false,
+                "Footer" : false,
+                "Id" : "Layout-17"
+              }
+            } ],
+            "Properties" : {
+              "MinHeight" : 0,
+              "TabWidth" : 36,
+              "BGImageRepeat" : "no-repeat",
+              "ShowDataLoading" : true,
+              "ShowExpandCollapseTab" : false,
+              "ExpandCollapseTabLocation" : "outside",
+              "Visible" : true,
+              "TabExpandStyle" : "DefaultTabExpandStyle",
+              "DisplayName" : "Header",
+              "Style" : "DefaultContainerStyle",
+              "BGImageSize" : "auto",
+              "Overlay" : false,
+              "Expanded" : true,
+              "TabCollapseStyle" : "DefaultTabCollapseStyle",
+              "OverlayIsTransparent" : false,
+              "ResponsiveLayout" : true,
+              "Z-index" : 10,
+              "MinWidth" : 0,
+              "TabOffset" : 0,
+              "__TypeDisplayName" : "Container",
+              "TabLocation" : "center",
+              "Type" : "container",
+              "Area" : "UI",
+              "AnimateExpandCollapse" : true,
+              "TabHeight" : 36,
+              "Id" : "container-5"
+            }
+          }, {
+            "Widgets" : [ {
+              "Widgets" : [ {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "Left" : 10,
+                  "TextboxLabelStyle" : "DefaultWidgetLabelStyle",
+                  "ShowDataLoading" : true,
+                  "Label" : "Address",
+                  "TabSequence" : 0,
+                  "PlaceholderText" : "",
+                  "TextAlign" : "left",
+                  "Visible" : true,
+                  "DisplayName" : "Textbox-31",
+                  "Style" : "DefaultTextBoxStyle",
+                  "Height" : 24,
+                  "Width" : 315,
+                  "ReadOnly" : false,
+                  "__supportsLabel" : true,
+                  "InnerShadow" : true,
+                  "ResponsiveLayout" : false,
+                  "Z-index" : 10,
+                  "LabelAlignment" : "left",
+                  "Text" : "",
+                  "__TypeDisplayName" : "Textbox",
+                  "Type" : "textbox",
+                  "Area" : "UI",
+                  "DefaultTextboxFocusStyle" : "DefaultFocusStyle",
+                  "MaskInputCharacters" : false,
+                  "Top" : 20,
+                  "CursorPosition" : 0,
+                  "Id" : "Textbox-31"
+                }
+              }, {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "Left" : 10,
+                  "CancelConfirmationButton" : "button2",
+                  "ShowDataLoading" : true,
+                  "Label" : "Get Location From Address",
+                  "FocusStyle" : "DefaultButtonFocusStyle",
+                  "TabSequence" : 0,
+                  "IconAlignment" : "left",
+                  "Visible" : true,
+                  "DisplayName" : "Button-32",
+                  "Style" : "DefaultButtonStyle",
+                  "Height" : 30,
+                  "DisabledStyle" : "DefaultButtonDisabledStyle",
+                  "Disabled" : false,
+                  "ConfirmationTitle" : "Confirm Action",
+                  "Width" : 135,
+                  "ResponsiveLayout" : false,
+                  "ConfirmationPrompt" : "Do Action?",
+                  "Z-index" : 10,
+                  "ConfirmationButton1Label" : "Yes",
+                  "RoundedCorners" : true,
+                  "__TypeDisplayName" : "Button",
+                  "HoverStyle" : "DefaultButtonHoverStyle",
+                  "Type" : "button",
+                  "Area" : "UI",
+                  "Top" : 75,
+                  "DefaultConfirmationButton" : "button1",
+                  "ConfirmationRequired" : false,
+                  "Id" : "Button-32",
+                  "ConfirmationButton2Label" : "No",
+                  "ActiveStyle" : "DefaultButtonActiveStyle"
+                }
+              }, {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "RouteLocationField" : "location",
+                  "Left" : 340,
+                  "SelectedRegionStyle" : "DefaultMapRegionSelectedStyle",
+                  "LocationField" : "location",
+                  "SelectionMarkerStyle" : "DefaultMapSelectedStyle",
+                  "StartMarkerStyle" : "DefaultMapStartStyle",
+                  "ShowDataLoading" : true,
+                  "TooltipMashupWidth" : 400,
+                  "ShowPlannedRoute" : false,
+                  "ShowMarkers" : true,
+                  "MapType" : "roadmap",
+                  "EndMarkerStyle" : "DefaultMapEndStyle",
+                  "RegionMultiSelect" : false,
+                  "SelectedMarkerStyle" : "DefaultMapSelectedStyle",
+                  "RegionStyle" : "DefaultMapRegionStyle",
+                  "AutoZoomBehavior" : "every-data-change",
+                  "TooltipMashupName" : "",
+                  "RouteStyle" : "DefaultMapRouteStyle",
+                  "MarkerFormatting_StateParameters" : [ ],
+                  "RegionFormatting_StateParameters" : [ ],
+                  "EnableLocationSelection" : false,
+                  "MashupParameters" : [ ],
+                  "Z-index" : 10,
+                  "PathStyle" : "DefaultMapPathStyle",
+                  "MarkerStyle" : "DefaultMapMarkerStyle",
+                  "__TypeDisplayName" : "Google Map",
+                  "Area" : "UI",
+                  "Top" : 10,
+                  "Id" : "GoogleMap-33",
+                  "TooltipMashupHeight" : 300,
+                  "RegionFillOpacity" : 1,
+                  "ShowSelectionMarker" : true,
+                  "ShowTraffic" : false,
+                  "MapSkin" : "normal",
+                  "EnableMarkerSelection" : true,
+                  "Visible" : true,
+                  "RegionLocationsField" : "locations",
+                  "DisplayName" : "GoogleMap-33",
+                  "ShowStartMarker" : true,
+                  "Zoom" : 14,
+                  "Height" : 200,
+                  "Width" : 325,
+                  "MarkerField" : "",
+                  "ShowEndMarker" : true,
+                  "MultiSelect" : false,
+                  "ResponsiveLayout" : false,
+                  "ShowPathBetweenMarkers" : false,
+                  "ShowRoute" : false,
+                  "ShowRegions" : false,
+                  "RegionLocationField" : "location",
+                  "ShowMarkerTooltips" : true,
+                  "Type" : "googlemap",
+                  "EnableRegionSelection" : false,
+                  "PlannedRouteStyle" : "DefaultMapRouteStyle",
+                  "ShowRegionTooltips" : false,
+                  "PlannedRouteLocationField" : "location"
+                }
+              }, {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "TextIfNoValue" : "",
+                  "Left" : 160,
+                  "ShowDataLoading" : true,
+                  "Label" : "Returned Location",
+                  "ValueDisplayLabelStyle" : "DefaultWidgetLabelStyle",
+                  "TextIfNoValueOffset" : 0,
+                  "Overflow" : "hidden",
+                  "Alignment" : "left",
+                  "TextIfNoValueStyle" : "DefaultValueDisplayNoTextStyle",
+                  "ImageScaling" : "width",
+                  "Visible" : true,
+                  "DisplayName" : "ValueDisplay-34",
+                  "Height" : 22,
+                  "VerticalAlignment" : "middle",
+                  "Width" : 100,
+                  "ValueDisplayStyle" : "DefaultValueDisplayStyle",
+                  "ValueFormat" : {
+                    "renderer" : "LOCATION",
+                    "FormatString" : "0.0000"
+                  },
+                  "__supportsLabel" : true,
+                  "BackgroundFill" : "content",
+                  "ResponsiveLayout" : false,
+                  "Z-index" : 10,
+                  "LabelAlignment" : "left",
+                  "ValueFormat_StateParameters" : [ ],
+                  "__TypeDisplayName" : "Value Display",
+                  "Type" : "valuedisplay",
+                  "Area" : "UI",
+                  "Top" : 70,
+                  "Id" : "ValueDisplay-34",
+                  "TextWrap" : true
+                }
+              }, {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "Left" : 10,
+                  "TextboxLabelStyle" : "DefaultWidgetLabelStyle",
+                  "ShowDataLoading" : true,
+                  "Label" : "Location Description",
+                  "TabSequence" : 0,
+                  "PlaceholderText" : "",
+                  "TextAlign" : "left",
+                  "Visible" : true,
+                  "DisplayName" : "Textbox-35",
+                  "Style" : "DefaultTextBoxStyle",
+                  "Height" : 24,
+                  "Width" : 315,
+                  "ReadOnly" : false,
+                  "__supportsLabel" : true,
+                  "InnerShadow" : true,
+                  "ResponsiveLayout" : false,
+                  "Z-index" : 10,
+                  "LabelAlignment" : "left",
+                  "Text" : "",
+                  "__TypeDisplayName" : "Textbox",
+                  "Type" : "textbox",
+                  "Area" : "UI",
+                  "DefaultTextboxFocusStyle" : "DefaultFocusStyle",
+                  "MaskInputCharacters" : false,
+                  "Top" : 167,
+                  "CursorPosition" : 0,
+                  "Id" : "Textbox-35"
+                }
+              }, {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "Minimum" : 1,
+                  "Left" : 10,
+                  "ValueAlign" : "right",
+                  "ShowDataLoading" : true,
+                  "Label" : "Location Sequence",
+                  "TabSequence" : 0,
+                  "Maximum" : 100,
+                  "ConstrainValue" : true,
+                  "Visible" : true,
+                  "DisplayName" : "NumericEntry-36",
+                  "Style" : "DefaultTextBoxStyle",
+                  "FixedDigits" : 0,
+                  "Height" : 24,
+                  "Width" : 95,
+                  "AllowDecimals" : false,
+                  "__supportsLabel" : true,
+                  "InnerShadow" : true,
+                  "ResponsiveLayout" : false,
+                  "Z-index" : 10,
+                  "LabelAlignment" : "left",
+                  "NumericEntryLabelStyle" : "DefaultWidgetLabelStyle",
+                  "__TypeDisplayName" : "Numeric Entry",
+                  "Type" : "numericentry",
+                  "Area" : "UI",
+                  "NumericEntryFocusStyle" : "DefaultFocusStyle",
+                  "Top" : 115,
+                  "AllowNegatives" : true,
+                  "Value" : 1,
+                  "Id" : "NumericEntry-36"
+                }
+              }, {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "Left" : 10,
+                  "CancelConfirmationButton" : "button2",
+                  "ShowDataLoading" : true,
+                  "Label" : "Add Location",
+                  "FocusStyle" : "DefaultButtonFocusStyle",
+                  "TabSequence" : 0,
+                  "IconAlignment" : "left",
+                  "Visible" : true,
+                  "DisplayName" : "Button-37",
+                  "Style" : "DefaultButtonStyle",
+                  "Height" : 30,
+                  "DisabledStyle" : "DefaultButtonDisabledStyle",
+                  "Disabled" : false,
+                  "ConfirmationTitle" : "Confirm Action",
+                  "Width" : 105,
+                  "ResponsiveLayout" : false,
+                  "ConfirmationPrompt" : "Add Location?",
+                  "Z-index" : 10,
+                  "ConfirmationButton1Label" : "Yes",
+                  "RoundedCorners" : true,
+                  "__TypeDisplayName" : "Button",
+                  "HoverStyle" : "DefaultButtonHoverStyle",
+                  "Type" : "button",
+                  "Area" : "UI",
+                  "Top" : 230,
+                  "DefaultConfirmationButton" : "button1",
+                  "ConfirmationRequired" : true,
+                  "Id" : "Button-37",
+                  "ConfirmationButton2Label" : "No",
+                  "ActiveStyle" : "DefaultButtonActiveStyle"
+                }
+              }, {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "Left" : 370,
+                  "CancelConfirmationButton" : "button2",
+                  "ShowDataLoading" : true,
+                  "Label" : "Move Up",
+                  "FocusStyle" : "DefaultButtonFocusStyle",
+                  "TabSequence" : 0,
+                  "IconAlignment" : "left",
+                  "Visible" : true,
+                  "DisplayName" : "Button-38",
+                  "Style" : "DefaultButtonStyle",
+                  "Height" : 30,
+                  "DisabledStyle" : "DefaultButtonDisabledStyle",
+                  "Disabled" : false,
+                  "ConfirmationTitle" : "Confirm Action",
+                  "Width" : 105,
+                  "ResponsiveLayout" : false,
+                  "ConfirmationPrompt" : "Do Action?",
+                  "Z-index" : 10,
+                  "ConfirmationButton1Label" : "Yes",
+                  "RoundedCorners" : true,
+                  "__TypeDisplayName" : "Button",
+                  "HoverStyle" : "DefaultButtonHoverStyle",
+                  "Type" : "button",
+                  "Area" : "UI",
+                  "Top" : 230,
+                  "DefaultConfirmationButton" : "button1",
+                  "ConfirmationRequired" : false,
+                  "Id" : "Button-38",
+                  "ConfirmationButton2Label" : "No",
+                  "ActiveStyle" : "DefaultButtonActiveStyle"
+                }
+              }, {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "Left" : 490,
+                  "CancelConfirmationButton" : "button2",
+                  "ShowDataLoading" : true,
+                  "Label" : "Move Down",
+                  "FocusStyle" : "DefaultButtonFocusStyle",
+                  "TabSequence" : 0,
+                  "IconAlignment" : "left",
+                  "Visible" : true,
+                  "DisplayName" : "Button-39",
+                  "Style" : "DefaultButtonStyle",
+                  "Height" : 30,
+                  "DisabledStyle" : "DefaultButtonDisabledStyle",
+                  "Disabled" : false,
+                  "ConfirmationTitle" : "Confirm Action",
+                  "Width" : 105,
+                  "ResponsiveLayout" : false,
+                  "ConfirmationPrompt" : "Do Action?",
+                  "Z-index" : 10,
+                  "ConfirmationButton1Label" : "Yes",
+                  "RoundedCorners" : true,
+                  "__TypeDisplayName" : "Button",
+                  "HoverStyle" : "DefaultButtonHoverStyle",
+                  "Type" : "button",
+                  "Area" : "UI",
+                  "Top" : 230,
+                  "DefaultConfirmationButton" : "button1",
+                  "ConfirmationRequired" : false,
+                  "Id" : "Button-39",
+                  "ConfirmationButton2Label" : "No",
+                  "ActiveStyle" : "DefaultButtonActiveStyle"
+                }
+              }, {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "Left" : 130,
+                  "CancelConfirmationButton" : "button2",
+                  "ShowDataLoading" : true,
+                  "Label" : "Update Location",
+                  "FocusStyle" : "DefaultButtonFocusStyle",
+                  "TabSequence" : 0,
+                  "IconAlignment" : "left",
+                  "Visible" : true,
+                  "DisplayName" : "Button-40",
+                  "Style" : "DefaultButtonStyle",
+                  "Height" : 30,
+                  "DisabledStyle" : "DefaultButtonDisabledStyle",
+                  "Disabled" : false,
+                  "ConfirmationTitle" : "Confirm Action",
+                  "Width" : 105,
+                  "ResponsiveLayout" : false,
+                  "ConfirmationPrompt" : "Update Location?",
+                  "Z-index" : 10,
+                  "ConfirmationButton1Label" : "Yes",
+                  "RoundedCorners" : true,
+                  "__TypeDisplayName" : "Button",
+                  "HoverStyle" : "DefaultButtonHoverStyle",
+                  "Type" : "button",
+                  "Area" : "UI",
+                  "Top" : 230,
+                  "DefaultConfirmationButton" : "button1",
+                  "ConfirmationRequired" : true,
+                  "Id" : "Button-40",
+                  "ConfirmationButton2Label" : "No",
+                  "ActiveStyle" : "DefaultButtonActiveStyle"
+                }
+              }, {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "Left" : 250,
+                  "CancelConfirmationButton" : "button2",
+                  "ShowDataLoading" : true,
+                  "Label" : "Delete Location",
+                  "FocusStyle" : "DefaultButtonFocusStyle",
+                  "TabSequence" : 0,
+                  "IconAlignment" : "left",
+                  "Visible" : true,
+                  "DisplayName" : "Button-41",
+                  "Style" : "DefaultButtonStyle",
+                  "Height" : 30,
+                  "DisabledStyle" : "DefaultButtonDisabledStyle",
+                  "Disabled" : false,
+                  "ConfirmationTitle" : "Confirm Action",
+                  "Width" : 105,
+                  "ResponsiveLayout" : false,
+                  "ConfirmationPrompt" : "Delete Location?",
+                  "Z-index" : 10,
+                  "ConfirmationButton1Label" : "Yes",
+                  "RoundedCorners" : true,
+                  "__TypeDisplayName" : "Button",
+                  "HoverStyle" : "DefaultButtonHoverStyle",
+                  "Type" : "button",
+                  "Area" : "UI",
+                  "Top" : 230,
+                  "DefaultConfirmationButton" : "button1",
+                  "ConfirmationRequired" : true,
+                  "Id" : "Button-41",
+                  "ConfirmationButton2Label" : "No",
+                  "ActiveStyle" : "DefaultButtonActiveStyle"
+                }
+              } ],
+              "Properties" : {
+                "Left" : 100,
+                "ResponsiveLayout" : true,
+                "ShowDataLoading" : true,
+                "Z-index" : 10,
+                "Title" : "Trip Location Management",
+                "__TypeDisplayName" : "Fieldset",
+                "FieldsetStyle" : "DefaultFieldsetStyle",
+                "Type" : "fieldset",
+                "Area" : "UI",
+                "Top" : 135,
+                "Visible" : true,
+                "DisplayName" : "Fieldset-28",
+                "Height" : 100,
+                "Id" : "Fieldset-28",
+                "Width" : 300,
+                "FieldsetLabelStyle" : "DefaultFieldsetLabelStyle"
+              }
+            } ],
+            "Properties" : {
+              "MinHeight" : 0,
+              "TabWidth" : 36,
+              "BGImageRepeat" : "no-repeat",
+              "ShowDataLoading" : true,
+              "ShowExpandCollapseTab" : false,
+              "ExpandCollapseTabLocation" : "outside",
+              "Visible" : true,
+              "TabExpandStyle" : "DefaultTabExpandStyle",
+              "DisplayName" : "Row 1",
+              "Style" : "DefaultContainerStyle",
+              "BGImageSize" : "auto",
+              "Overlay" : false,
+              "Expanded" : true,
+              "TabCollapseStyle" : "DefaultTabCollapseStyle",
+              "OverlayIsTransparent" : false,
+              "ResponsiveLayout" : true,
+              "Z-index" : 10,
+              "MinWidth" : 0,
+              "TabOffset" : 0,
+              "__TypeDisplayName" : "Container",
+              "TabLocation" : "center",
+              "Type" : "container",
+              "Area" : "UI",
+              "AnimateExpandCollapse" : true,
+              "TabHeight" : 36,
+              "Id" : "container-6"
+            }
+          }, {
+            "Widgets" : [ {
+              "Widgets" : [ ],
+              "Properties" : {
+                "RowSelectedStyle" : "DefaultRowSelectedStyle",
+                "IsEditable" : false,
+                "GridInvalidFieldStyle" : "DefaultGridInvalidFieldStyle",
+                "Left" : 130,
+                "ShowDataLoading" : true,
+                "GridHeaderStyle" : "DefaultGridHeaderStyle",
+                "RowAlternateBackgroundStyle" : "DefaultRowAlternateBackgroundStyle",
+                "RowFormat_StateParameters" : [ ],
+                "GridBackgroundStyle" : "DefaultGridBackgroundStyle",
+                "CellTextWrapping" : false,
+                "RowBackgroundStyle" : "DefaultRowBackgroundStyle",
+                "Visible" : true,
+                "GridEditableFieldStyle" : "DefaultGridEditableFieldStyle",
+                "DisplayName" : "Grid-29",
+                "Height" : 200,
+                "Width" : 400,
+                "MultiSelect" : false,
+                "CurrentScrollTop" : 0,
+                "ResponsiveLayout" : true,
+                "Z-index" : 10,
+                "ShowAllColumns" : false,
+                "__TypeDisplayName" : "Grid",
+                "ScrollTop" : 0,
+                "RowHeight" : 30,
+                "ColumnFormat" : {
+                  "formatInfo" : [ {
+                    "ValidationMessage" : "",
+                    "Align" : "left",
+                    "AllowEdit" : false,
+                    "ValidationExpression" : "",
+                    "Title" : "Sequence",
+                    "FormatOptions" : {
+                      "renderer" : "DEFAULT"
+                    },
+                    "FieldName" : "Sequence",
+                    "Width" : "auto"
+                  }, {
+                    "ValidationMessage" : "",
+                    "Align" : "left",
+                    "AllowEdit" : false,
+                    "ValidationExpression" : "",
+                    "Title" : "LocationAddress",
+                    "FormatOptions" : {
+                      "renderer" : "STRING",
+                      "FormatString" : "full"
+                    },
+                    "FieldName" : "LocationAddress",
+                    "Width" : "auto"
+                  }, {
+                    "ValidationMessage" : "",
+                    "Align" : "left",
+                    "AllowEdit" : false,
+                    "ValidationExpression" : "",
+                    "Title" : "LocationDescription",
+                    "FormatOptions" : {
+                      "renderer" : "STRING",
+                      "FormatString" : "full"
+                    },
+                    "FieldName" : "LocationDescription",
+                    "Width" : "auto"
+                  } ]
+                },
+                "Type" : "dhxgrid",
+                "Area" : "UI",
+                "Top" : 135,
+                "IsPrintLayout" : false,
+                "Id" : "Grid-29",
+                "RowHoverStyle" : "DefaultRowHoverStyle",
+                "AutoSelectFirstRow" : true
+              }
+            } ],
+            "Properties" : {
+              "MinHeight" : 0,
+              "TabWidth" : 36,
+              "BGImageRepeat" : "no-repeat",
+              "ShowDataLoading" : true,
+              "ShowExpandCollapseTab" : false,
+              "ExpandCollapseTabLocation" : "outside",
+              "Visible" : true,
+              "TabExpandStyle" : "DefaultTabExpandStyle",
+              "DisplayName" : "Row 2",
+              "Style" : "DefaultContainerStyle",
+              "BGImageSize" : "auto",
+              "Overlay" : false,
+              "Expanded" : true,
+              "TabCollapseStyle" : "DefaultTabCollapseStyle",
+              "OverlayIsTransparent" : false,
+              "ResponsiveLayout" : true,
+              "Z-index" : 10,
+              "MinWidth" : 0,
+              "TabOffset" : 0,
+              "__TypeDisplayName" : "Container",
+              "TabLocation" : "center",
+              "Type" : "container",
+              "Area" : "UI",
+              "AnimateExpandCollapse" : true,
+              "TabHeight" : 36,
+              "Id" : "container-7"
+            }
+          } ],
+          "Properties" : {
+            "Left" : 60,
+            "IncludeSpacingInFixedAreas" : false,
+            "ShowDataLoading" : true,
+            "HeaderHeight" : 250,
+            "PctRow4" : 0,
+            "PctRow3" : 0,
+            "PctRow2" : 40,
+            "PctRow1" : 60,
+            "FooterHeight" : 0,
+            "PctRow8" : 0,
+            "PctRow7" : 0,
+            "PctRow6" : 0,
+            "PctRow5" : 0,
+            "Visible" : true,
+            "PctColumn5" : 1,
+            "RightSidebar" : false,
+            "DisplayName" : "Layout-4",
+            "LeftSidebar" : false,
+            "PctColumn6" : 1,
+            "PrintWidth" : 650,
+            "PctColumn3" : 1,
+            "PctColumn4" : 1,
+            "PctColumn1" : 50,
+            "PctColumn2" : 50,
+            "PrintMarginTopBottom" : 0.5,
+            "Rows" : 2,
+            "RightSidebarWidth" : 0,
+            "PrintMarginLeftRight" : 0.5,
+            "PctColumn7" : 1,
+            "ResponsiveLayout" : true,
+            "PctColumn8" : 1,
+            "Columns" : 0,
+            "Z-index" : 10,
+            "Spacing" : 0,
+            "Orientation" : "vertical",
+            "__TypeDisplayName" : "Layout",
+            "Type" : "layout",
+            "Area" : "UI",
+            "LeftSidebarWidth" : 0,
+            "Header" : true,
+            "Top" : 155,
+            "IsPrintLayout" : false,
+            "Footer" : false,
+            "Id" : "Layout-4"
+          }
+        } ],
+        "Properties" : {
+          "MinHeight" : 0,
+          "TabWidth" : 36,
+          "BGImageRepeat" : "no-repeat",
+          "ShowDataLoading" : true,
+          "ShowExpandCollapseTab" : false,
+          "ExpandCollapseTabLocation" : "outside",
+          "Visible" : true,
+          "TabExpandStyle" : "DefaultTabExpandStyle",
+          "DisplayName" : "Left Sidebar",
+          "Style" : "DefaultContainerStyle",
+          "BGImageSize" : "auto",
+          "Overlay" : false,
+          "Expanded" : true,
+          "TabCollapseStyle" : "DefaultTabCollapseStyle",
+          "OverlayIsTransparent" : false,
+          "ResponsiveLayout" : true,
+          "Z-index" : 10,
+          "MinWidth" : 0,
+          "TabOffset" : 0,
+          "__TypeDisplayName" : "Container",
+          "TabLocation" : "center",
+          "Type" : "container",
+          "Area" : "UI",
+          "AnimateExpandCollapse" : true,
+          "TabHeight" : 36,
+          "Id" : "container-2"
+        }
+      }, {
+        "Widgets" : [ {
+          "Widgets" : [ {
+            "Widgets" : [ {
+              "Widgets" : [ {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "Left" : 10,
+                  "ResponsiveLayout" : false,
+                  "ShowDataLoading" : true,
+                  "Z-index" : 10,
+                  "Text" : "Planned Route",
+                  "__TypeDisplayName" : "Label",
+                  "Type" : "label",
+                  "Area" : "UI",
+                  "Alignment" : "left",
+                  "Top" : 15,
+                  "Visible" : true,
+                  "DisplayName" : "Label-48",
+                  "Style" : {
+                    "image" : "",
+                    "backgroundColor" : "",
+                    "textSize" : "2xl",
+                    "lineStyle" : "solid",
+                    "displayString" : "",
+                    "fontEmphasisUnderline" : false,
+                    "fontEmphasisItalic" : false,
+                    "lineThickness" : 1,
+                    "lineColor" : "",
+                    "foregroundColor" : "#000000",
+                    "fontEmphasisBold" : true,
+                    "secondaryBackgroundColor" : ""
+                  },
+                  "Height" : 22,
+                  "Id" : "Label-48",
+                  "Width" : 140
+                }
+              }, {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "TextIfNoValue" : "",
+                  "Left" : 155,
+                  "ShowDataLoading" : true,
+                  "Label" : "Distance (miles)",
+                  "ValueDisplayLabelStyle" : "DefaultWidgetLabelStyle",
+                  "TextIfNoValueOffset" : 0,
+                  "Overflow" : "hidden",
+                  "Alignment" : "left",
+                  "TextIfNoValueStyle" : "DefaultValueDisplayNoTextStyle",
+                  "ImageScaling" : "width",
+                  "Visible" : true,
+                  "DisplayName" : "ValueDisplay-49",
+                  "Height" : 22,
+                  "VerticalAlignment" : "middle",
+                  "Width" : 140,
+                  "ValueDisplayStyle" : {
+                    "image" : "",
+                    "backgroundColor" : "",
+                    "textSize" : "xlarge",
+                    "lineStyle" : "solid",
+                    "displayString" : "",
+                    "fontEmphasisUnderline" : false,
+                    "fontEmphasisItalic" : false,
+                    "lineThickness" : 1,
+                    "lineColor" : "",
+                    "foregroundColor" : "#000000",
+                    "fontEmphasisBold" : true,
+                    "secondaryBackgroundColor" : ""
+                  },
+                  "ValueFormat" : {
+                    "renderer" : "NUMBER",
+                    "formatInfo" : {
+                      "StateFormats" : [ {
+                        "stateName" : "fixed",
+                        "state" : ""
+                      } ],
+                      "StateDefinition" : "",
+                      "StateDefinitionType" : "fixed",
+                      "FieldName" : ""
+                    },
+                    "FormatString" : "0.00"
+                  },
+                  "__supportsLabel" : true,
+                  "BackgroundFill" : "content",
+                  "ResponsiveLayout" : false,
+                  "Z-index" : 10,
+                  "LabelAlignment" : "left",
+                  "ValueFormat_StateParameters" : [ ],
+                  "__TypeDisplayName" : "Value Display",
+                  "Type" : "valuedisplay",
+                  "Area" : "UI",
+                  "Top" : 5,
+                  "Id" : "ValueDisplay-49",
+                  "TextWrap" : true
+                }
+              }, {
+                "Widgets" : [ ],
+                "Properties" : {
+                  "Left" : 240,
+                  "CancelConfirmationButton" : "button2",
+                  "ShowDataLoading" : true,
+                  "Label" : "Update Trip with Planned Distance",
+                  "FocusStyle" : "DefaultButtonFocusStyle",
+                  "TabSequence" : 0,
+                  "IconAlignment" : "left",
+                  "Visible" : true,
+                  "DisplayName" : "Button-51",
+                  "Style" : "DefaultButtonStyle",
+                  "Height" : 30,
+                  "DisabledStyle" : "DefaultButtonDisabledStyle",
+                  "Disabled" : false,
+                  "ConfirmationTitle" : "Confirm Action",
+                  "Width" : 205,
+                  "ResponsiveLayout" : false,
+                  "ConfirmationPrompt" : "Do Action?",
+                  "Z-index" : 10,
+                  "ConfirmationButton1Label" : "Yes",
+                  "RoundedCorners" : true,
+                  "__TypeDisplayName" : "Button",
+                  "HoverStyle" : "DefaultButtonHoverStyle",
+                  "Type" : "button",
+                  "Area" : "UI",
+                  "Top" : 15,
+                  "DefaultConfirmationButton" : "button1",
+                  "ConfirmationRequired" : false,
+                  "Id" : "Button-51",
+                  "ConfirmationButton2Label" : "No",
+                  "ActiveStyle" : "DefaultButtonActiveStyle"
+                }
+              } ],
+              "Properties" : {
+                "Left" : 50,
+                "ResponsiveLayout" : true,
+                "ShowDataLoading" : true,
+                "Z-index" : 10,
+                "VerticalAnchor" : "top",
+                "__TypeDisplayName" : "Panel",
+                "HorizontalAnchor" : "left",
+                "Type" : "panel",
+                "Area" : "UI",
+                "Top" : 45,
+                "Visible" : true,
+                "DisplayName" : "Panel-47",
+                "Style" : "DefaultPanelStyle",
+                "Height" : 200,
+                "Id" : "Panel-47",
+                "Width" : 300
+              }
+            } ],
+            "Properties" : {
+              "MinHeight" : 0,
+              "TabWidth" : 36,
+              "BGImageRepeat" : "no-repeat",
+              "ShowDataLoading" : true,
+              "ShowExpandCollapseTab" : false,
+              "ExpandCollapseTabLocation" : "outside",
+              "Visible" : true,
+              "TabExpandStyle" : "DefaultTabExpandStyle",
+              "DisplayName" : "Header",
+              "Style" : "DefaultContainerStyle",
+              "BGImageSize" : "auto",
+              "Overlay" : false,
+              "Expanded" : true,
+              "TabCollapseStyle" : "DefaultTabCollapseStyle",
+              "OverlayIsTransparent" : false,
+              "ResponsiveLayout" : true,
+              "Z-index" : 10,
+              "MinWidth" : 0,
+              "TabOffset" : 0,
+              "__TypeDisplayName" : "Container",
+              "TabLocation" : "center",
+              "Type" : "container",
+              "Area" : "UI",
+              "AnimateExpandCollapse" : true,
+              "TabHeight" : 36,
+              "Id" : "container-45"
+            }
+          }, {
+            "Widgets" : [ {
+              "Widgets" : [ ],
+              "Properties" : {
+                "RouteLocationField" : "location",
+                "Left" : 0,
+                "SelectedRegionStyle" : "DefaultMapRegionSelectedStyle",
+                "LocationField" : "Location",
+                "SelectionMarkerStyle" : "DefaultMapSelectionStyle",
+                "StartMarkerStyle" : "DefaultMapStartStyle",
+                "ShowDataLoading" : true,
+                "TooltipMashupWidth" : 400,
+                "ShowPlannedRoute" : true,
+                "ShowMarkers" : true,
+                "MapType" : "roadmap",
+                "EndMarkerStyle" : "DefaultMapEndStyle",
+                "RegionMultiSelect" : false,
+                "SelectedMarkerStyle" : "DefaultMapSelectedStyle",
+                "RegionStyle" : "DefaultMapRegionStyle",
+                "AutoZoomBehavior" : "every-data-change",
+                "TooltipMashupName" : "",
+                "TooltipField1" : "LocationDescription",
+                "RouteStyle" : "DefaultMapRouteStyle",
+                "MarkerFormatting_StateParameters" : [ ],
+                "RegionFormatting_StateParameters" : [ ],
+                "EnableLocationSelection" : false,
+                "MashupParameters" : [ ],
+                "Z-index" : 10,
+                "PathStyle" : "DefaultMapPathStyle",
+                "MarkerStyle" : "DefaultMapMarkerStyle",
+                "__TypeDisplayName" : "Google Map",
+                "Area" : "UI",
+                "Top" : 0,
+                "Id" : "GoogleMap-50",
+                "TooltipMashupHeight" : 300,
+                "RegionFillOpacity" : 1,
+                "ShowSelectionMarker" : false,
+                "ShowTraffic" : false,
+                "MapSkin" : "normal",
+                "EnableMarkerSelection" : true,
+                "Visible" : true,
+                "RegionLocationsField" : "locations",
+                "DisplayName" : "GoogleMap-50",
+                "ShowStartMarker" : true,
+                "Zoom" : 8,
+                "Height" : 200,
+                "Width" : 400,
+                "MarkerField" : "",
+                "ShowEndMarker" : true,
+                "MultiSelect" : false,
+                "ResponsiveLayout" : true,
+                "ShowPathBetweenMarkers" : false,
+                "ShowRoute" : false,
+                "ShowRegions" : false,
+                "RegionLocationField" : "location",
+                "ShowMarkerTooltips" : true,
+                "Type" : "googlemap",
+                "EnableRegionSelection" : false,
+                "PlannedRouteStyle" : {
+                  "image" : "",
+                  "backgroundColor" : "",
+                  "textSize" : "normal",
+                  "lineStyle" : "dotted",
+                  "displayString" : "",
+                  "fontEmphasisUnderline" : false,
+                  "fontEmphasisItalic" : false,
+                  "lineThickness" : 5,
+                  "lineColor" : "#ff2104",
+                  "foregroundColor" : "",
+                  "fontEmphasisBold" : false,
+                  "secondaryBackgroundColor" : ""
+                },
+                "ShowRegionTooltips" : false,
+                "TooltipLabel1" : "Description",
+                "PlannedRouteLocationField" : "routeLocation"
+              }
+            } ],
+            "Properties" : {
+              "MinHeight" : 0,
+              "TabWidth" : 36,
+              "BGImageRepeat" : "no-repeat",
+              "ShowDataLoading" : true,
+              "ShowExpandCollapseTab" : false,
+              "ExpandCollapseTabLocation" : "outside",
+              "Visible" : true,
+              "TabExpandStyle" : "DefaultTabExpandStyle",
+              "DisplayName" : "Row 1",
+              "Style" : "DefaultContainerStyle",
+              "BGImageSize" : "auto",
+              "Overlay" : false,
+              "Expanded" : true,
+              "TabCollapseStyle" : "DefaultTabCollapseStyle",
+              "OverlayIsTransparent" : false,
+              "ResponsiveLayout" : true,
+              "Z-index" : 10,
+              "MinWidth" : 0,
+              "TabOffset" : 0,
+              "__TypeDisplayName" : "Container",
+              "TabLocation" : "center",
+              "Type" : "container",
+              "Area" : "UI",
+              "AnimateExpandCollapse" : true,
+              "TabHeight" : 36,
+              "Id" : "container-46"
+            }
+          } ],
+          "Properties" : {
+            "Left" : 220,
+            "IncludeSpacingInFixedAreas" : false,
+            "ShowDataLoading" : true,
+            "HeaderHeight" : 60,
+            "PctRow4" : 0,
+            "PctRow3" : 0,
+            "PctRow2" : 0,
+            "PctRow1" : 100,
+            "FooterHeight" : 0,
+            "PctRow8" : 0,
+            "PctRow7" : 0,
+            "PctRow6" : 0,
+            "PctRow5" : 0,
+            "Visible" : true,
+            "PctColumn5" : 1,
+            "RightSidebar" : false,
+            "DisplayName" : "Layout-44",
+            "LeftSidebar" : false,
+            "PctColumn6" : 1,
+            "PrintWidth" : 650,
+            "PctColumn3" : 1,
+            "PctColumn4" : 1,
+            "PctColumn1" : 50,
+            "PctColumn2" : 50,
+            "PrintMarginTopBottom" : 0.5,
+            "Rows" : 1,
+            "RightSidebarWidth" : 0,
+            "PrintMarginLeftRight" : 0.5,
+            "PctColumn7" : 1,
+            "ResponsiveLayout" : true,
+            "PctColumn8" : 1,
+            "Columns" : 0,
+            "Z-index" : 10,
+            "Spacing" : 0,
+            "Orientation" : "vertical",
+            "__TypeDisplayName" : "Layout",
+            "Type" : "layout",
+            "Area" : "UI",
+            "LeftSidebarWidth" : 0,
+            "Header" : true,
+            "Top" : 330,
+            "IsPrintLayout" : false,
+            "Footer" : false,
+            "Id" : "Layout-44"
+          }
+        } ],
+        "Properties" : {
+          "MinHeight" : 0,
+          "TabWidth" : 36,
+          "BGImageRepeat" : "no-repeat",
+          "ShowDataLoading" : true,
+          "ShowExpandCollapseTab" : false,
+          "ExpandCollapseTabLocation" : "outside",
+          "Visible" : true,
+          "TabExpandStyle" : "DefaultTabExpandStyle",
+          "DisplayName" : "Column 1",
+          "Style" : "DefaultContainerStyle",
+          "BGImageSize" : "auto",
+          "Overlay" : false,
+          "Expanded" : true,
+          "TabCollapseStyle" : "DefaultTabCollapseStyle",
+          "OverlayIsTransparent" : false,
+          "ResponsiveLayout" : true,
+          "Z-index" : 10,
+          "MinWidth" : 0,
+          "TabOffset" : 0,
+          "__TypeDisplayName" : "Container",
+          "TabLocation" : "center",
+          "Type" : "container",
+          "Area" : "UI",
+          "AnimateExpandCollapse" : true,
+          "TabHeight" : 36,
+          "Id" : "container-3"
+        }
+      } ],
+      "Properties" : {
+        "Left" : 90,
+        "IncludeSpacingInFixedAreas" : false,
+        "ShowDataLoading" : true,
+        "HeaderHeight" : 0,
+        "PctRow4" : 0,
+        "PctRow3" : 0,
+        "PctRow2" : 50,
+        "PctRow1" : 50,
+        "FooterHeight" : 0,
+        "PctRow8" : 0,
+        "PctRow7" : 0,
+        "PctRow6" : 0,
+        "PctRow5" : 0,
+        "Visible" : true,
+        "PctColumn5" : 1,
+        "RightSidebar" : false,
+        "DisplayName" : "Layout-1",
+        "LeftSidebar" : true,
+        "PctColumn6" : 1,
+        "PrintWidth" : 650,
+        "PctColumn3" : 1,
+        "PctColumn4" : 1,
+        "PctColumn1" : 100,
+        "PctColumn2" : 0,
+        "PrintMarginTopBottom" : 0.5,
+        "Rows" : 0,
+        "RightSidebarWidth" : 0,
+        "PrintMarginLeftRight" : 0.5,
+        "PctColumn7" : 1,
+        "ResponsiveLayout" : true,
+        "PctColumn8" : 1,
+        "Columns" : 1,
+        "Z-index" : 10,
+        "Spacing" : 0,
+        "Orientation" : "horizontal",
+        "__TypeDisplayName" : "Layout",
+        "Type" : "layout",
+        "Area" : "UI",
+        "LeftSidebarWidth" : 680,
+        "Header" : false,
+        "Top" : 135,
+        "IsPrintLayout" : false,
+        "Footer" : false,
+        "Id" : "Layout-1"
+      }
+    } ],
+    "Properties" : {
+      "MinHeight" : 0,
+      "Left" : 0,
+      "BGImageRepeat" : "no-repeat",
+      "ShowDataLoading" : true,
+      "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+      "id_index" : 51,
+      "supportsAutoResize" : true,
+      "Visible" : true,
+      "DisplayName" : "Mashup",
+      "Style" : "DefaultMashupStyle",
+      "BGImageSize" : "auto",
+      "Height" : 618,
+      "Width" : 1024,
+      "Rows" : 0,
+      "TitleBar" : false,
+      "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+      "TitleBarStyle" : "DefaultTitleBarStyle",
+      "ResponsiveLayout" : true,
+      "Columns" : 0,
+      "Z-index" : 10,
+      "Title" : "",
+      "TitleBarText" : "Gadget Title Here",
+      "MinWidth" : 0,
+      "__TypeDisplayName" : "Mashup",
+      "Type" : "mashup",
+      "Area" : "Mashup",
+      "Top" : 0,
+      "IsPrintLayout" : false,
+      "Id" : "mashup-root",
+      "IgnoreWarningsInViewMashup" : false
+    }
+  },
+  "mashupType" : "mashup",
+  "Events" : [ {
+    "EventTriggerArea" : "Mashup",
+    "EventHandlerService" : "QueryImplementingThingsWithData",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "ThingTemplates_VehicleDeviceTemplate",
+    "EventTriggerEvent" : "Loaded",
+    "Id" : "8649b8b1-d0f2-434e-8b18-4e7fd6cffc32",
+    "EventTriggerId" : "mashup-root",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "UI",
+    "EventHandlerService" : "QueryImplementingThingsWithData",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "ThingTemplates_VehicleDeviceTemplate",
+    "EventTriggerEvent" : "Changed",
+    "Id" : "99726309-f3ec-4a86-a1cd-cc22633bb361",
+    "EventTriggerId" : "DataFilter-9",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "Data",
+    "EventHandlerService" : "GetTrips",
+    "EventTriggerSection" : "ThingTemplates_VehicleDeviceTemplate",
+    "EventHandlerId" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "EventTriggerEvent" : "SelectedRowsChanged",
+    "Id" : "61655ea0-f915-455e-8760-16053def8349",
+    "EventTriggerId" : "QueryImplementingThingsWithData",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "UI",
+    "EventHandlerService" : "GetTrips",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "EventTriggerEvent" : "PopupClosed",
+    "Id" : "cce76905-b07c-48e4-a7dc-895669be8c95",
+    "EventTriggerId" : "Navigation-22",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "UI",
+    "EventHandlerService" : "GetTrips",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "EventTriggerEvent" : "Changed",
+    "Id" : "1e446c57-54dd-4c4d-a645-7fcd12380d2f",
+    "EventTriggerId" : "DateTimePicker-21",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "UI",
+    "EventHandlerService" : "EditTrip",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "EventTriggerEvent" : "Clicked",
+    "Id" : "c4c3b625-3c5a-438d-98cc-96faa14c3577",
+    "EventTriggerId" : "Button-26",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "Data",
+    "EventHandlerService" : "GetTrips",
+    "EventTriggerSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "EventHandlerId" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "EventTriggerEvent" : "ServiceInvokeCompleted",
+    "Id" : "24bee0db-8f70-40e5-9a22-466c8e826d7f",
+    "EventTriggerId" : "EditTrip",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "UI",
+    "EventHandlerService" : "DeleteTrip",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "EventTriggerEvent" : "Clicked",
+    "Id" : "737c0fd1-5933-4a79-8fcd-991f0c7adb29",
+    "EventTriggerId" : "Button-27",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "Data",
+    "EventHandlerService" : "GetTrips",
+    "EventTriggerSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "EventHandlerId" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "EventTriggerEvent" : "ServiceInvokeCompleted",
+    "Id" : "ca25c2c2-b829-4b70-b298-bed67fb3cc98",
+    "EventTriggerId" : "DeleteTrip",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "UI",
+    "EventHandlerService" : "GetLocationFromAddress",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "Things_TripBuilderServices",
+    "EventTriggerEvent" : "Clicked",
+    "Id" : "a1031e08-9345-4106-831f-dc46c1495b05",
+    "EventTriggerId" : "Button-32",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "Data",
+    "EventHandlerService" : "GetTripLocations",
+    "EventTriggerSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "EventHandlerId" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "EventTriggerEvent" : "SelectedRowsChanged",
+    "Id" : "f1302e94-929e-4545-815c-bbb9bf5d0012",
+    "EventTriggerId" : "GetTrips",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "UI",
+    "EventHandlerService" : "AddTripLocation",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "EventTriggerEvent" : "Clicked",
+    "Id" : "f8722033-de4a-4e4f-bc72-455416635c67",
+    "EventTriggerId" : "Button-37",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "Data",
+    "EventHandlerService" : "GetTripLocations",
+    "EventTriggerSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "EventHandlerId" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "EventTriggerEvent" : "ServiceInvokeCompleted",
+    "Id" : "b470d26d-b7de-4311-80dc-6ac44bf9e698",
+    "EventTriggerId" : "AddTripLocation",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "Data",
+    "EventHandlerService" : "GetLocationFromAddress",
+    "EventTriggerSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "EventHandlerId" : "Things_TripBuilderServices",
+    "EventTriggerEvent" : "SelectedRowsChanged",
+    "Id" : "9d2af1ec-6f56-4422-89a0-1ec6d648fecf",
+    "EventTriggerId" : "GetTripLocations",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "UI",
+    "EventHandlerService" : "EditTripLocation",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "EventTriggerEvent" : "Clicked",
+    "Id" : "0b78084e-59d0-4701-988f-4aada46e94ef",
+    "EventTriggerId" : "Button-40",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "Data",
+    "EventHandlerService" : "GetTripLocations",
+    "EventTriggerSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "EventHandlerId" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "EventTriggerEvent" : "ServiceInvokeCompleted",
+    "Id" : "9833fe2c-3a47-4f1b-805b-aa08b0f52c82",
+    "EventTriggerId" : "EditTripLocation",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "UI",
+    "EventHandlerService" : "DeleteTripLocation",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "EventTriggerEvent" : "Clicked",
+    "Id" : "0c3437ae-412f-4b16-97b8-e1d6ac6b13e6",
+    "EventTriggerId" : "Button-41",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "Data",
+    "EventHandlerService" : "GetTripLocations",
+    "EventTriggerSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "EventHandlerId" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "EventTriggerEvent" : "ServiceInvokeCompleted",
+    "Id" : "9967aca3-54ca-4eeb-b380-714d728a3a74",
+    "EventTriggerId" : "DeleteTripLocation",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "UI",
+    "EventHandlerService" : "ChangeTripLocationPriority",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "Things_TripBuilderServices",
+    "EventTriggerEvent" : "Clicked",
+    "Id" : "0f5ee97a-bdf0-4edd-aeb4-bfb31d5b7ceb",
+    "EventTriggerId" : "Button-38",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "UI",
+    "EventHandlerService" : "ChangeTripLocationPriority1",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "Things_TripBuilderServices",
+    "EventTriggerEvent" : "Clicked",
+    "Id" : "6b3d0cee-0cef-484a-8b77-f70671aa26a1",
+    "EventTriggerId" : "Button-39",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "Data",
+    "EventHandlerService" : "GetTripLocations",
+    "EventTriggerSection" : "Things_TripBuilderServices",
+    "EventHandlerId" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "EventTriggerEvent" : "ServiceInvokeCompleted",
+    "Id" : "650c7711-8180-4b29-8e88-ebe4fc30f05f",
+    "EventTriggerId" : "ChangeTripLocationPriority1",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "Data",
+    "EventHandlerService" : "GetTripLocations",
+    "EventTriggerSection" : "Things_TripBuilderServices",
+    "EventHandlerId" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "EventTriggerEvent" : "ServiceInvokeCompleted",
+    "Id" : "4fdc2b68-1a9b-4fec-8f27-8e50e471fc6d",
+    "EventTriggerId" : "ChangeTripLocationPriority",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "Data",
+    "EventHandlerService" : "GetRouteDataForTrip",
+    "EventTriggerSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "EventHandlerId" : "Things_TripBuilderServices",
+    "EventTriggerEvent" : "ServiceInvokeCompleted",
+    "Id" : "fab00e53-3c49-4123-8176-e5ac60a29834",
+    "EventTriggerId" : "GetTripLocations",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "Data",
+    "EventHandlerService" : "SumDistance",
+    "EventTriggerSection" : "Things_TripBuilderServices",
+    "EventHandlerId" : "Things_TripBuilderServices",
+    "EventTriggerEvent" : "ServiceInvokeCompleted",
+    "Id" : "5a819748-4b30-4b43-ac04-30e3d647f56d",
+    "EventTriggerId" : "GetRouteDataForTrip",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "UI",
+    "EventHandlerService" : "UpdateTripPlannedDistance",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "EventTriggerEvent" : "Clicked",
+    "Id" : "193fb5f1-d053-4f8a-97fc-c9118b744f69",
+    "EventTriggerId" : "Button-51",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "Data",
+    "EventHandlerService" : "GetTrips",
+    "EventTriggerSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "EventHandlerId" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "EventTriggerEvent" : "ServiceInvokeCompleted",
+    "Id" : "ede5707a-0805-4198-8e98-1df930138145",
+    "EventTriggerId" : "UpdateTripPlannedDistance",
+    "EventHandlerArea" : "Data"
+  } ],
+  "DataBindings" : [ {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "QueryImplementingThingsWithData",
+    "SourceSection" : "ThingTemplates_VehicleDeviceTemplate",
+    "Id" : "c7f39024-dfc6-4f6c-8a3c-47394c8b17f6",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "InfoTable",
+      "TargetProperty" : "Data",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "INFOTABLE",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "SourceProperty" : ""
+    } ],
+    "SourceDetails" : "AllData",
+    "TargetId" : "DataFilter-9"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "ThingTemplates_VehicleDeviceTemplate",
+    "SourceId" : "DataFilter-9",
+    "SourceSection" : "",
+    "Id" : "f63c6fb6-bf43-4adb-84d9-677c11b0e4c0",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "query",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "QUERY",
+      "TargetPropertyBaseType" : "QUERY",
+      "SourceProperty" : "Query"
+    } ],
+    "TargetId" : "QueryImplementingThingsWithData"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "QueryImplementingThingsWithData",
+    "SourceSection" : "ThingTemplates_VehicleDeviceTemplate",
+    "Id" : "3c03090d-dac7-4eb6-95b4-748a945136b3",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "InfoTable",
+      "TargetProperty" : "Data",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "INFOTABLE",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "SourceProperty" : ""
+    } ],
+    "SourceDetails" : "AllData",
+    "TargetId" : "List-10"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "QueryImplementingThingsWithData",
+    "SourceSection" : "ThingTemplates_VehicleDeviceTemplate",
+    "Id" : "2273a22c-e7a0-4204-8184-ccf53615ac35",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "Data",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "ANYSCALAR",
+      "SourceProperty" : "Make"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "ValueDisplay-12"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "QueryImplementingThingsWithData",
+    "SourceSection" : "ThingTemplates_VehicleDeviceTemplate",
+    "Id" : "2b5e8658-4d98-485f-82a9-dc7015f6daef",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "Data",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "ANYSCALAR",
+      "SourceProperty" : "Model"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "ValueDisplay-15"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "QueryImplementingThingsWithData",
+    "SourceSection" : "ThingTemplates_VehicleDeviceTemplate",
+    "Id" : "5639285b-dc75-419f-91dd-35d4dc1a3af1",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "Data",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "ANYSCALAR",
+      "SourceProperty" : "Color"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "ValueDisplay-11"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "QueryImplementingThingsWithData",
+    "SourceSection" : "ThingTemplates_VehicleDeviceTemplate",
+    "Id" : "0cafc437-3b3f-4383-8546-ae435af1b99b",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "Data",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "ANYSCALAR",
+      "SourceProperty" : "Year"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "ValueDisplay-16"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "QueryImplementingThingsWithData",
+    "SourceSection" : "ThingTemplates_VehicleDeviceTemplate",
+    "Id" : "045fe809-b935-48a2-86a5-3733819fc831",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "Data",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "ANYSCALAR",
+      "SourceProperty" : "FirstName"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "ValueDisplay-13"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "QueryImplementingThingsWithData",
+    "SourceSection" : "ThingTemplates_VehicleDeviceTemplate",
+    "Id" : "40c451e4-be10-407f-851a-28798e76409a",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "Data",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "ANYSCALAR",
+      "SourceProperty" : "LastName"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "ValueDisplay-14"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "SourceId" : "QueryImplementingThingsWithData",
+    "SourceSection" : "ThingTemplates_VehicleDeviceTemplate",
+    "Id" : "34ff3105-415e-4873-81b8-903061aa3d9c",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "value",
+      "TargetPropertyType" : "Entity",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "THINGNAME",
+      "SourceProperty" : "name"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "EntityName"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "SourceId" : "DateTimePicker-21",
+    "SourceSection" : "",
+    "Id" : "04288c90-57ad-4cb3-a27c-2fbe932bc72e",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "TripDate",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "DATETIME",
+      "TargetPropertyBaseType" : "DATETIME",
+      "SourceProperty" : "DateTime"
+    } ],
+    "TargetId" : "GetTrips"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "QueryImplementingThingsWithData",
+    "SourceSection" : "ThingTemplates_VehicleDeviceTemplate",
+    "Id" : "069f6b0f-85e6-4ee5-ad27-c9025fd9d9d3",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "Vehicle",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "name"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "Navigation-22"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetTrips",
+    "SourceSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "Id" : "00f11aa9-c0e9-459d-8f98-fdd78d37f9fe",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "InfoTable",
+      "TargetProperty" : "Data",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "INFOTABLE",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "SourceProperty" : ""
+    } ],
+    "SourceDetails" : "AllData",
+    "TargetId" : "Grid-23"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetTrips",
+    "SourceSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "Id" : "0153130b-0912-4448-8ee6-6411e92d2417",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "Value",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "INTEGER",
+      "TargetPropertyBaseType" : "NUMBER",
+      "SourceProperty" : "Priority"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "NumericEntry-24"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetTrips",
+    "SourceSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "Id" : "f88bb11a-c6a1-479e-888d-93c208b0d674",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "Text",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "Description"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "Textbox-25"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "SourceId" : "NumericEntry-24",
+    "SourceSection" : "",
+    "Id" : "e3731f6d-6af5-442a-a92e-de9514d693ba",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "TripPriority",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "NUMBER",
+      "TargetPropertyBaseType" : "INTEGER",
+      "SourceProperty" : "Value"
+    } ],
+    "TargetId" : "EditTrip"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "SourceId" : "Textbox-25",
+    "SourceSection" : "",
+    "Id" : "9538627b-2da8-4bf8-840f-9ff7068dee09",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "TripDescription",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "Text"
+    } ],
+    "TargetId" : "EditTrip"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "SourceId" : "DateTimePicker-21",
+    "SourceSection" : "",
+    "Id" : "b6ec5d79-9036-4c81-85b0-3912b0bafb27",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "TripDate",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "DATETIME",
+      "TargetPropertyBaseType" : "DATETIME",
+      "SourceProperty" : "DateTime"
+    } ],
+    "TargetId" : "EditTrip"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "SourceId" : "GetTrips",
+    "SourceSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "Id" : "c0fe9cc7-fe1c-454e-932e-8df8c9412afb",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "TripID",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "INTEGER",
+      "TargetPropertyBaseType" : "INTEGER",
+      "SourceProperty" : "ID"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "EditTrip"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "SourceId" : "DateTimePicker-21",
+    "SourceSection" : "",
+    "Id" : "782cb267-3265-4c29-90b2-60dd79e1d6c6",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "TripDate",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "DATETIME",
+      "TargetPropertyBaseType" : "DATETIME",
+      "SourceProperty" : "DateTime"
+    } ],
+    "TargetId" : "DeleteTrip"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "SourceId" : "GetTrips",
+    "SourceSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "Id" : "87f1ea37-e7ef-4886-8394-3b76549a1b7a",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "TripID",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "INTEGER",
+      "TargetPropertyBaseType" : "INTEGER",
+      "SourceProperty" : "ID"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "DeleteTrip"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "DateTimePicker-21",
+    "SourceSection" : "",
+    "Id" : "2e4ca2ad-7e0b-4b29-8e7f-258049cbc11e",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "TripDate",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "DATETIME",
+      "TargetPropertyBaseType" : "DATETIME",
+      "SourceProperty" : "DateTime"
+    } ],
+    "TargetId" : "Navigation-22"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetLocationFromAddress",
+    "SourceSection" : "Things_TripBuilderServices",
+    "Id" : "9bfb6257-3a9a-4de0-8df3-2dc8b109f6c7",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "SelectedLocation",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "LOCATION",
+      "TargetPropertyBaseType" : "LOCATION",
+      "SourceProperty" : "result"
+    } ],
+    "SourceDetails" : "AllData",
+    "TargetId" : "GoogleMap-33"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "Things_TripBuilderServices",
+    "SourceId" : "Textbox-31",
+    "SourceSection" : "",
+    "Id" : "9b6db9f2-40d0-4917-8579-dc0457ca0863",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "Address",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "Text"
+    } ],
+    "TargetId" : "GetLocationFromAddress"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetLocationFromAddress",
+    "SourceSection" : "Things_TripBuilderServices",
+    "Id" : "3ebce8e0-be8a-4cdb-b61c-4bf7c3e4b6f8",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "Data",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "LOCATION",
+      "TargetPropertyBaseType" : "ANYSCALAR",
+      "SourceProperty" : "result"
+    } ],
+    "SourceDetails" : "AllData",
+    "TargetId" : "ValueDisplay-34"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "SourceId" : "DateTimePicker-21",
+    "SourceSection" : "",
+    "Id" : "2675827d-3fd8-491e-85ba-c01f559bf93d",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "TripDate",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "DATETIME",
+      "TargetPropertyBaseType" : "DATETIME",
+      "SourceProperty" : "DateTime"
+    } ],
+    "TargetId" : "GetTripLocations"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "SourceId" : "GetTrips",
+    "SourceSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "Id" : "aad55c84-5477-4a20-99b8-fe409564c4a2",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "TripID",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "INTEGER",
+      "TargetPropertyBaseType" : "INTEGER",
+      "SourceProperty" : "ID"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "GetTripLocations"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "SourceId" : "DateTimePicker-21",
+    "SourceSection" : "",
+    "Id" : "a2bf80f3-2077-4aae-bd93-e33b233651ac",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "TripDate",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "DATETIME",
+      "TargetPropertyBaseType" : "DATETIME",
+      "SourceProperty" : "DateTime"
+    } ],
+    "TargetId" : "AddTripLocation"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "SourceId" : "Textbox-31",
+    "SourceSection" : "",
+    "Id" : "6dd79c19-f997-4193-8b74-22190f6886cc",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "LocationAddress",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "Text"
+    } ],
+    "TargetId" : "AddTripLocation"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "SourceId" : "GetTrips",
+    "SourceSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "Id" : "5a5d9d80-0e61-4842-abb8-6493ddeca9c0",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "TripID",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "INTEGER",
+      "TargetPropertyBaseType" : "INTEGER",
+      "SourceProperty" : "ID"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "AddTripLocation"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "SourceId" : "NumericEntry-36",
+    "SourceSection" : "",
+    "Id" : "5d04e366-5ba1-49a7-8967-8b65164c69ce",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "LocationSequence",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "NUMBER",
+      "TargetPropertyBaseType" : "INTEGER",
+      "SourceProperty" : "Value"
+    } ],
+    "TargetId" : "AddTripLocation"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "SourceId" : "Textbox-35",
+    "SourceSection" : "",
+    "Id" : "cb0146de-1bb7-4593-80e8-14d1c4dd29b8",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "LocationDescription",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "Text"
+    } ],
+    "TargetId" : "AddTripLocation"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetTripLocations",
+    "SourceSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "Id" : "aff8d141-4b73-48db-af0b-3eef3bd0aef0",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "InfoTable",
+      "TargetProperty" : "Data",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "INFOTABLE",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "SourceProperty" : ""
+    } ],
+    "SourceDetails" : "AllData",
+    "TargetId" : "Grid-29"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetTripLocations",
+    "SourceSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "Id" : "ac481b1d-c4ba-4590-9431-d1d9454aecb1",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "Text",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "LocationDescription"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "Textbox-35"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetTripLocations",
+    "SourceSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "Id" : "f278ba63-7696-4c34-b66a-a9cb6279cac6",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "Text",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "LocationAddress"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "Textbox-31"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetTripLocations",
+    "SourceSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "Id" : "80df82bb-7142-4188-b7a9-2c1e5dee9c86",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "Value",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "INTEGER",
+      "TargetPropertyBaseType" : "NUMBER",
+      "SourceProperty" : "Sequence"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "NumericEntry-36"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "SourceId" : "GetLocationFromAddress",
+    "SourceSection" : "Things_TripBuilderServices",
+    "Id" : "77e3a0c0-68b1-44ab-82bd-e26f979862d5",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "Location",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "LOCATION",
+      "TargetPropertyBaseType" : "LOCATION",
+      "SourceProperty" : "result"
+    } ],
+    "SourceDetails" : "AllData",
+    "TargetId" : "AddTripLocation"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "SourceId" : "NumericEntry-36",
+    "SourceSection" : "",
+    "Id" : "34b50342-1ff5-4cc7-b91e-049fdc5bcbc3",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "LocationSequence",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "NUMBER",
+      "TargetPropertyBaseType" : "INTEGER",
+      "SourceProperty" : "Value"
+    } ],
+    "TargetId" : "EditTripLocation"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "SourceId" : "DateTimePicker-21",
+    "SourceSection" : "",
+    "Id" : "e9c0319d-94be-499a-886d-a003c83e34d3",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "TripDate",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "DATETIME",
+      "TargetPropertyBaseType" : "DATETIME",
+      "SourceProperty" : "DateTime"
+    } ],
+    "TargetId" : "EditTripLocation"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "SourceId" : "Textbox-35",
+    "SourceSection" : "",
+    "Id" : "f27c16a4-b73f-4574-83ef-a7765a1d4d3e",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "LocationDescription",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "Text"
+    } ],
+    "TargetId" : "EditTripLocation"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "SourceId" : "Textbox-31",
+    "SourceSection" : "",
+    "Id" : "5f6580b3-0947-4a5a-8b3d-17fe470422cf",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "LocationAddress",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "Text"
+    } ],
+    "TargetId" : "EditTripLocation"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "SourceId" : "GetLocationFromAddress",
+    "SourceSection" : "Things_TripBuilderServices",
+    "Id" : "61330244-0b7a-4436-a00b-6746bd535db7",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "Location",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "LOCATION",
+      "TargetPropertyBaseType" : "LOCATION",
+      "SourceProperty" : "result"
+    } ],
+    "SourceDetails" : "AllData",
+    "TargetId" : "EditTripLocation"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "SourceId" : "GetTripLocations",
+    "SourceSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "Id" : "122a8e56-f8c5-4cf8-93eb-139665d1fb7b",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "TripLocationID",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "INTEGER",
+      "TargetPropertyBaseType" : "INTEGER",
+      "SourceProperty" : "LocationID"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "EditTripLocation"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "SourceId" : "GetTrips",
+    "SourceSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "Id" : "b7a2bd1e-f086-4f03-bbb4-205fbb696852",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "TripID",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "INTEGER",
+      "TargetPropertyBaseType" : "INTEGER",
+      "SourceProperty" : "ID"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "EditTripLocation"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "SourceId" : "GetTripLocations",
+    "SourceSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "Id" : "3f1532c9-8c82-43f8-8c0a-4dd28051c074",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "TripID",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "INTEGER",
+      "TargetPropertyBaseType" : "INTEGER",
+      "SourceProperty" : "TripID"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "DeleteTripLocation"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "SourceId" : "GetTripLocations",
+    "SourceSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "Id" : "89bec7be-202a-4c18-8a25-72e7eee2db57",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "LocationID",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "INTEGER",
+      "TargetPropertyBaseType" : "INTEGER",
+      "SourceProperty" : "LocationID"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "DeleteTripLocation"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "SourceId" : "DateTimePicker-21",
+    "SourceSection" : "",
+    "Id" : "332fd7c1-1d58-4b13-8c1c-618e17df08cc",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "TripDate",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "DATETIME",
+      "TargetPropertyBaseType" : "DATETIME",
+      "SourceProperty" : "DateTime"
+    } ],
+    "TargetId" : "DeleteTripLocation"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "Data",
+    "TargetSection" : "Things_TripBuilderServices",
+    "SourceId" : "GetTripLocations",
+    "SourceSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "Id" : "abfd112c-c4ad-431d-802e-05877241fb6b",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "TripLocationRecords",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "INFOTABLE",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "SourceProperty" : ""
+    } ],
+    "SourceDetails" : "AllData",
+    "TargetId" : "ChangeTripLocationPriority"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "Data",
+    "TargetSection" : "Things_TripBuilderServices",
+    "SourceId" : "GetTripLocations",
+    "SourceSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "Id" : "0a8656e9-4a95-42b7-8263-78d297ff3272",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "TripLocationRecords",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "INFOTABLE",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "SourceProperty" : ""
+    } ],
+    "SourceDetails" : "AllData",
+    "TargetId" : "ChangeTripLocationPriority1"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "Data",
+    "TargetSection" : "Things_TripBuilderServices",
+    "SourceId" : "GetTripLocations",
+    "SourceSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "Id" : "393a927b-d0f9-4b95-82a7-01f34d659d38",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "LocationIDToChange",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "INTEGER",
+      "TargetPropertyBaseType" : "INTEGER",
+      "SourceProperty" : "LocationID"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "ChangeTripLocationPriority"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "Data",
+    "TargetSection" : "Things_TripBuilderServices",
+    "SourceId" : "GetTripLocations",
+    "SourceSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "Id" : "8d07bcdf-6381-4441-9ce0-198452c1e4d3",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "LocationIDToChange",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "INTEGER",
+      "TargetPropertyBaseType" : "INTEGER",
+      "SourceProperty" : "LocationID"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "ChangeTripLocationPriority1"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "SourceId" : "GetTripLocations",
+    "SourceSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "Id" : "e3448cb5-bdfb-4a2d-863d-e26cf0a68843",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "LocationData",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "INFOTABLE",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "SourceProperty" : ""
+    } ],
+    "SourceDetails" : "AllData",
+    "TargetId" : "GetRouteDataForTrip"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "Data",
+    "TargetSection" : "Things_TripBuilderServices",
+    "SourceId" : "GetTripLocations",
+    "SourceSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "Id" : "d5c3635a-d5da-4d88-bc66-02901ff50822",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "LocationData",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "INFOTABLE",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "SourceProperty" : ""
+    } ],
+    "SourceDetails" : "AllData",
+    "TargetId" : "GetRouteDataForTrip"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "Data",
+    "TargetSection" : "Things_TripBuilderServices",
+    "SourceId" : "GetRouteDataForTrip",
+    "SourceSection" : "Things_TripBuilderServices",
+    "Id" : "241bd9ac-4e8a-46c3-9f49-c84addbaad3c",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "RouteData",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "INFOTABLE",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "SourceProperty" : ""
+    } ],
+    "SourceDetails" : "AllData",
+    "TargetId" : "SumDistance"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "SumDistance",
+    "SourceSection" : "Things_TripBuilderServices",
+    "Id" : "3c17d288-d4aa-46aa-863b-0624202ff7e7",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Field",
+      "TargetProperty" : "Data",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "NUMBER",
+      "TargetPropertyBaseType" : "ANYSCALAR",
+      "SourceProperty" : "result"
+    } ],
+    "SourceDetails" : "AllData",
+    "TargetId" : "ValueDisplay-49"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetTripLocations",
+    "SourceSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "Id" : "34d33155-2762-4fca-b0d6-73d4283ed408",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "InfoTable",
+      "TargetProperty" : "Data",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "INFOTABLE",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "SourceProperty" : ""
+    } ],
+    "SourceDetails" : "AllData",
+    "TargetId" : "GoogleMap-50"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetRouteDataForTrip",
+    "SourceSection" : "Things_TripBuilderServices",
+    "Id" : "9019d8b7-b100-405a-ab17-11e6a4301b7a",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "InfoTable",
+      "TargetProperty" : "PlannedRouteData",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "INFOTABLE",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "SourceProperty" : ""
+    } ],
+    "SourceDetails" : "AllData",
+    "TargetId" : "GoogleMap-50"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "SourceId" : "GetTrips",
+    "SourceSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "Id" : "411000c7-56f0-4251-b065-b3fd77ee67e7",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "TripID",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "INTEGER",
+      "TargetPropertyBaseType" : "INTEGER",
+      "SourceProperty" : "ID"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "UpdateTripPlannedDistance"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "SourceId" : "GetTrips",
+    "SourceSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "Id" : "9f5eaa7b-ceed-4697-8450-65bc3dde4112",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "TripDate",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "DATETIME",
+      "TargetPropertyBaseType" : "DATETIME",
+      "SourceProperty" : "TripDate"
+    } ],
+    "SourceDetails" : "SelectedRows",
+    "TargetId" : "UpdateTripPlannedDistance"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "Data",
+    "TargetSection" : "DynamicThingTemplates_VehicleDeviceTemplate",
+    "SourceId" : "SumDistance",
+    "SourceSection" : "Things_TripBuilderServices",
+    "Id" : "e04528a3-3a81-4293-975d-133f310ccf8a",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "PlannedDistance",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "NUMBER",
+      "TargetPropertyBaseType" : "NUMBER",
+      "SourceProperty" : "result"
+    } ],
+    "SourceDetails" : "AllData",
+    "TargetId" : "UpdateTripPlannedDistance"
+  } ],
+  "Data" : {
+    "ThingTemplates_VehicleDeviceTemplate" : {
+      "EntityType" : "ThingTemplates",
+      "Services" : [ {
+        "Target" : "QueryImplementingThingsWithData",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "d6c61dbf-7667-4c0c-99ad-1f10db017a5f",
+        "Name" : "QueryImplementingThingsWithData"
+      } ],
+      "EntityName" : "VehicleDeviceTemplate",
+      "Id" : "4ec00497-6e85-4e91-8f3e-69712c6b4727",
+      "DataName" : "ThingTemplates_VehicleDeviceTemplate"
+    },
+    "UserExtensions" : {
+      "EntityType" : "UserExtensions",
+      "Services" : [ {
+        "Target" : "GetCurrentUserExtensionProperties",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "UserExtensionInterface",
+        "Name" : "GetCurrentUserExtensionProperties"
+      } ],
+      "EntityName" : "",
+      "Id" : "UserExtensions",
+      "DataName" : "UserExtensions"
+    },
+    "DynamicThingTemplates_VehicleDeviceTemplate" : {
+      "EntityType" : "DynamicThingTemplates",
+      "Services" : [ {
+        "Target" : "GetTrips",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "570d4246-04ca-40c9-9ddb-04de324d82f4",
+        "Name" : "GetTrips"
+      }, {
+        "Target" : "EditTrip",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "5ed9a4fc-3394-4a93-b69b-c1492d928ca0",
+        "Name" : "EditTrip"
+      }, {
+        "Target" : "DeleteTrip",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "ed9fe895-4950-401b-8f96-c92c62a64ee5",
+        "Name" : "DeleteTrip"
+      }, {
+        "Target" : "GetTripLocations",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "230c8348-2d6e-45ee-988a-3bb4b0480aa1",
+        "Name" : "GetTripLocations"
+      }, {
+        "Target" : "AddTripLocation",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "f55b2d75-ddbc-477f-b056-7c21b9564c68",
+        "Name" : "AddTripLocation"
+      }, {
+        "Target" : "EditTripLocation",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "c8275ccf-9bac-45e9-9d9a-64edcb7d601e",
+        "Name" : "EditTripLocation"
+      }, {
+        "Target" : "DeleteTripLocation",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "d6244e52-f5e4-4a3f-8aef-61600a3bb414",
+        "Name" : "DeleteTripLocation"
+      }, {
+        "Target" : "UpdateTripPlannedDistance",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "79c80fdc-6c60-4bec-84f1-6716520b4dc1",
+        "Name" : "UpdateTripPlannedDistance"
+      } ],
+      "EntityName" : "VehicleDeviceTemplate",
+      "Id" : "884c7adc-a2d9-464f-b4fd-778155a9a208",
+      "DataName" : "DynamicThingTemplates_VehicleDeviceTemplate"
+    },
+    "Things_TripBuilderServices" : {
+      "EntityType" : "Things",
+      "Services" : [ {
+        "Target" : "GetLocationFromAddress",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "2aa9a4fd-189d-4a1f-8ae3-81070e7735d4",
+        "Name" : "GetLocationFromAddress"
+      }, {
+        "Target" : "ChangeTripLocationPriority",
+        "Parameters" : {
+          "MoveUp" : true
+        },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "f754b3f4-1bac-4494-bef4-d05615cb9482",
+        "Name" : "ChangeTripLocationPriority"
+      }, {
+        "Target" : "ChangeTripLocationPriority",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "8eb0c4e5-b874-42ae-9fe8-bb7e6e5a18e2",
+        "Name" : "ChangeTripLocationPriority1"
+      }, {
+        "Target" : "GetRouteDataForTrip",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "a658c70a-738e-41d3-80f6-a0b8ba822f83",
+        "Name" : "GetRouteDataForTrip"
+      }, {
+        "Target" : "SumDistance",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "15bb09de-debc-470d-b29f-0300a8828021",
+        "Name" : "SumDistance"
+      } ],
+      "EntityName" : "TripBuilderServices",
+      "Id" : "aecb071a-0b73-4d0c-88c4-06cca7ee89be",
+      "DataName" : "Things_TripBuilderServices"
+    },
+    "Session" : {
+      "EntityType" : "Session",
+      "Services" : [ {
+        "Target" : "GetGlobalSessionValues",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "SessionInterface",
+        "Name" : "GetGlobalSessionValues"
+      } ],
+      "EntityName" : "",
+      "Id" : "session",
+      "DataName" : "Session"
+    }
+  },
+  "DesignTimePermissions" : { }
+}]]></mashupContent>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : tags : updated, name : updated&#10;documentation : updated&#10;" timestamp="2015-03-27T13:16:33.397-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="documentation : updated&#10;" timestamp="2015-03-27T13:21:11.162-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T13:23:20.768-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T13:28:26.031-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T13:32:34.672-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T13:33:45.213-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T13:39:35.908-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T13:40:53.361-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T13:41:25.692-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T13:41:26.857-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T14:39:26.133-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T14:39:39.055-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T14:42:49.193-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T14:42:52.528-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T14:43:30.383-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T14:44:42.755-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T14:46:29.037-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T14:47:18.949-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T14:47:19.697-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T14:48:11.392-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T14:48:14.528-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T14:49:24.722-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T14:52:32.671-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T14:53:30.797-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T14:54:12.388-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T14:55:56.949-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T14:58:53.740-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T15:03:47.775-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T16:15:03.967-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T16:17:06.156-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T16:23:35.892-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T16:24:47.918-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T16:27:01.326-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T16:27:58.453-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T17:13:20.838-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T17:16:08.918-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T17:16:23.895-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T17:58:24.639-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T18:16:41.115-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T18:18:44.619-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T18:19:59.038-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T18:22:15.098-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T18:23:52.033-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T18:23:52.888-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T18:32:59.879-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T18:34:02.395-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T18:42:19.109-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T18:43:14.145-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T18:43:36.718-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T18:44:16.522-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T18:47:10.139-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T18:47:27.405-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T18:47:32.860-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T19:08:38.137-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T19:08:53.684-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T19:13:20.830-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T19:13:23.090-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T19:16:01.917-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T19:25:38.798-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T19:25:39.970-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T19:38:51.572-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T19:45:29.340-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T19:45:31.335-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T19:55:13.365-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T19:55:15.020-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T19:55:46.624-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T19:56:00.411-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T20:01:15.659-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T20:01:17.864-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T20:13:48.241-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T20:18:11.752-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T20:21:29.208-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T20:23:42.936-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-28T17:02:54.579-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-28T17:02:57.173-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-28T17:08:44.264-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-28T17:08:56.172-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-28T17:13:02.790-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-28T17:33:18.554-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-28T17:41:15.104-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-28T17:46:06.822-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-28T17:46:07.683-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-28T17:48:25.234-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-28T17:48:26.832-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-29T13:24:38.880-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-29T13:29:44.922-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-29T13:29:57.801-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-29T13:35:48.349-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-29T13:35:49.313-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-29T13:39:22.669-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-29T13:50:53.921-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-29T13:52:26.417-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-29T13:52:27.479-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-29T13:54:22.018-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-29T13:56:45.503-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-29T13:57:27.526-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-29T13:57:28.273-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-29T14:09:42.897-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-29T14:09:44.412-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-30T10:09:11.143-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-30T10:12:03.649-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-30T10:12:34.287-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-30T10:13:04.194-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-30T10:16:20.735-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-30T14:06:41.733-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-31T07:34:27.073-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-31T08:25:29.125-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-31T08:25:58.298-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-31T08:26:58.205-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-31T08:27:53.604-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-31T08:29:14.143-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-11-17T12:08:22.372-05:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </Mashup>
+    </Mashups>
+</Entities>
