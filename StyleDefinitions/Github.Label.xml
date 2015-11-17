@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <StyleDefinitions>
+        <StyleDefinition description="" documentationContent="" homeMashup="" lastModifiedDate="2015-11-17T13:17:06.027-05:00" name="Github.Label" tags="Applications:github">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <content><![CDATA[{"image":"","backgroundColor":"","textSize":"large","lineStyle":"solid","displayString":"","fontEmphasisUnderline":false,"fontEmphasisItalic":false,"lineThickness":1,"lineColor":"","foregroundColor":"#B65924","fontEmphasisBold":false,"secondaryBackgroundColor":""}]]></content>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-08-28T12:30:33.932-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-09-03T13:16:19.163-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-03T13:18:33.078-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-03T13:19:37.650-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-03T17:37:48.988-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-09-11T09:40:23.685-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-10-20T14:23:06.062-04:00" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-20T15:14:19.904-04:00" user="stevea"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-11-16T15:56:24.264-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-11-17T11:42:13.864-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T13:17:06.027-05:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </StyleDefinition>
+    </StyleDefinitions>
+</Entities>
