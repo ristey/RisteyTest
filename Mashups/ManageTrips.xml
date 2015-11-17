@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <Mashups>
-        <Mashup aspect.isResponsive="true" aspect.mashupType="mashup" columns="0.0" description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" homeMashup="" lastModifiedDate="2015-11-17T12:22:11.617-05:00" name="ManageTrips" rows="0.0" tags="Applications:TripBuilder">
+        <Mashup aspect.isResponsive="true" aspect.mashupType="mashup" columns="0.0" description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" homeMashup="" lastModifiedDate="2015-11-17T13:26:37.555-05:00" name="ManageTrips" rows="0.0" tags="Applications:TripBuilder">
             <Owner name="Administrator" type="User"/>
             <avatar/>
             <DesignTimePermissions>
@@ -299,7 +299,7 @@
                       "TextIfNoValue" : "",
                       "Left" : 155,
                       "ShowDataLoading" : true,
-                      "Label" : "Model",
+                      "Label" : "Vehicle Model",
                       "ValueDisplayLabelStyle" : "DefaultWidgetLabelStyle",
                       "TextIfNoValueOffset" : 0,
                       "Overflow" : "hidden",
@@ -3465,6 +3465,7 @@
                 <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-11-17T12:08:22.372-05:00" user="Administrator"/>
                 <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T12:19:44.506-05:00" user="Administrator"/>
                 <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T12:22:11.617-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T13:26:37.555-05:00" user="Administrator"/>
             </ConfigurationChanges>
         </Mashup>
     </Mashups>
