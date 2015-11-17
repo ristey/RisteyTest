@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <DataShapes>
+        <DataShape baseDataShape="" description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;" homeMashup="" lastModifiedDate="2015-11-17T12:08:22.346-05:00" name="TripLocationShape" tags="Applications:TripBuilder">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <FieldDefinitions>
+                <FieldDefinition aspect.isPrimaryKey="true" baseType="DATETIME" description="" name="TripDate" ordinal="1"/>
+                <FieldDefinition baseType="STRING" description="" name="LocationDescription" ordinal="6"/>
+                <FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="" name="VehicleDeviceThing" ordinal="2"/>
+                <FieldDefinition aspect.isPrimaryKey="true" baseType="INTEGER" description="" name="LocationID" ordinal="4"/>
+                <FieldDefinition baseType="STRING" description="" name="LocationAddress" ordinal="8"/>
+                <FieldDefinition baseType="INTEGER" description="" name="Sequence" ordinal="5"/>
+                <FieldDefinition aspect.isPrimaryKey="true" baseType="INTEGER" description="" name="TripID" ordinal="3"/>
+                <FieldDefinition baseType="LOCATION" description="" name="Location" ordinal="7"/>
+            </FieldDefinitions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated&#10;documentation : updated&#10;" timestamp="2015-03-27T17:06:51.798-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : TripDate : Added, VehicleDeviceThing : Added, TripID : Added, LocationID : Added, Sequence : Added, LocationDescription : Added, Location : Added&#10;" timestamp="2015-03-27T17:10:53.735-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T17:11:47.210-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : LocationAddress : Added&#10;" timestamp="2015-03-27T18:50:15.206-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-11-17T12:08:22.346-05:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </DataShape>
+    </DataShapes>
+</Entities>
