@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <ThingTemplates>
+        <ThingTemplate baseThingTemplate="GenericThing" description="" documentationContent="&#10;" effectiveThingPackage="ConfiguredThing" homeMashup="" lastModifiedDate="2015-11-17T13:17:05.978-05:00" name="Github.Connection" tags="Applications:github" thingPackage="" valueStream="">
+            <Owner name="Administrator" type="User"/>
+            <avatar><![CDATA[iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAOeUlEQVR42u1a+XdUZZrmL5jf5ni6
+nSaVpJKq1L7cWlIJAQRGaIGEEIyNEZc0yowoAiK2EhBsbBqCotLD5gCKBFoRoRmkmyhHtnSLEOmw
+SACxmc7CCKSWu9WaZ557K3HAEwlLPN19ztQ530ml6t7vvs/7vd/7PO/71SBZlvGPPAb9P4DrhgRJ
+4hBFiByxWAyxaEz/K+qf9Xz/dwdAyhomywoUVYUaTyCRSCKZSiOd5kjxfYKfxfmdymt4jw5E+nsA
+0Otx3cuadzUQccQJIplKIZXmIIBEnJ/pxmevj8V6V+RvAkAzIopIJIqolEAKvS8FYvtZtDYfQmPj
+Tmxd8ybefIVjzVbsbGzEoeZWnG0XeVXvK4WkzDkiEUTF2wutWwcg9Xgu3mOD+j9oazmMT/Zsx9ZN
+a7G2fhFemjMdtbWTUXFPKUqdHPdUYHJtLabPeQmL6nnNpt9i+55PcLjlIjrlnnniPSsp/ZAAtMkV
+xnFChRwNI3blPM7ufxdrn6nCCK8VhSYTrA4n7BwulxturxdeH4eX710uOB12DitM2nXeEaiauRIb
+Pj6D1k4R4Zisz6sqPc8ZaACKzLiNxCAnGdOI4FLTG1j2VCVGDRmK4SEBLrsNVpuNxjvgcGoAXHB7
+PPB4OTxu/X+nk98RhM1mhc3ughAahrLSUZgwvR5vNF3irJw7KevPEbmXBhAAPRSWkNFiNnwaB96q
+w/zHhqPUVQiDoRAWpweCP4BAIAC/3we/zwcfhyAI3w6f/pkfPr9fvy7gF+BxWmAyGGByl2D4Y/NR
+99YBnA4n+ZQMpHCYIAYCgKSlPIUZJY5E+CSa3p6LaSVGFJnoRX8JPViMII32CVqo3MIQeI8/iOLS
+MpT4uHqmIhhLpmHu2004GU4gzsylZbj+wmlQf9lGllU91XXLrTi0bjZqQwUMCx9cHnpVDw9t3KLx
+vcPTcz/nEzwufb6CUC1mrzuEVrlbB6BqnHG7AMSYhHhCQTzdhqZ1z+KpEVa4Gd9Ojw9uayFMeYMx
+OCcPxkIrHF6GTzCIYDDAwVUpLkbxdYPe5vcB/RqGkdcBa6EReTmcI8+EQqsbPg/ndrphHfEUnl3X
+hPZ0HEoiDomccesAmOfFeAZxhdnm2GrMn+SHs8AEJ2PYJ7hRVjMbsxavxMoVi/DijMkoLzbBYsyF
+wViA/NwcGDTDBl8zcgzIyc1HgdGAXCNjv7gck2e8iEUrOMfiWZhdUwY3w8rvd8JUwNWYNA8rj4XR
+pcSRiYvkiVsEoDFrQttMbc1onDsGPw05USiUwu8wM36LUbO+BcdVLYFH0HlqFzYtfBg140di1Oix
+GF9RiQmVVZg4sQpVVRwTJ6KqcgIqK8Zj7OhRGDm+Bg8v3IRdpzp5t8Ylx9GyvgbF3Edmhx9DBBPs
+odEYOXc3jrWJtCKpM/fNAyBZRaQ0yeUv+Osn9Xi4xA+X2QZfSRAOix2Cbyzm7zyHVo1SVaZWRSQJ
+deD0kX04sG8/jp7txNcdV3HlylV0dXXh6pUruNrxNTrPHsX+fQew78hpdJAMReb8mOYEpRXnds7H
+WJ8Au8WBYIkPNrML/pIpqP/kr/gLSTMtRfokuT4BSCKNoj6Ite7GR/NKECQpWWwCSkJe2Iq8TJmP
+4PXGC7iYSCMeCUNWU+imHUmVXqJhjLy+XxnGM0NBVJP8pxspVUY4Ekc6cREXGl/HI0yt3iIbvKEQ
+BJsFHlcxSuZ9hN2tMaoOghWlmwMQi0pIQ8T5PSuwoGww87cbDkHL3z44LVwJYSSe/+AkTkq0SQ7r
+4RalLhKZbmVF4aajtiGwcPiawe8jTAoKva5whbXrtbAIy0Qrca4PnsdI7gGbxQlfIAi/4ICb3DG4
+bAFW7DlPa9KQKM37AZCVxLFYgu5sxv41M1FudMDrdsPD5fVzAzusRXwfwvT3vkAzA7hbuWZppf70
+vnS9jNZCVeHaRZrxxXvTEfJ5UGR16M8R+N7t9sJhLMfMNfvRzEVLMDKU76TVQd+NfZm7PqbSK2e3
+YNOL98Fspo5xe3QWDfjssNiHwnPfMjSc6EA4k4FCr0h3UADFogoymTA6TjRg2X0eDLVbYPcFdDb3
+0HFusxn3vfAOtpzlanO/xbmC1+6F6wBIBKBpeYnxf3XfItQ/aobR6aem8cIfKIZgN8BVNg4T60/h
+1JW45n5Eo9Id6XkpGoW2CPErnLO+CuPKXDDYBRQH/CQ6N/xOI8w/fw2//JTLnZSQYE0hStKNAajc
+bF99MAMvVdwNqzuoAwgUB2A3FqKs4nH86oiITjFD+1ku3mlVJXEvEEFG7IR45Fd4vGIICo12Pi8L
+oNhlxY/v/yVm/e4iMmnlRgAkPUMoLPvi+AYn1k3HnKEGyt4AAQhkVjfMhjKMqX4VO9pVhFkuJhmT
+4h0DoMoVkyw7w1Dbd+DV6jEoM5jhJnMLBBD0WJEzYg6e3nACkW46N84kcU3x8x0AmtaXSRvn8XHd
+VDySlwcHlaPHqwGwwzi4HOU1W9BEL0i8So2KN6UY+9sHIvcBpRtX/yi21FSgfLARdsoPgdooEHAg
+L/8RPD7/Y1ygTpVZMyj9AUjhDHbNqkX1XXlwFfcACDpQmDMGYyevx8cRZqpMCvHYAAGIxZHKMHwj
+n2L95HEYk1MIR7AHQLELeXdVo3bWLlqVBaD2D+Ac9r4wFVMo1Jy9KxBkissN4t77F+M9UmNXMo2U
+NEAhxKyRTnaR+H+Lxfffi2AuUzVFX3YFnMgzTMHUF/fSqn4BKHqMJfA1Di95AtPseXpK81D6Bqgg
+Lfl2jKichfUtKi4z1aYHZBNzDiXNFHkZast6zKocAXu+hco2QMnt0VN3nn0anlhymFYl9D16gxDq
+3cSX0bL6STxX2ruJtTRKHVSQi5JxU7Dg0y60RVg3qVpX4s6zUJTOSEXa0PXpAkwZV4LcAuqhnjQa
+YK1tKH0OT65uoVXZTSx/PwDGYZwaPJ3Axe3P4eXKXFjcWQBa9SQ48skDFZiw9DjORMjW3TLFWvSO
+iCxKscfaBYnIGRxfOgHlQxgy5AGtytMBuC3IrXwZz22/iATTaJwAxL4BZONR4wGRHBU7+ipWPu2B
+0ebLAiAz+gUrinQmXo5Nx7NSOKX8X06WbqWv1PteSemSvOP4O1jew8S2HibWAPhsRnieXolXj1LQ
+sS6I6zxwIy2kqIgyJrs7d+D9JZNgLOqREtTqAid1Ox0QgsPw0/m7sferhNbQoXhjGFBSRHu7bTds
+iGldPO36qM7i2gzJr/6A3fNGsw7wwOag0b5sI0CXEkVGTFryPnZ0dnPPRfW2i3RjNaqJOQr91Hl8
+3lCHh6xmBOgJZ6AModBQFDuLSGh3o7C0ChOeXYW3Gr/Ef8vXSObutC6T+wRA2Z3uvuZa5QKO/34N
+ls+YiEnDnLCSMJ1ara11MVj1uT1+mK0Poa7hc5znQimxrJiT+wMgkaASpJZv/rgRb1eY9aU0BCfh
+ZzNewdI3XsOCpx5Eld8AgzmA0JSXsWLzR2jc/xk+/7wFJ8+1oT3c20vSvJVVuHqIhdvRdu4kjv/p
+CJr27cFH7/4ac6spnYtyqbk0Cc1kwYznEYLwuYv0gr9owkZsbPqG1iRIeNLNAMgWNGR3ZNoP4U//
+MR5lARd+4q3Gz1/bi2NhTnX1M2ybQ8b0FMLGIt9ht8HFEnBE1S+wcP1+HLsk603erHLMKly9qXvp
+GA5s4IasHI6RfivsdgccHq0lc31bRqCcdltN8ASGoGLVH3Gwjeo4Kd58QaNnB7IjMpfR8cV61I3x
+Mj5dcJQ+hH9b8CGaoyrkU1tQXzMMph/9BIUmKkZTPv657Fk8s7EFkRRzNQsbuUd0afpf+19NRXDi
+ndmYe8+PqPvtMLM8dXJ/eUmUwrftFh9J0wmLsxTeMXXYcLwDl2l/PNZ3thv0/TI3RlXaDaWrFX9e
+9SAml1hx9z8Nhn3oY5i2rQ1R+RIuHNyIJc9MRW0Vw6uyGhNf2oZ3tSono+iVl/gtAFGv1LR0GW5a
+gd884WK8h+BljRH0X2s8QyhUAk9hAaXE/Xhw1Z9xpkvRCgG9SrzFvlCW4hOsuFJt27F2ZhVGWXOQ
+J9wD16MbseNMtkne3cHKbduH2PnBPhw6cwkdLKZVSbq+ctKAEEBMpWw+txUNC0czHXvgdHn0jJPt
+1PW0IF0WmIvKMP6ZtdjelmLFlshKltvqzGmeYwEuMYbFI2+g/sky6hInY3QSpr97DF+EM3pb/Nu8
+rCjfewiiA9BqoC+3YMu8e2HuA4BXq8LMJgyZ9mu8zpojTo5JqvIN9dag/glHJYAUCesy2ptWo742
+BEuuDZ5RD2DK3Hos/8/t+K8/7MHe3+/AroMn0HJR1B/a5wr0BcAfQDAU0j1vNxoRmLoUbx5m3OvP
+1FqL0u23FrPpjw8XI4hoBxpyBzoOrcLCJydiiOEu/PhfiuD812pMfvAB1FSX49FlO/Dh6bjOmN8P
+YCu21o2B1UVvC9wDFGtmrbVoGYJx/16HFQfb0KZFZ5zPFLNzKANxPiDFwmTobiQotyMnt1Fm/AwT
+hwgI+V0w5xthys/BsOc3Y/OX2sNj+iaWpD4AnG7A5hdGIN9sg5lDCNL7gbGofHw5NpyMQEwwf5Nx
+wzFpoE9oskaoWs0sRxDtOIHm9xdjXvVQWHPzUZiXg+G/2IyG0939AmgggFyjGQWU58MemIdX3m9G
+S3sEYYZrXFWz9/4wR0xitq+jprMHdFcv4OyRRvyuYTV+88JMLGs4hP3tQFqN9Xl/TLuvfT8ONizF
+jOdXYtXmndj7WSu+uprUDwozqqSDFaUf9JRS0plaE29aWsy+RIRPNaP1fAfaxDTict/LL8lxpMU2
+dJxvRfOpMO/qkU8EHNM6dbdxUjnoTstB/URee7CSZV+l3/uULCsrWUeIt3EyOaAH3dlWoqIXQr2n
+8P0CYJxrhYki957w/81/K5HV+Tf3O4is0aI4ML+Z+If/tcr/AnSbs2ISEm29AAAAAElFTkSuQmCC]]></avatar>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations>
+                <AlertDefinitions name="GithubRepo"/>
+                <AlertDefinitions name="GithubReportedUserID"/>
+                <AlertDefinitions name="GithubReportedMessage"/>
+                <AlertDefinitions name="GithubUserID"/>
+                <AlertDefinitions name="GithubAccessToken"/>
+            </AlertConfigurations>
+            <ThingShape>
+                <PropertyDefinitions>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="GithubRepo" ordinal="1"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="ThingWorx System" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="GithubReportedUserID" ordinal="3"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="System Update" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="GithubReportedMessage" ordinal="4"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="GithubUserID" ordinal="2"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="PASSWORD" category="" description="" isLocalOnly="false" name="GithubAccessToken" ordinal="5"/>
+                </PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="base64Encode">
+                        <ResultType baseType="STRING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="STRING" description="" name="value" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetFileContents">
+                        <ResultType baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="STRING" description="" name="path" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="CreateGithubRepo">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="STRING" description="" name="RepoName" ordinal="1"/>
+                            <FieldDefinition aspect.defaultValue="false" baseType="BOOLEAN" description="" name="Private" ordinal="2"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="CreateFileGithub">
+                        <ResultType baseType="JSON" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition aspect.defaultValue="TestFileName.txt" baseType="STRING" description="" name="path" ordinal="2"/>
+                            <FieldDefinition aspect.defaultValue="Steve Alexander" baseType="STRING" description="" name="name" ordinal="4"/>
+                            <FieldDefinition aspect.defaultValue="update" baseType="STRING" description="" name="message" ordinal="3"/>
+                            <FieldDefinition aspect.defaultValue="Test" baseType="STRING" description="" name="content" ordinal="6"/>
+                            <FieldDefinition aspect.defaultValue="steve.alexander@thingworx.com" baseType="STRING" description="" name="email" ordinal="5"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetGithubRepos">
+                        <ResultType aspect.dataShape="Github.Repositories" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="base64Decode">
+                        <ResultType baseType="STRING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="STRING" description="" name="value" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="EditFileGithub">
+                        <ResultType baseType="JSON" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition aspect.defaultValue="TestFileName.txt" baseType="STRING" description="" name="path" ordinal="2"/>
+                            <FieldDefinition aspect.defaultValue="Steve Alexander" baseType="STRING" description="" name="name" ordinal="4"/>
+                            <FieldDefinition aspect.defaultValue="update" baseType="STRING" description="" name="message" ordinal="3"/>
+                            <FieldDefinition baseType="STRING" description="" name="sha" ordinal="7"/>
+                            <FieldDefinition aspect.defaultValue="Test" baseType="STRING" description="" name="content" ordinal="6"/>
+                            <FieldDefinition aspect.defaultValue="steve.alexander@thingworx.com" baseType="STRING" description="" name="email" ordinal="5"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="CreateOrUpdateGithubFile">
+                        <ResultType baseType="JSON" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="STRING" description="" name="path" ordinal="2"/>
+                            <FieldDefinition aspect.defaultValue="Steve Alexander" baseType="STRING" description="" name="name" ordinal="4"/>
+                            <FieldDefinition aspect.defaultValue="update" baseType="STRING" description="" name="message" ordinal="3"/>
+                            <FieldDefinition aspect.defaultValue="Test" baseType="STRING" description="" name="content" ordinal="6"/>
+                            <FieldDefinition aspect.defaultValue="steve.alexander@thingworx.com" baseType="STRING" description="" name="email" ordinal="5"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations>
+                    <ServiceImplementation description="" handlerName="Script" name="base64Encode">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var Base64 = {
+
+
+    _keyStr: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
+
+
+    encode: function(input) {
+        var output = "";
+        var chr1, chr2, chr3, enc1, enc2, enc3, enc4;
+        var i = 0;
+
+        input = Base64._utf8_encode(input);
+
+        while (i < input.length) {
+
+            chr1 = input.charCodeAt(i++);
+            chr2 = input.charCodeAt(i++);
+            chr3 = input.charCodeAt(i++);
+
+            enc1 = chr1 >> 2;
+            enc2 = ((chr1 & 3) << 4) | (chr2 >> 4);
+            enc3 = ((chr2 & 15) << 2) | (chr3 >> 6);
+            enc4 = chr3 & 63;
+
+            if (isNaN(chr2)) {
+                enc3 = enc4 = 64;
+            } else if (isNaN(chr3)) {
+                enc4 = 64;
+            }
+
+            output = output + this._keyStr.charAt(enc1) + this._keyStr.charAt(enc2) + this._keyStr.charAt(enc3) + this._keyStr.charAt(enc4);
+
+        }
+
+        return output;
+    },
+
+
+    decode: function(input) {
+        var output = "";
+        var chr1, chr2, chr3;
+        var enc1, enc2, enc3, enc4;
+        var i = 0;
+
+        input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
+
+        while (i < input.length) {
+
+            enc1 = this._keyStr.indexOf(input.charAt(i++));
+            enc2 = this._keyStr.indexOf(input.charAt(i++));
+            enc3 = this._keyStr.indexOf(input.charAt(i++));
+            enc4 = this._keyStr.indexOf(input.charAt(i++));
+
+            chr1 = (enc1 << 2) | (enc2 >> 4);
+            chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
+            chr3 = ((enc3 & 3) << 6) | enc4;
+
+            output = output + String.fromCharCode(chr1);
+
+            if (enc3 != 64) {
+                output = output + String.fromCharCode(chr2);
+            }
+            if (enc4 != 64) {
+                output = output + String.fromCharCode(chr3);
+            }
+
+        }
+
+        output = Base64._utf8_decode(output);
+
+        return output;
+
+    },
+
+    _utf8_encode: function(string) {
+        string = string.replace(/\r\n/g, "\n");
+        var utftext = "";
+
+        for (var n = 0; n < string.length; n++) {
+
+            var c = string.charCodeAt(n);
+
+            if (c < 128) {
+                utftext += String.fromCharCode(c);
+            }
+            else if ((c > 127) && (c < 2048)) {
+                utftext += String.fromCharCode((c >> 6) | 192);
+                utftext += String.fromCharCode((c & 63) | 128);
+            }
+            else {
+                utftext += String.fromCharCode((c >> 12) | 224);
+                utftext += String.fromCharCode(((c >> 6) & 63) | 128);
+                utftext += String.fromCharCode((c & 63) | 128);
+            }
+
+        }
+
+        return utftext;
+    },
+
+    _utf8_decode: function(utftext) {
+        var string = "";
+        var i = 0;
+        var c = c1 = c2 = 0;
+
+        while (i < utftext.length) {
+
+            c = utftext.charCodeAt(i);
+
+            if (c < 128) {
+                string += String.fromCharCode(c);
+                i++;
+            }
+            else if ((c > 191) && (c < 224)) {
+                c2 = utftext.charCodeAt(i + 1);
+                string += String.fromCharCode(((c & 31) << 6) | (c2 & 63));
+                i += 2;
+            }
+            else {
+                c2 = utftext.charCodeAt(i + 1);
+                c3 = utftext.charCodeAt(i + 2);
+                string += String.fromCharCode(((c & 15) << 12) | ((c2 & 63) << 6) | (c3 & 63));
+                i += 3;
+            }
+
+        }
+
+        return string;
+    }
+
+};
+
+var result = Base64.encode(value);]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="GetFileContents">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var url = "https://api.github.com/repos/" + me.GithubUserID + "/" + me.GithubRepo + "/contents/" + path + "?access_token=" +me.GithubAccessToken;
+
+var headers = { "Accept" : "application/json",
+				"Content-Type" : "application/json"
+};
+
+var params = {
+	proxyScheme: undefined /* STRING */,
+	headers: headers /* JSON */,
+	ignoreSSLErrors: undefined /* BOOLEAN */,
+	useNTLM: undefined /* BOOLEAN */,
+	workstation: undefined /* STRING */,
+	useProxy: undefined /* BOOLEAN */,
+	withCookies: undefined /* BOOLEAN */,
+	proxyHost: undefined /* STRING */,
+	url: url /* STRING */,
+	timeout: undefined /* NUMBER */,
+	proxyPort: undefined /* INTEGER */,
+	password: undefined /* STRING */,
+	domain: undefined /* STRING */,
+	username: undefined /* STRING */
+};
+
+// result: JSON
+var json = Resources["ContentLoaderFunctions"].GetJSON(params);
+
+var params = {
+	infoTableName : "InfoTable",
+	dataShapeName : "Github.FileContents"
+};
+
+// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(Github.Repositories)
+var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+
+// Github.FileContents entry object
+var newEntry = new Object();
+newEntry.path = json.path; // STRING
+newEntry.size = json.size; // NUMBER
+newEntry.name = json.name; // STRING
+newEntry.type = json.type; // STRING
+newEntry.sha = json.sha; // STRING
+newEntry.url = json.url; // STRING
+newEntry.content = json.content;
+result.AddRow(newEntry);
+   
+
+
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="CreateGithubRepo">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var body = {
+        "name": RepoName, 
+        "auto_init": true, 
+        "private": Private, 
+        "gitignore_template": "nanoc" 
+};
+
+var url = "https://api.github.com/user/repos?access_token=" + me.GithubAccessToken;
+
+var headers = { "Accept" : "application/json",
+				"Content-Type" : "application/json"
+};
+
+var params = {
+	proxyScheme: undefined /* STRING */,
+	headers: headers /* JSON */,
+	ignoreSSLErrors: undefined /* BOOLEAN */,
+	useNTLM: undefined /* BOOLEAN */,
+	workstation: undefined /* STRING */,
+	useProxy: undefined /* BOOLEAN */,
+	withCookies: undefined /* BOOLEAN */,
+	proxyHost: undefined /* STRING */,
+	url: url /* STRING */,
+	content: body /* JSON */,
+	timeout: undefined /* NUMBER */,
+	proxyPort: undefined /* INTEGER */,
+	password: undefined /* STRING */,
+	domain: undefined /* STRING */,
+	username: undefined /* STRING */
+};
+
+// result: JSON
+var result = Resources["ContentLoaderFunctions"].PostJSON(params);
+
+
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="CreateFileGithub">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var url = "https://api.github.com/repos/" + me.GithubUserID + "/" + me.GithubRepo + "/contents/" + path + "?access_token=" +me.GithubAccessToken;
+
+// base64EncodeString(value:STRING):STRING
+var params = {
+	value: content /* STRING */
+};
+
+var contentBase64 = me.base64Encode(params)
+
+var content = {
+  "message": message,
+  "committer": {
+    "name": name,
+    "email": email
+  },
+  "content": contentBase64
+}
+
+var headers = { "Accept" : "application/json",
+				"Content-Type" : "application/json"
+};
+
+
+var params = {
+	proxyScheme: undefined /* STRING */,
+	headers: headers /* JSON */,
+	ignoreSSLErrors: undefined /* BOOLEAN */,
+	useNTLM: undefined /* BOOLEAN */,
+	workstation: undefined /* STRING */,
+	useProxy: undefined /* BOOLEAN */,
+	withCookies: undefined /* BOOLEAN */,
+	proxyHost: undefined /* STRING */,
+	url: url /* STRING */,
+	content: content /* JSON */,
+	timeout: undefined /* NUMBER */,
+	proxyPort: undefined /* INTEGER */,
+	password: undefined /* STRING */,
+	domain: undefined /* STRING */,
+	username: undefined /* STRING */
+};
+
+// result: JSON
+var result = Resources["ContentLoaderFunctions"].PutJSON(params);
+
+
+
+
+
+
+
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="GetGithubRepos">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var url = "https://api.github.com/users/" + me.GithubUserID + "/repos?access_token=" +me.GithubAccessToken;
+
+var headers = { "Accept" : "application/json",
+				"Content-Type" : "application/json"
+};
+
+var params = {
+	proxyScheme: undefined /* STRING */,
+	headers: undefined /* JSON */,
+	ignoreSSLErrors: undefined /* BOOLEAN */,
+	useNTLM: undefined /* BOOLEAN */,
+	workstation: undefined /* STRING */,
+	useProxy: undefined /* BOOLEAN */,
+	withCookies: undefined /* BOOLEAN */,
+	proxyHost: undefined /* STRING */,
+	url: url /* STRING */,
+	timeout: undefined /* NUMBER */,
+	proxyPort: undefined /* INTEGER */,
+	password: undefined /* STRING */,
+	domain: undefined /* STRING */,
+	username: undefined /* STRING */
+};
+
+// result: JSON
+var json = Resources["ContentLoaderFunctions"].GetJSON(params);
+
+var params = {
+	infoTableName : "InfoTable",
+	dataShapeName : "Github.Repositories"
+};
+
+// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(Github.Repositories)
+var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+
+for each(var row in json.array) {
+        // Github.Repositories entry object
+    var newEntry = new Object();
+    newEntry.private = row.private; // BOOLEAN
+    newEntry.fork = row.fork; // BOOLEAN
+    newEntry.full_name = row.full_name; // STRING
+    newEntry.forks_url = row.forks_url; // HYPERLINK
+    newEntry.html_url = row.html_url; // HYPERLINK
+    newEntry.name = row.name; // STRING
+    newEntry.description = row.description; // STRING
+    newEntry.id = row.id; // STRING
+    newEntry.url = row.url; // HYPERLINK
+
+    result.AddRow(newEntry);
+   
+}
+
+
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="base64Decode">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var Base64 = {
+
+
+    _keyStr: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
+
+    decode: function(input) {
+        var output = "";
+        var chr1, chr2, chr3;
+        var enc1, enc2, enc3, enc4;
+        var i = 0;
+
+        input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
+
+        while (i < input.length) {
+
+            enc1 = this._keyStr.indexOf(input.charAt(i++));
+            enc2 = this._keyStr.indexOf(input.charAt(i++));
+            enc3 = this._keyStr.indexOf(input.charAt(i++));
+            enc4 = this._keyStr.indexOf(input.charAt(i++));
+
+            chr1 = (enc1 << 2) | (enc2 >> 4);
+            chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
+            chr3 = ((enc3 & 3) << 6) | enc4;
+
+            output = output + String.fromCharCode(chr1);
+
+            if (enc3 != 64) {
+                output = output + String.fromCharCode(chr2);
+            }
+            if (enc4 != 64) {
+                output = output + String.fromCharCode(chr3);
+            }
+
+        }
+
+        output = Base64._utf8_decode(output);
+
+        return output;
+
+    },
+
+    _utf8_decode: function(utftext) {
+        var string = "";
+        var i = 0;
+        var c = c1 = c2 = 0;
+
+        while (i < utftext.length) {
+
+            c = utftext.charCodeAt(i);
+
+            if (c < 128) {
+                string += String.fromCharCode(c);
+                i++;
+            }
+            else if ((c > 191) && (c < 224)) {
+                c2 = utftext.charCodeAt(i + 1);
+                string += String.fromCharCode(((c & 31) << 6) | (c2 & 63));
+                i += 2;
+            }
+            else {
+                c2 = utftext.charCodeAt(i + 1);
+                c3 = utftext.charCodeAt(i + 2);
+                string += String.fromCharCode(((c & 15) << 12) | ((c2 & 63) << 6) | (c3 & 63));
+                i += 3;
+            }
+
+        }
+
+        return string;
+    }
+
+};
+
+var result = Base64.decode(value);]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="EditFileGithub">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[
+var url = "https://api.github.com/repos/" + me.GithubUserID + "/" + me.GithubRepo + "/contents/" + path + "?access_token=" +me.GithubAccessToken;
+
+// base64EncodeString(value:STRING):STRING
+var params = {
+	value: content /* STRING */
+};
+
+var contentBase64 = me.base64Encode(params)
+
+var content = {
+  "message": message,
+  "committer": {
+    "name": name,
+    "email": email
+  },
+  "content": contentBase64,
+    "sha" : sha
+}
+
+var headers = { "Accept" : "application/json",
+				"Content-Type" : "application/json"
+};
+
+
+var params = {
+	proxyScheme: undefined /* STRING */,
+	headers: headers /* JSON */,
+	ignoreSSLErrors: undefined /* BOOLEAN */,
+	useNTLM: undefined /* BOOLEAN */,
+	workstation: undefined /* STRING */,
+	useProxy: undefined /* BOOLEAN */,
+	withCookies: undefined /* BOOLEAN */,
+	proxyHost: undefined /* STRING */,
+	url: url /* STRING */,
+	content: content /* JSON */,
+	timeout: undefined /* NUMBER */,
+	proxyPort: undefined /* INTEGER */,
+	password: undefined /* STRING */,
+	domain: undefined /* STRING */,
+	username: undefined /* STRING */
+};
+
+// result: JSON
+var result = Resources["ContentLoaderFunctions"].PutJSON(params);
+
+
+
+
+
+
+
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="CreateOrUpdateGithubFile">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[
+var params = {
+	path: path /* STRING */
+};
+
+// result: INFOTABLE dataShape: "undefined"
+var fileExists = me.GetFileContents(params);
+
+if(fileExists[0].sha != undefined) {
+	//logger.warn("Edit File");
+    var params = {
+        path: path /* STRING */,
+        name: name /* STRING */,
+        message: message /* STRING */,
+        email: email /* STRING */,
+        content: content /* STRING */,
+        sha: fileExists[0].sha /* STRING */
+    };
+
+    // result: JSON
+    var result = me.EditFileGithub(params);
+
+   
+} else {
+	//logger.warn("Create File");
+    var params = {
+        path: path /* STRING */,
+        name: name /* STRING */,
+        message: message /* STRING */,
+        email: email /* STRING */,
+        content: content /* STRING */
+    };
+
+    // result: JSON
+    var result = me.CreateFileGithub(params);
+
+   
+}]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions/>
+            </ThingShape>
+            <ImplementedShapes/>
+            <SharedConfigurationTables/>
+            <InstanceDesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </InstanceDesignTimePermissions>
+            <InstanceRunTimePermissions/>
+            <InstanceVisibilityPermissions>
+                <Visibility/>
+            </InstanceVisibilityPermissions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated&#10;" timestamp="2015-09-09T17:46:37.973-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : avatar : updated&#10;" timestamp="2015-09-09T17:47:00.556-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : GithubReportedMessage : Updated&#10;" timestamp="2015-09-10T14:56:19.524-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : CreateOrUpdateGithubFile : Service Added&#10;" timestamp="2015-09-11T12:28:01.435-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : CreateOrUpdateGithubRepo : removed&#10;" timestamp="2015-09-11T12:28:15.055-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-11T15:06:51.970-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-14T09:46:32.093-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-14T10:04:47.330-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-10-20T14:23:05.893-04:00" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-20T15:14:19.687-04:00" user="stevea"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-11-16T15:56:24.182-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-11-17T11:42:13.800-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T13:17:05.978-05:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </ThingTemplate>
+    </ThingTemplates>
+</Entities>
