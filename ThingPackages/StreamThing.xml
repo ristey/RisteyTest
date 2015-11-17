@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <ThingPackages>
+        <ThingPackage aspect.isSystemObject="true" className="com.thingworx.streams.StreamThing" description="Stream" documentationContent="" homeMashup="" lastModifiedDate="2015-11-17T11:27:39.674-05:00" name="StreamThing" tags="">
+            <Owner name="SuperUser" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <HandlerDefinitions>
+                <HandlerDefinition className="com.thingworx.dsl.DSLServiceHandler" description="Script handler" isUserDefinable="true" name="Script"/>
+                <HandlerDefinition className="com.thingworx.handlers.ReflectionServiceHandler" description="Reflection handler" isUserDefinable="false" name="Reflection"/>
+            </HandlerDefinitions>
+            <ImplementedShapes>
+                <ImplementedShape name="Stream" type="ThingShape"/>
+            </ImplementedShapes>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-11-17T11:18:46.552-05:00" user="SuperUser"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T11:27:39.674-05:00" user="SuperUser"/>
+            </ConfigurationChanges>
+        </ThingPackage>
+    </ThingPackages>
+</Entities>
