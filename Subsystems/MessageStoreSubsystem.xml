@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Subsystems>
+        <Subsystem aspect.isCreatable="false" aspect.isEditableSystemObject="true" autoStart="true" className="com.thingworx.system.subsystems.messagestore.MessageStoreSubsystem" dependsOn="" description="Message Store Subsystem processes queued messages for various remote Things including Edge Things, Connected Things and Federated servers" documentationContent="" enabled="true" friendlyName="Message Store" homeMashup="MonitoringMessageStoreSubsystem" lastModifiedDate="2015-11-17T11:18:48.781-05:00" name="MessageStoreSubsystem" tags="">
+            <Owner name="SuperUser" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables>
+                <ConfigurationTable description="Message Store Settings" isMultiRow="false" name="MessageStoreSettings" ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition aspect.defaultValue="1000.0" aspect.friendlyName="Max Queue Entries Before Adding New Working Thread" baseType="NUMBER" description="Maximum number of entries to queue before adding an additional worker thread to the pool" name="maximumQueueSize" ordinal="2"/>
+                            <FieldDefinition aspect.defaultValue="10.0" aspect.friendlyName="Min threads allocated to message store processing pool" baseType="NUMBER" description="Minimum number of threads allocated to the message store processing thread pool" name="minimumThreadPoolSize" ordinal="0"/>
+                            <FieldDefinition aspect.defaultValue="600000.0" aspect.friendlyName="Idle Thread Timeout (sec)" baseType="NUMBER" description="How long idle threads should remain in the pool in seconds" name="maximumThreadLife" ordinal="3"/>
+                            <FieldDefinition aspect.defaultValue="1000.0" aspect.friendlyName="Max Message Count" baseType="NUMBER" description="Maximum number of messages to store." name="maxMessageCount" ordinal="4"/>
+                            <FieldDefinition aspect.defaultValue="100.0" aspect.friendlyName="Max threads allocated to message store processing pool" baseType="NUMBER" description="Maximum number of threads allocated to the message store processing thread pool" name="maximumThreadPoolSize" ordinal="1"/>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <maximumQueueSize>100.0</maximumQueueSize>
+                            <minimumThreadPoolSize>10.0</minimumThreadPoolSize>
+                            <maximumThreadLife>600000.0</maximumThreadLife>
+                            <maxMessageCount>1000.0</maxMessageCount>
+                            <maximumThreadPoolSize>100.0</maximumThreadPoolSize>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-11-17T11:18:48.781-05:00" user="SuperUser"/>
+            </ConfigurationChanges>
+        </Subsystem>
+    </Subsystems>
+</Entities>
