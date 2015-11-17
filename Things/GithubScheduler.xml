@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Things>
+        <Thing description="This is used for scheduling when the exports are happening. Based on the timing set here, the export will only export back in time this amount of time so we only get changes from the last export for incremental backup" documentationContent="&lt;p&gt;This is used for scheduling when the exports are happening. Based on the timing set here, the export will only export back in time this amount of time so we only get changes from the last export for incremental backup&lt;br&gt;&lt;/p&gt;This scheduler is used in GithubFileRepo thing&#10;" effectiveThingPackage="SchedulerThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2015-11-17T13:17:06.124-05:00" name="GithubScheduler" published="false" tags="Applications:github" thingTemplate="Scheduler" valueStream="">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables>
+                <ConfigurationTable description="General Settings" isMultiRow="false" name="Settings" ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition baseType="USERNAME" description="User context in which to run event handlers" name="runAsUser" ordinal="0"/>
+                            <FieldDefinition aspect.defaultValue="0 0/1 * * * ?" baseType="SCHEDULE" description="Execution Schedule (Cron String)" name="schedule" ordinal="0"/>
+                            <FieldDefinition aspect.defaultValue="true" baseType="BOOLEAN" description="Automatically enable scheduler on startup" name="enabled" ordinal="0"/>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <runAsUser/>
+                            <schedule><![CDATA[0 0/2 * * * ? *]]></schedule>
+                            <enabled>true</enabled>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions/>
+                <ServiceDefinitions>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetSchedulerTimeInMinutes">
+                        <ResultType baseType="NUMBER" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations>
+                    <ServiceImplementation description="" handlerName="Script" name="GetSchedulerTimeInMinutes">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[
+var params = {
+	tableName: "Settings" /* STRING */
+};
+
+// result: INFOTABLE dataShape: "undefined"
+var table = me.GetConfigurationTable(params);
+
+//default the time to 0
+var result = 0;
+    
+//first number is seconds
+var secondsBreak = table.schedule.indexOf(" ");
+var seconds = table.schedule.substring(0, secondsBreak);
+var aferterSecondsBreak = secondsBreak + 1;
+
+if(seconds.indexOf("/") > 0) {
+    result = seconds.replace("0/","")/60; 
+} else {
+    var secondsInMinutes = seconds/60;
+    var minuteBreak = table.schedule.substring(aferterSecondsBreak).indexOf(" ") + aferterSecondsBreak;
+    var minutes = table.schedule.substring(aferterSecondsBreak, minuteBreak);
+    var afterMinuteBreak = minuteBreak + 1;
+    
+    if(minutes.indexOf("/") > 0) {
+        minutes = Number(minutes.replace("0/",""));
+        result =  minutes + secondsInMinutes;
+    } else {
+        
+        minutes = Number(minutes);
+        
+        var hourBreak = table.schedule.substring(afterMinuteBreak).indexOf(" ") + afterMinuteBreak;
+        var hours = table.schedule.substring(afterMinuteBreak, hourBreak);
+        var afterHourBreak = hourBreak + 1;
+      
+        if(hours.indexOf("/") > 0) {
+            result = secondsInMinutes + Number(minutes) + Number(hours.replace("0/","") * 60);
+        } else {
+                      
+            var hourInMinutes = Number(hours) * 60;
+            
+            var dayBreak = table.schedule.substring(afterHourBreak).indexOf(" ") + afterHourBreak;
+            var days = table.schedule.substring(afterHourBreak+2, dayBreak);    
+            
+            if(days.indexOf("/") > 0) {
+				var result = minutes + hourInMinutes + (days.replace("1/", "") * 24 * 60) + secondsInMinutes;
+            } else {
+                var daysInMinutes = Number(days) * 24 * 60 
+                var result = minutes + hourInMinutes + daysInMinutes + secondsInMinutes;
+            }
+        }
+    }
+}
+
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions/>
+            </ThingShape>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations/>
+            <ImplementedShapes/>
+            <ThingProperties/>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-11-17T11:42:13.944-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T13:17:06.124-05:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </Thing>
+    </Things>
+</Entities>
