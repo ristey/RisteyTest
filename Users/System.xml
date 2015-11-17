@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Users>
+        <User aspect.isSystemObject="true" description="System" documentationContent="" enabled="true" homeMashup="" lastModifiedDate="2015-11-17T11:18:42.538-05:00" mobileMashup="" name="System" passwordHash="" passwordHashAlgorithm="" passwordHashIterationCount="null" passwordHashSaltSizeInBytes="null" passwordHashSizeInBytes="null" tags="">
+            <Owner name="SuperUser" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables>
+                <ConfigurationTable description="UserExtensions" isMultiRow="false" name="UserExtensions" ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition aspect.defaultValue="" aspect.isPersistent="true" baseType="STRING" category="" description="First name" isLocalOnly="false" name="firstName" ordinal="0"/>
+                            <FieldDefinition aspect.defaultValue="" aspect.isPersistent="true" baseType="STRING" category="" description="Last name" isLocalOnly="false" name="lastName" ordinal="0"/>
+                            <FieldDefinition aspect.defaultValue="" aspect.isPersistent="true" baseType="STRING" category="" description="E-mail address" isLocalOnly="false" name="emailAddress" ordinal="0"/>
+                            <FieldDefinition aspect.defaultValue="" aspect.isPersistent="true" baseType="STRING" category="" description="SMS address" isLocalOnly="false" name="smsAddress" ordinal="0"/>
+                            <FieldDefinition aspect.defaultValue="" aspect.isPersistent="true" baseType="STRING" category="" description="Mobile phone" isLocalOnly="false" name="mobilePhone" ordinal="0"/>
+                            <FieldDefinition aspect.defaultValue="" aspect.isPersistent="true" baseType="STRING" category="" description="Home phone" isLocalOnly="false" name="homePhone" ordinal="0"/>
+                            <FieldDefinition aspect.defaultValue="" aspect.isPersistent="true" baseType="STRING" category="" description="Middle name" isLocalOnly="false" name="middleName" ordinal="0"/>
+                            <FieldDefinition aspect.defaultValue="" aspect.isPersistent="true" baseType="STRING" category="" description="Work phone" isLocalOnly="false" name="workPhone" ordinal="0"/>
+                            <FieldDefinition aspect.defaultValue="" aspect.isPersistent="true" baseType="STRING" category="" description="Title" isLocalOnly="false" name="title" ordinal="0"/>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <firstName/>
+                            <lastName/>
+                            <emailAddress/>
+                            <smsAddress/>
+                            <mobilePhone/>
+                            <homePhone/>
+                            <middleName/>
+                            <workPhone/>
+                            <title/>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable description="Settings" isMultiRow="false" name="Settings" ordinal="2">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition aspect.defaultValue="" aspect.isPrimaryKey="true" baseType="STRING" description="Primary language" name="language" ordinal="0"/>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <language><![CDATA[en]]></language>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <PersistentValues/>
+            <ConfigurationChanges/>
+        </User>
+    </Users>
+</Entities>
