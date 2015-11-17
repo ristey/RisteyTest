@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <Mashups>
-        <Mashup aspect.isResponsive="true" aspect.mashupType="mashup" columns="0.0" description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" homeMashup="" lastModifiedDate="2015-11-17T12:08:22.373-05:00" name="ManageTrips" rows="0.0" tags="Applications:TripBuilder">
+        <Mashup aspect.isResponsive="true" aspect.mashupType="mashup" columns="0.0" description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" homeMashup="" lastModifiedDate="2015-11-17T12:22:11.617-05:00" name="ManageTrips" rows="0.0" tags="Applications:TripBuilder">
             <Owner name="Administrator" type="User"/>
             <avatar/>
             <DesignTimePermissions>
@@ -78,6 +78,7 @@
                       "__supportsLabel" : true,
                       "ResponsiveLayout" : false,
                       "Z-index" : 10,
+                      "LabelAlignment" : "left",
                       "HeightOfDropdownView" : 200,
                       "View" : "dropdown",
                       "__TypeDisplayName" : "List",
@@ -102,6 +103,7 @@
                       "ValueDisplayLabelStyle" : "DefaultWidgetLabelStyle",
                       "TextIfNoValueOffset" : 0,
                       "Overflow" : "hidden",
+                      "ToolTipField" : "",
                       "Alignment" : "left",
                       "TextIfNoValueStyle" : "DefaultValueDisplayNoTextStyle",
                       "ImageScaling" : "width",
@@ -151,6 +153,7 @@
                       "ValueDisplayLabelStyle" : "DefaultWidgetLabelStyle",
                       "TextIfNoValueOffset" : 0,
                       "Overflow" : "hidden",
+                      "ToolTipField" : "",
                       "Alignment" : "left",
                       "TextIfNoValueStyle" : "DefaultValueDisplayNoTextStyle",
                       "ImageScaling" : "width",
@@ -200,6 +203,7 @@
                       "ValueDisplayLabelStyle" : "DefaultWidgetLabelStyle",
                       "TextIfNoValueOffset" : 0,
                       "Overflow" : "hidden",
+                      "ToolTipField" : "",
                       "Alignment" : "left",
                       "TextIfNoValueStyle" : "DefaultValueDisplayNoTextStyle",
                       "ImageScaling" : "width",
@@ -249,6 +253,7 @@
                       "ValueDisplayLabelStyle" : "DefaultWidgetLabelStyle",
                       "TextIfNoValueOffset" : 0,
                       "Overflow" : "hidden",
+                      "ToolTipField" : "",
                       "Alignment" : "left",
                       "TextIfNoValueStyle" : "DefaultValueDisplayNoTextStyle",
                       "ImageScaling" : "width",
@@ -294,10 +299,11 @@
                       "TextIfNoValue" : "",
                       "Left" : 155,
                       "ShowDataLoading" : true,
-                      "Label" : "Vehicle Model",
+                      "Label" : "Model",
                       "ValueDisplayLabelStyle" : "DefaultWidgetLabelStyle",
                       "TextIfNoValueOffset" : 0,
                       "Overflow" : "hidden",
+                      "ToolTipField" : "",
                       "Alignment" : "left",
                       "TextIfNoValueStyle" : "DefaultValueDisplayNoTextStyle",
                       "ImageScaling" : "width",
@@ -347,6 +353,7 @@
                       "ValueDisplayLabelStyle" : "DefaultWidgetLabelStyle",
                       "TextIfNoValueOffset" : 0,
                       "Overflow" : "hidden",
+                      "ToolTipField" : "",
                       "Alignment" : "left",
                       "TextIfNoValueStyle" : "DefaultValueDisplayNoTextStyle",
                       "ImageScaling" : "width",
@@ -450,6 +457,7 @@
                       "InitializeWithCurrentDateTime" : true,
                       "TabSequence" : 0,
                       "__TypeDisplayName" : "Date Time Picker",
+                      "ToolTipField" : "",
                       "Type" : "datetimepicker",
                       "Area" : "UI",
                       "Top" : 20,
@@ -471,6 +479,7 @@
                       "ModalPopupOpacity" : 0.5,
                       "ShowCloseButton" : true,
                       "FixedPopupHeight" : 170,
+                      "ToolTipField" : "",
                       "Alignment" : "left",
                       "IconAlignment" : "left",
                       "Visible" : true,
@@ -478,6 +487,7 @@
                       "Style" : "DefaultNavigationStyle",
                       "Height" : 30,
                       "Width" : 135,
+                      "PopupScrolling" : "auto",
                       "PopupTitle" : "",
                       "ShowMessageIfNoMashup" : false,
                       "ClickOutsideToClose" : false,
@@ -485,19 +495,6 @@
                       "ResponsiveLayout" : false,
                       "PopupTitleStyle" : "DefaultPopupTitleStyle",
                       "MashupParameters" : [ {
-                        "Description" : "",
-                        "BaseType" : "DATETIME",
-                        "ParmDef" : {
-                          "name" : "TripDate",
-                          "aspects" : {
-                            "ordinal" : "1"
-                          },
-                          "description" : "",
-                          "baseType" : "DATETIME",
-                          "ordinal" : 0
-                        },
-                        "ParameterName" : "TripDate"
-                      }, {
                         "Description" : "",
                         "BaseType" : "STRING",
                         "ParmDef" : {
@@ -510,6 +507,19 @@
                           "ordinal" : 0
                         },
                         "ParameterName" : "Vehicle"
+                      }, {
+                        "Description" : "",
+                        "BaseType" : "DATETIME",
+                        "ParmDef" : {
+                          "name" : "TripDate",
+                          "aspects" : {
+                            "ordinal" : "1"
+                          },
+                          "description" : "",
+                          "baseType" : "DATETIME",
+                          "ordinal" : 0
+                        },
+                        "ParameterName" : "TripDate"
                       } ],
                       "Z-index" : 10,
                       "FixedPopupWidth" : 270,
@@ -634,6 +644,7 @@
                       "ShowDataLoading" : true,
                       "Label" : "Priority",
                       "TabSequence" : 0,
+                      "ToolTipField" : "",
                       "Maximum" : 100,
                       "ConstrainValue" : false,
                       "Visible" : true,
@@ -667,6 +678,7 @@
                       "Label" : "Description",
                       "TabSequence" : 0,
                       "PlaceholderText" : "",
+                      "ToolTipField" : "",
                       "TextAlign" : "left",
                       "Visible" : true,
                       "DisplayName" : "Textbox-25",
@@ -698,6 +710,7 @@
                       "Label" : "Update Trip",
                       "FocusStyle" : "DefaultButtonFocusStyle",
                       "TabSequence" : 0,
+                      "ToolTipField" : "",
                       "IconAlignment" : "left",
                       "Visible" : true,
                       "DisplayName" : "Button-26",
@@ -718,6 +731,7 @@
                       "Area" : "UI",
                       "Top" : 205,
                       "DefaultConfirmationButton" : "button1",
+                      "ContextId" : "",
                       "ConfirmationRequired" : true,
                       "Id" : "Button-26",
                       "ConfirmationButton2Label" : "No",
@@ -732,6 +746,7 @@
                       "Label" : "Delete Trip",
                       "FocusStyle" : "DefaultButtonFocusStyle",
                       "TabSequence" : 0,
+                      "ToolTipField" : "",
                       "IconAlignment" : "left",
                       "Visible" : true,
                       "DisplayName" : "Button-27",
@@ -752,6 +767,7 @@
                       "Area" : "UI",
                       "Top" : 205,
                       "DefaultConfirmationButton" : "button1",
+                      "ContextId" : "",
                       "ConfirmationRequired" : true,
                       "Id" : "Button-27",
                       "ConfirmationButton2Label" : "No",
@@ -892,6 +908,7 @@
                   "Label" : "Address",
                   "TabSequence" : 0,
                   "PlaceholderText" : "",
+                  "ToolTipField" : "",
                   "TextAlign" : "left",
                   "Visible" : true,
                   "DisplayName" : "Textbox-31",
@@ -923,6 +940,7 @@
                   "Label" : "Get Location From Address",
                   "FocusStyle" : "DefaultButtonFocusStyle",
                   "TabSequence" : 0,
+                  "ToolTipField" : "",
                   "IconAlignment" : "left",
                   "Visible" : true,
                   "DisplayName" : "Button-32",
@@ -943,6 +961,7 @@
                   "Area" : "UI",
                   "Top" : 75,
                   "DefaultConfirmationButton" : "button1",
+                  "ContextId" : "",
                   "ConfirmationRequired" : false,
                   "Id" : "Button-32",
                   "ConfirmationButton2Label" : "No",
@@ -1018,6 +1037,7 @@
                   "ValueDisplayLabelStyle" : "DefaultWidgetLabelStyle",
                   "TextIfNoValueOffset" : 0,
                   "Overflow" : "hidden",
+                  "ToolTipField" : "",
                   "Alignment" : "left",
                   "TextIfNoValueStyle" : "DefaultValueDisplayNoTextStyle",
                   "ImageScaling" : "width",
@@ -1053,6 +1073,7 @@
                   "Label" : "Location Description",
                   "TabSequence" : 0,
                   "PlaceholderText" : "",
+                  "ToolTipField" : "",
                   "TextAlign" : "left",
                   "Visible" : true,
                   "DisplayName" : "Textbox-35",
@@ -1084,6 +1105,7 @@
                   "ShowDataLoading" : true,
                   "Label" : "Location Sequence",
                   "TabSequence" : 0,
+                  "ToolTipField" : "",
                   "Maximum" : 100,
                   "ConstrainValue" : true,
                   "Visible" : true,
@@ -1117,6 +1139,7 @@
                   "Label" : "Add Location",
                   "FocusStyle" : "DefaultButtonFocusStyle",
                   "TabSequence" : 0,
+                  "ToolTipField" : "",
                   "IconAlignment" : "left",
                   "Visible" : true,
                   "DisplayName" : "Button-37",
@@ -1137,6 +1160,7 @@
                   "Area" : "UI",
                   "Top" : 230,
                   "DefaultConfirmationButton" : "button1",
+                  "ContextId" : "",
                   "ConfirmationRequired" : true,
                   "Id" : "Button-37",
                   "ConfirmationButton2Label" : "No",
@@ -1151,6 +1175,7 @@
                   "Label" : "Move Up",
                   "FocusStyle" : "DefaultButtonFocusStyle",
                   "TabSequence" : 0,
+                  "ToolTipField" : "",
                   "IconAlignment" : "left",
                   "Visible" : true,
                   "DisplayName" : "Button-38",
@@ -1171,6 +1196,7 @@
                   "Area" : "UI",
                   "Top" : 230,
                   "DefaultConfirmationButton" : "button1",
+                  "ContextId" : "",
                   "ConfirmationRequired" : false,
                   "Id" : "Button-38",
                   "ConfirmationButton2Label" : "No",
@@ -1185,6 +1211,7 @@
                   "Label" : "Move Down",
                   "FocusStyle" : "DefaultButtonFocusStyle",
                   "TabSequence" : 0,
+                  "ToolTipField" : "",
                   "IconAlignment" : "left",
                   "Visible" : true,
                   "DisplayName" : "Button-39",
@@ -1205,6 +1232,7 @@
                   "Area" : "UI",
                   "Top" : 230,
                   "DefaultConfirmationButton" : "button1",
+                  "ContextId" : "",
                   "ConfirmationRequired" : false,
                   "Id" : "Button-39",
                   "ConfirmationButton2Label" : "No",
@@ -1219,6 +1247,7 @@
                   "Label" : "Update Location",
                   "FocusStyle" : "DefaultButtonFocusStyle",
                   "TabSequence" : 0,
+                  "ToolTipField" : "",
                   "IconAlignment" : "left",
                   "Visible" : true,
                   "DisplayName" : "Button-40",
@@ -1239,6 +1268,7 @@
                   "Area" : "UI",
                   "Top" : 230,
                   "DefaultConfirmationButton" : "button1",
+                  "ContextId" : "",
                   "ConfirmationRequired" : true,
                   "Id" : "Button-40",
                   "ConfirmationButton2Label" : "No",
@@ -1253,6 +1283,7 @@
                   "Label" : "Delete Location",
                   "FocusStyle" : "DefaultButtonFocusStyle",
                   "TabSequence" : 0,
+                  "ToolTipField" : "",
                   "IconAlignment" : "left",
                   "Visible" : true,
                   "DisplayName" : "Button-41",
@@ -1273,6 +1304,7 @@
                   "Area" : "UI",
                   "Top" : 230,
                   "DefaultConfirmationButton" : "button1",
+                  "ContextId" : "",
                   "ConfirmationRequired" : true,
                   "Id" : "Button-41",
                   "ConfirmationButton2Label" : "No",
@@ -1518,6 +1550,7 @@
                   "Z-index" : 10,
                   "Text" : "Planned Route",
                   "__TypeDisplayName" : "Label",
+                  "ToolTipField" : "",
                   "Type" : "label",
                   "Area" : "UI",
                   "Alignment" : "left",
@@ -1552,6 +1585,7 @@
                   "ValueDisplayLabelStyle" : "DefaultWidgetLabelStyle",
                   "TextIfNoValueOffset" : 0,
                   "Overflow" : "hidden",
+                  "ToolTipField" : "",
                   "Alignment" : "left",
                   "TextIfNoValueStyle" : "DefaultValueDisplayNoTextStyle",
                   "ImageScaling" : "width",
@@ -1609,6 +1643,7 @@
                   "Label" : "Update Trip with Planned Distance",
                   "FocusStyle" : "DefaultButtonFocusStyle",
                   "TabSequence" : 0,
+                  "ToolTipField" : "",
                   "IconAlignment" : "left",
                   "Visible" : true,
                   "DisplayName" : "Button-51",
@@ -1629,6 +1664,7 @@
                   "Area" : "UI",
                   "Top" : 15,
                   "DefaultConfirmationButton" : "button1",
+                  "ContextId" : "",
                   "ConfirmationRequired" : false,
                   "Id" : "Button-51",
                   "ConfirmationButton2Label" : "No",
@@ -3427,6 +3463,8 @@
                 <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-31T08:27:53.604-04:00" user="Administrator"/>
                 <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-31T08:29:14.143-04:00" user="Administrator"/>
                 <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-11-17T12:08:22.372-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T12:19:44.506-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T12:22:11.617-05:00" user="Administrator"/>
             </ConfigurationChanges>
         </Mashup>
     </Mashups>
