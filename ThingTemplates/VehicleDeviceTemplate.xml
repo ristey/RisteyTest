@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <ThingTemplates>
+        <ThingTemplate baseThingTemplate="GenericThing" description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" effectiveThingPackage="ConfiguredThing" homeMashup="" lastModifiedDate="2015-11-17T12:08:22.362-05:00" name="VehicleDeviceTemplate" tags="Applications:TripBuilder" thingPackage="" valueStream="">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations>
+                <AlertDefinitions name="Year"/>
+                <AlertDefinitions name="FirstName"/>
+                <AlertDefinitions name="Color"/>
+                <AlertDefinitions name="Model"/>
+                <AlertDefinitions name="Make"/>
+                <AlertDefinitions name="LastName"/>
+            </AlertConfigurations>
+            <ThingShape>
+                <PropertyDefinitions>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="Year" ordinal="5"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="FirstName" ordinal="2"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="Color" ordinal="6"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="Model" ordinal="4"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="Make" ordinal="3"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="LastName" ordinal="1"/>
+                </PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetTripLocations">
+                        <ResultType aspect.dataShape="TripLocationShape" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition aspect.isRequired="true" baseType="DATETIME" description="" name="TripDate" ordinal="1"/>
+                            <FieldDefinition baseType="INTEGER" description="" name="TripID" ordinal="2"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="UpdateTripPlannedDistance">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition aspect.isRequired="true" baseType="DATETIME" description="" name="TripDate" ordinal="1"/>
+                            <FieldDefinition aspect.isRequired="true" baseType="NUMBER" description="" name="PlannedDistance" ordinal="3"/>
+                            <FieldDefinition aspect.isRequired="true" baseType="INTEGER" description="" name="TripID" ordinal="2"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="AddTrip">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="STRING" description="" name="TripDescription" ordinal="3"/>
+                            <FieldDefinition aspect.isRequired="true" baseType="DATETIME" description="" name="TripDate" ordinal="1"/>
+                            <FieldDefinition aspect.isRequired="true" baseType="INTEGER" description="" name="TripPriority" ordinal="2"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="AddTripLocation">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition aspect.isRequired="true" baseType="DATETIME" description="" name="TripDate" ordinal="1"/>
+                            <FieldDefinition baseType="STRING" description="" name="LocationDescription" ordinal="4"/>
+                            <FieldDefinition baseType="INTEGER" description="" name="LocationSequence" ordinal="6"/>
+                            <FieldDefinition baseType="STRING" description="" name="LocationAddress" ordinal="3"/>
+                            <FieldDefinition baseType="INTEGER" description="" name="TripID" ordinal="2"/>
+                            <FieldDefinition aspect.isRequired="true" baseType="LOCATION" description="" name="Location" ordinal="5"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="EditTrip">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="STRING" description="" name="TripDescription" ordinal="3"/>
+                            <FieldDefinition baseType="DATETIME" description="" name="TripDate" ordinal="2"/>
+                            <FieldDefinition baseType="INTEGER" description="" name="TripPriority" ordinal="4"/>
+                            <FieldDefinition baseType="INTEGER" description="" name="TripID" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetTrips">
+                        <ResultType aspect.dataShape="TripShape" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition aspect.isRequired="true" baseType="DATETIME" description="" name="TripDate" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="EditTripLocation">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition aspect.isRequired="true" baseType="DATETIME" description="" name="TripDate" ordinal="1"/>
+                            <FieldDefinition baseType="STRING" description="" name="LocationDescription" ordinal="4"/>
+                            <FieldDefinition baseType="INTEGER" description="" name="LocationSequence" ordinal="6"/>
+                            <FieldDefinition baseType="INTEGER" description="" name="TripLocationID" ordinal="7"/>
+                            <FieldDefinition baseType="STRING" description="" name="LocationAddress" ordinal="3"/>
+                            <FieldDefinition baseType="INTEGER" description="" name="TripID" ordinal="2"/>
+                            <FieldDefinition aspect.isRequired="true" baseType="LOCATION" description="" name="Location" ordinal="5"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="DeleteTripLocation">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="DATETIME" description="" name="TripDate" ordinal="2"/>
+                            <FieldDefinition baseType="INTEGER" description="" name="LocationID" ordinal="3"/>
+                            <FieldDefinition baseType="INTEGER" description="" name="TripID" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="DeleteTrip">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="DATETIME" description="" name="TripDate" ordinal="2"/>
+                            <FieldDefinition baseType="INTEGER" description="" name="TripID" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations>
+                    <ServiceImplementation description="" handlerName="Script" name="GetTripLocations">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var NewTripDate = TripDate;
+
+NewTripDate.setMilliseconds(0);
+
+var query = {
+  "filters": {
+    "type": "AND",
+    "filters": [
+      {
+        "fieldName": "VehicleDeviceThing",
+        "type": "EQ",
+        "value": me.name
+      },
+      {
+        "fieldName": "TripID",
+        "type": "EQ",
+        "value": TripID
+      },
+      {
+        "fieldName": "TripDate",
+        "type": "EQ",
+        "value": NewTripDate
+      }
+    ]
+  }
+};
+
+var params = {
+	query: query /* QUERY */
+};
+
+// result: INFOTABLE
+var result = Things["TripLocations"].QueryDataTableEntries(params);
+
+
+var params = {
+	sortColumn: "Sequence" /* STRING */,
+	t: result /* INFOTABLE */,
+	ascending: true /* BOOLEAN */
+};
+
+// result: INFOTABLE
+var result = Resources["InfoTableFunctions"].Sort(params);]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="UpdateTripPlannedDistance">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var values = Things["Trips"].CreateValues();
+
+values.VehicleDeviceThing = me.name; //STRING [Primary Key]
+values.TripDate = TripDate; //DATETIME [Primary Key]
+values.ID = TripID; //INTEGER [Primary Key]
+values.PlannedDistance = PlannedDistance; //NUMBER
+
+var params = {
+	values: values /* INFOTABLE*/
+};
+
+// no return
+Things["Trips"].UpdateDataTableEntry(params);]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="AddTrip">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var NewTripDate = TripDate;
+
+NewTripDate.setMilliseconds(0);
+
+var query = {
+  "filters": {
+    "type": "AND",
+    "filters": [
+      {
+        "fieldName": "VehicleDeviceThing",
+        "type": "EQ",
+        "value": me.name
+      },
+      {
+        "fieldName": "TripDate",
+        "type": "EQ",
+        "value": NewTripDate
+      }
+    ]
+  }
+};
+
+var params = {
+	query: query /* QUERY */
+};
+
+// result: INFOTABLE
+var TripRecords = Things["Trips"].QueryDataTableEntries(params);
+
+var tableLength = TripRecords.rows.length;
+
+if (tableLength == 0)
+{
+    var TripID = 1}
+else
+{
+    var params = {
+        t: TripRecords /* INFOTABLE */,
+        columns: "ID" /* STRING */,
+        aggregates: "MAX" /* STRING */,
+        groupByColumns: undefined /* STRING */
+    };
+
+    // result: INFOTABLE
+    var AggregateRecord = Resources["InfoTableFunctions"].Aggregate(params);
+    var row = AggregateRecord.rows[0];
+    var TripID = row.MAX_ID + 1;
+};
+
+
+var values = Things["Trips"].CreateValues();
+
+values.Description = TripDescription; //STRING
+values.VehicleDeviceThing = me.name; //STRING [Primary Key]
+values.TripDate = NewTripDate; //DATETIME [Primary Key]
+values.ID = TripID; //INTEGER [Primary Key]
+values.Priority = TripPriority; //INTEGER
+
+var params = {
+	tags: undefined /* TAGS */,
+	sourceType: undefined /* STRING */,
+	values: values /* INFOTABLE*/,
+	source: undefined /* STRING */,
+	location: undefined /* LOCATION */
+};
+
+// result: STRING
+var id = Things["Trips"].AddDataTableEntry(params);]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="AddTripLocation">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var NewTripDate = TripDate;
+
+NewTripDate.setMilliseconds(0);
+
+var query = {
+  "filters": {
+    "type": "AND",
+    "filters": [
+      {
+        "fieldName": "VehicleDeviceThing",
+        "type": "EQ",
+        "value": me.name
+      },
+      {
+        "fieldName": "TripID",
+        "type": "EQ",
+        "value": TripID
+      },
+      {
+        "fieldName": "TripDate",
+        "type": "EQ",
+        "value": NewTripDate
+      }
+    ]
+  }
+};
+
+var params = {
+	query: query /* QUERY */
+};
+
+// result: INFOTABLE
+var TripLocationRecords = Things["TripLocations"].QueryDataTableEntries(params);
+
+var tableLength = TripLocationRecords.rows.length;
+
+if (tableLength == 0)
+{
+    var LocationID = 1}
+else
+{
+    var params = {
+        t: TripLocationRecords /* INFOTABLE */,
+        columns: "LocationID" /* STRING */,
+        aggregates: "MAX" /* STRING */,
+        groupByColumns: undefined /* STRING */
+    };
+
+    // result: INFOTABLE
+    var AggregateRecord = Resources["InfoTableFunctions"].Aggregate(params);
+    var row = AggregateRecord.rows[0];
+    var LocationID = row.MAX_LocationID + 1;
+};
+
+var values = Things["TripLocations"].CreateValues();
+
+values.LocationDescription = LocationDescription; //STRING
+values.VehicleDeviceThing = me.name; //STRING [Primary Key]
+values.LocationID = LocationID; //INTEGER [Primary Key]
+values.TripDate = NewTripDate; //DATETIME [Primary Key]
+values.LocationAddress = LocationAddress; //STRING
+values.Location = Location; //LOCATION
+values.TripID = TripID; //INTEGER [Primary Key]
+values.Sequence = LocationSequence; //INTEGER
+
+var params = {
+	values: values /* INFOTABLE*/
+};
+
+// result: STRING
+var id = Things["TripLocations"].AddDataTableEntry(params);]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="EditTrip">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var NewTripDate = TripDate;
+
+NewTripDate.setMilliseconds(0);
+
+var values = Things["Trips"].CreateValues();
+
+values.Description = TripDescription; //STRING
+values.VehicleDeviceThing = me.name; //STRING [Primary Key]
+values.TripDate = NewTripDate; //DATETIME [Primary Key]
+values.ID = TripID; //INTEGER [Primary Key]
+values.Priority = TripPriority; //INTEGER
+
+var params = {
+	values: values /* INFOTABLE*/
+};
+
+// no return
+Things["Trips"].UpdateDataTableEntry(params);]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="GetTrips">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var NewTripDate = TripDate;
+
+NewTripDate.setMilliseconds(0);
+
+var query = {
+  "filters": {
+    "type": "AND",
+    "filters": [
+      {
+        "fieldName": "VehicleDeviceThing",
+        "type": "EQ",
+        "value": me.name
+      },
+      {
+        "fieldName": "TripDate",
+        "type": "EQ",
+        "value": TripDate
+      }
+    ]
+  }
+};
+
+var params = {
+	query: query /* QUERY */
+};
+
+// result: INFOTABLE
+var result = Things["Trips"].QueryDataTableEntries(params);
+
+var params = {
+	sortColumn: "Priority" /* STRING */,
+	t: result /* INFOTABLE */,
+	ascending: true /* BOOLEAN */
+};
+
+// result: INFOTABLE
+var result = Resources["InfoTableFunctions"].Sort(params);]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="EditTripLocation">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var NewTripDate = TripDate;
+
+NewTripDate.setMilliseconds(0);
+
+var values = Things["TripLocations"].CreateValues();
+
+values.LocationDescription = LocationDescription; //STRING
+values.VehicleDeviceThing = me.name; //STRING [Primary Key]
+values.LocationID = TripLocationID; //INTEGER [Primary Key]
+values.TripDate = NewTripDate; //DATETIME [Primary Key]
+values.LocationAddress = LocationAddress; //STRING
+values.Location = Location; //LOCATION
+values.TripID = TripID; //INTEGER [Primary Key]
+values.Sequence = LocationSequence; //INTEGER
+
+var params = {
+	values: values /* INFOTABLE*/
+};
+
+// no return
+Things["TripLocations"].UpdateDataTableEntry(params);]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="DeleteTripLocation">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var NewTripDate = TripDate;
+
+NewTripDate.setMilliseconds(0);
+
+var values = Things["TripLocations"].CreateValues();
+
+values.VehicleDeviceThing = me.name; //STRING [Primary Key]
+values.LocationID = LocationID; //INTEGER [Primary Key]
+values.TripDate = NewTripDate; //DATETIME [Primary Key]
+values.TripID = TripID; //INTEGER [Primary Key]
+
+var params = {
+	values: values /* INFOTABLE*/
+};
+
+// no return
+Things["TripLocations"].DeleteDataTableEntry(params);]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="DeleteTrip">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var NewTripDate = TripDate;
+
+NewTripDate.setMilliseconds(0);
+
+var values = Things["Trips"].CreateValues();
+
+values.VehicleDeviceThing = me.name; //STRING [Primary Key]
+values.TripDate = NewTripDate; //DATETIME [Primary Key]
+values.ID = TripID; //INTEGER [Primary Key]
+
+var params = {
+	values: values /* INFOTABLE*/
+};
+
+// no return
+Things["Trips"].DeleteDataTableEntry(params);]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions/>
+            </ThingShape>
+            <ImplementedShapes/>
+            <SharedConfigurationTables/>
+            <InstanceDesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </InstanceDesignTimePermissions>
+            <InstanceRunTimePermissions/>
+            <InstanceVisibilityPermissions>
+                <Visibility/>
+            </InstanceVisibilityPermissions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, baseThingTemplate : updated, tags : updated&#10;documentation : updated&#10;properties : LastName : Added, FirstName : Added, Updated&#10;" timestamp="2015-03-27T13:03:05.856-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : Make : Added, Model : Added, Year : Added&#10;" timestamp="2015-03-27T13:24:33.232-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : Color : Added&#10;" timestamp="2015-03-27T13:25:20.507-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services :  : Input parameter TripDate Added, Input parameter TripPriority Added, Input parameter TripDescription Added, AddTrip : Inputs updated, Code Updated, Service Added&#10;" timestamp="2015-03-27T14:09:20.029-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T14:09:34.547-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : AddTripCopy : Input parameter TripPriority Added, Input parameter TripDescription Added, GetTrips : Inputs updated, Code Updated, Output Updated, Service Added&#10;" timestamp="2015-03-27T14:14:26.394-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetTrips : Code Updated&#10;" timestamp="2015-03-27T14:15:28.206-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services :  : Input parameter TripID Added, Input parameter TripDate Added, Input parameter TripDescription Added, Input parameter TripPriority Added, EditTrip : Inputs updated, Code Updated, Service Added&#10;" timestamp="2015-03-27T14:19:43.097-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : DeleteTrip : Code Updated, Inputs updated, Service Added, EditTripCopy : Input parameter TripDescription Added, Input parameter TripPriority Added&#10;" timestamp="2015-03-27T14:21:23.459-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T14:21:37.535-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetTrips : Code Updated&#10;" timestamp="2015-03-27T14:44:38.974-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetTrips : Code Updated&#10;" timestamp="2015-03-27T14:46:26.036-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : AddTrip : Code Updated&#10;" timestamp="2015-03-27T14:55:50.447-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : AddTrip : Code Updated&#10;" timestamp="2015-03-27T16:14:58.674-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetTrips : Code Updated&#10;" timestamp="2015-03-27T16:16:57.709-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T16:16:59.539-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : AddTrip : Code Updated&#10;" timestamp="2015-03-27T16:20:51.681-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetTrips : Code Updated&#10;" timestamp="2015-03-27T16:21:39.840-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : EditTrip : Code Updated, DeleteTrip : Code Updated&#10;" timestamp="2015-03-27T16:23:28.903-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T16:23:31.999-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : DeleteTrip : Code Updated&#10;" timestamp="2015-03-27T16:26:52.072-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T16:26:58.930-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : AddTrip : Code Updated&#10;" timestamp="2015-03-27T17:05:09.948-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : AddTripLocation : Code Updated, Inputs updated, Service Added, AddTripCopy : Input parameter TripPriority Added, Input parameter TripDescription Added, Input parameter TripID Added, Input parameter LocationAddress Added, Input parameter LocationDescription Added, Input parameter Location Added, Input parameter LocationSequence Added&#10;" timestamp="2015-03-27T18:59:11.345-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T18:59:55.739-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : AddTripLocationCopy : Input parameter LocationSequence Added, Input parameter LocationAddress Added, Input parameter LocationDescription Added, Input parameter Location Added, GetTripLocations : Inputs updated, Code Updated, Service Added&#10;" timestamp="2015-03-27T19:03:31.719-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetTripLocations : Output Updated&#10;" timestamp="2015-03-27T19:15:00.449-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : EditTripLocation : Service Added&#10;" timestamp="2015-03-27T19:36:41.378-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : EditTripLocation : Input parameter TripLocationID Added, Inputs updated, Code Updated&#10;" timestamp="2015-03-27T19:42:29.452-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : DeleteTripLocation : Code Updated, Inputs updated, Service Added,  : Input parameter TripID Added, Input parameter TripDate Added, Input parameter LocationID Added&#10;" timestamp="2015-03-27T19:59:39.367-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T19:59:44.733-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : AddTripLocation : Code Updated&#10;" timestamp="2015-03-27T20:13:22.752-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T20:13:31.410-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : AddTrip : Code Updated, AddTripLocation : Code Updated&#10;" timestamp="2015-03-27T20:17:43.745-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T20:21:20.206-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : AddTripLocation : Code Updated, AddTrip : Code Updated&#10;" timestamp="2015-03-27T20:23:37.479-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="documentation : updated&#10;services :  : Input parameter routePreference Added, Input parameter TripDate Added, Input parameter VehicleDevice Added, Input parameter TripId Added, Input parameter TripID Added, GetRouteDataForTrip : Inputs updated, Code Updated, Output Updated, Service Added&#10;" timestamp="2015-03-29T13:09:55.935-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-29T13:11:35.334-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services :  : Input parameter VehicleDevice Added, Input parameter TripDate Added, Input parameter TripID Added, RetrieveTripLocations : Inputs updated, Output Updated, Code Updated, Service Added&#10;" timestamp="2015-03-29T13:16:20.894-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetRouteDataForTrip : Code Updated, Input parameter TripDate Updated, Inputs updated, Input parameter TripID Updated, Input parameter TripLocations Added, Input parameter LocationData Updated, Input parameter routePreference Updated, RetrieveTripLocations : removed&#10;" timestamp="2015-03-29T13:22:38.699-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-29T13:23:07.313-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-29T13:29:52.197-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-29T13:29:54.029-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetRouteDataForTrip : removed&#10;" timestamp="2015-03-29T13:34:29.755-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services :  : Input parameter TripDate Added, Input parameter TripID Added, Input parameter PlannedDistance Added, UpdateTripPlannedDistance : Inputs updated, Code Updated, Service Added&#10;" timestamp="2015-03-29T14:06:04.661-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-11-17T12:08:22.362-05:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </ThingTemplate>
+    </ThingTemplates>
+</Entities>
