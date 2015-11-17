@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <StyleDefinitions>
+        <StyleDefinition description="Default Style for Grid Widget Row Selected - Theme: ThingWorx Light" documentationContent="" homeMashup="" lastModifiedDate="2015-11-17T13:17:06.018-05:00" name="Github.ButtonStyle" tags="Applications:github">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <content><![CDATA[{"image":"","backgroundColor":"#B65924","textSize":"large","lineStyle":"solid","displayString":"","fontEmphasisUnderline":false,"fontEmphasisItalic":false,"lineThickness":1,"lineColor":"#8C450F","foregroundColor":"#262626","fontEmphasisBold":true,"secondaryBackgroundColor":"#8C450F"}]]></content>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-08-30T20:51:06.650-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-08-30T20:51:21.484-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-08-30T20:52:39.857-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-08-30T21:11:10.184-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-09-03T13:16:19.201-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-03T13:18:33.119-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-03T13:19:37.685-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-03T17:37:49.022-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-09-11T09:40:23.677-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-10-20T14:23:05.966-04:00" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-20T15:14:19.801-04:00" user="stevea"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-11-16T15:56:24.244-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-11-17T11:42:13.854-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T13:17:06.018-05:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </StyleDefinition>
+    </StyleDefinitions>
+</Entities>
