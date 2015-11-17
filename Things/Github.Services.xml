@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Things>
+        <Thing description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2015-11-17T13:17:06.128-05:00" name="Github.Services" published="false" tags="Applications:github" thingTemplate="GenericThing" valueStream="">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ThingShape>
+                <PropertyDefinitions/>
+                <ServiceDefinitions>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="UpdateGithubConfiguration">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="STRING" description="" name="githubRepo" ordinal="5"/>
+                            <FieldDefinition baseType="BOOLEAN" description="" name="accessTokenChanged" ordinal="4"/>
+                            <FieldDefinition aspect.defaultValue="MyFileRepo2" aspect.thingTemplate="Github.FileRepository" baseType="THINGNAME" description="" name="fileRepo" ordinal="1"/>
+                            <FieldDefinition baseType="STRING" description="" name="reportedUserID" ordinal="7"/>
+                            <FieldDefinition baseType="STRING" description="" name="defaultReportedMessage" ordinal="6"/>
+                            <FieldDefinition baseType="STRING" description="" name="accessToken" ordinal="3"/>
+                            <FieldDefinition baseType="STRING" description="" name="userID" ordinal="2"/>
+                            <FieldDefinition baseType="STRING" description="" name="tags" ordinal="8"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="CreateGithubConfiguration">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="STRING" description="" name="Description" ordinal="5"/>
+                            <FieldDefinition baseType="STRING" description="" name="FileRepoThingName" ordinal="2"/>
+                            <FieldDefinition baseType="STRING" description="" name="ConnectionThingName" ordinal="1"/>
+                            <FieldDefinition baseType="STRING" description="" name="GithubUserID" ordinal="3"/>
+                            <FieldDefinition baseType="STRING" description="" name="GithubAccessToken" ordinal="4"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetConnectionAndFileRepoData">
+                        <ResultType aspect.dataShape="Github.ConfigurationDS" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="CreateThing">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="STRING" description="" name="Description" ordinal="3"/>
+                            <FieldDefinition baseType="STRING" description="" name="ThingName" ordinal="1"/>
+                            <FieldDefinition baseType="STRING" description="" name="ThingTemplate" ordinal="2"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations>
+                    <ServiceImplementation description="" handlerName="Script" name="UpdateGithubConfiguration">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[Things[Things[fileRepo].GithubConnection].GithubRepo = githubRepo;
+Things[Things[fileRepo].GithubConnection].GithubUserID = userID;
+Things[Things[fileRepo].GithubConnection].GithubReportedUserID = reportedUserID;
+Things[Things[fileRepo].GithubConnection].GithubReportedMessage = defaultReportedMessage;
+Things[fileRepo].TagsToExport = tags;
+logger.warn("tags=" + tags);
+if(accessTokenChanged == true) {
+ 	//since we know it changed, we need to encrypt again before we save it
+    Things[Things[fileRepo].GithubConnection].GithubAccessToken = encryptPropertyValue(accessToken);
+
+}]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="CreateGithubConfiguration">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[try {
+    var params = {
+        ThingName: ConnectionThingName /* STRING */,
+        ThingTemplate: "Github.Connection" /* STRING */,
+        Description: Description /* STRING */
+    };
+
+    me.CreateThing(params);
+} catch(err) {
+ 	logger.warn("Error creating Connection thing. Error=" + err);   
+}
+
+try {
+    var params = {
+        ThingName: FileRepoThingName /* STRING */,
+        ThingTemplate: "Github.FileRepository" /* STRING */,
+        Description: Description /* STRING */
+    };
+
+    me.CreateThing(params);
+} catch(err) {
+ 	logger.warn("Error creating Connection thing. Error=" + err);   
+}
+
+var params = {
+	data: GithubAccessToken /* STRING */
+};
+
+// result: STRING
+var accessToken = Resources["EncryptionServices"].Encrypt(params);
+
+
+Things[ConnectionThingName].GithubUserID = GithubUserID;
+Things[FileRepoThingName].GithubConnection = ConnectionThingName;
+
+
+var params = {
+	data: GithubAccessToken /* STRING */
+};
+
+// result: STRING
+var accessToken = Resources["EncryptionServices"].EncryptPropertyValue(params);
+
+
+Things[ConnectionThingName].GithubAccessToken = accessToken;
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="GetConnectionAndFileRepoData">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var params = {
+	infoTableName : "InfoTable",
+	dataShapeName : "Github.ConfigurationDS"
+};
+
+// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(Github.ConfigurationDS)
+var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+
+
+var params = {
+	maxItems: undefined /* NUMBER */,
+	nameMask: undefined /* STRING */,
+	query: undefined /* QUERY */,
+	tags: undefined /* TAGS */
+};
+
+// result: INFOTABLE dataShape: RootEntityList
+var filerepo = ThingTemplates["Github.FileRepository"].QueryImplementingThingsWithData(params);
+
+for each(var row in filerepo.rows) {
+    // Github.ConfigurationDS entry object
+    var newEntry = new Object();
+    newEntry.GithubRepo = Things[row.GithubConnection].GithubRepo; // STRING
+    newEntry.GithubReportedUserID = Things[row.GithubConnection].GithubReportedUserID; // STRING
+    newEntry.TagsToExport = row.TagsToExport; // TAGS
+    newEntry.GithubFileRepoName = row.name; // STRING
+    newEntry.description = Things[row.GithubConnection].description; // STRING
+    newEntry.GithubReportedMessage = Things[row.GithubConnection].GithubReportedMessage; // STRING
+    newEntry.GithubUserID = Things[row.GithubConnection].GithubUserID; // STRING
+     
+    newEntry.GithubAccessToken = encryptPropertyValue(Things[row.GithubConnection].GithubAccessToken);
+    newEntry.GithubConnectionName = row.GithubConnection; // STRING
+
+    result.AddRow(newEntry);
+    
+}]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="CreateThing">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[
+var params = {
+	name: ThingName /* STRING */,
+	description: Description /* STRING */,
+	thingTemplateName: ThingTemplate /* THINGTEMPLATENAME */,
+	tags: undefined /* TAGS */
+};
+
+// no return
+Resources["EntityServices"].CreateThing(params);
+
+
+Things[ThingName].EnableThing();
+
+
+Things[ThingName].RestartThing();
+
+
+
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions/>
+            </ThingShape>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations/>
+            <ImplementedShapes/>
+            <ThingProperties/>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-11-17T11:42:13.947-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T13:17:06.128-05:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </Thing>
+    </Things>
+</Entities>
