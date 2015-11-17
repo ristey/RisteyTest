@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <DataShapes>
+        <DataShape baseDataShape="" description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" homeMashup="" lastModifiedDate="2015-11-17T12:08:22.351-05:00" name="TripShape" tags="Applications:TripBuilder">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <FieldDefinitions>
+                <FieldDefinition baseType="STRING" description="" name="Description" ordinal="5"/>
+                <FieldDefinition aspect.isPrimaryKey="true" baseType="DATETIME" description="" name="TripDate" ordinal="3"/>
+                <FieldDefinition aspect.isPrimaryKey="false" baseType="INTEGER" description="" name="Priority" ordinal="4"/>
+                <FieldDefinition aspect.isPrimaryKey="true" baseType="STRING" description="" name="VehicleDeviceThing" ordinal="3"/>
+                <FieldDefinition aspect.isPrimaryKey="true" baseType="INTEGER" description="" name="ID" ordinal="2"/>
+                <FieldDefinition baseType="NUMBER" description="" name="PlannedDistance" ordinal="6"/>
+            </FieldDefinitions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated&#10;documentation : updated&#10;" timestamp="2015-03-27T13:46:32.104-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : VehcileDeviceName : Added, removed, ID : Added, VehicleDeviceThing : Added, TripDate : Added, Priority : Added, Description : Added&#10;" timestamp="2015-03-27T13:48:54.281-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="documentation : updated&#10;fields : TripDateString : Added, TripDate : Updated&#10;" timestamp="2015-03-27T15:09:45.772-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : TripDate : Updated, TripDateString : removed&#10;" timestamp="2015-03-27T16:12:06.375-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : KeyID : Added&#10;" timestamp="2015-03-27T16:55:10.958-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-27T16:56:29.819-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : KeyID : removed&#10;" timestamp="2015-03-27T17:05:21.859-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : PlannedDistance : Added&#10;" timestamp="2015-03-29T14:02:40.122-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-11-17T12:08:22.351-05:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </DataShape>
+    </DataShapes>
+</Entities>
