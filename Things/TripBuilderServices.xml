@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Things>
+        <Thing description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2015-11-17T12:08:22.377-05:00" name="TripBuilderServices" published="false" tags="Applications:TripBuilder" thingTemplate="GenericThing" valueStream="">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ThingShape>
+                <PropertyDefinitions/>
+                <ServiceDefinitions>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="SumDistance">
+                        <ResultType baseType="NUMBER" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition aspect.dataShape="RouteDataShape" aspect.isRequired="true" baseType="INFOTABLE" description="" name="RouteData" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="ChangeTripLocationPriority">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition aspect.defaultValue="false" aspect.isRequired="true" baseType="BOOLEAN" description="" name="MoveUp" ordinal="2"/>
+                            <FieldDefinition aspect.isRequired="true" baseType="INTEGER" description="" name="LocationIDToChange" ordinal="3"/>
+                            <FieldDefinition aspect.dataShape="TripLocationShape" aspect.isRequired="true" baseType="INFOTABLE" description="" name="TripLocationRecords" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetRouteDataForTrip">
+                        <ResultType aspect.dataShape="RouteDataShape" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition aspect.dataShape="TripLocationShape" aspect.isRequired="true" baseType="INFOTABLE" description="" name="LocationData" ordinal="2"/>
+                            <FieldDefinition aspect.defaultValue="0" baseType="INTEGER" description="" name="routePreference" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetLocationFromAddress">
+                        <ResultType baseType="LOCATION" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="STRING" description="" name="Address" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations>
+                    <ServiceImplementation description="" handlerName="Script" name="SumDistance">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var params = {
+	t: RouteData /* INFOTABLE */,
+	columns: "distance" /* STRING */,
+	aggregates: "SUM" /* STRING */
+};
+
+// result: INFOTABLE
+var AggregatedData = Resources["InfoTableFunctions"].Aggregate(params);
+
+var row = AggregatedData.rows[0];
+
+var result = row.SUM_distance / 1760;]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="ChangeTripLocationPriority">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[// Move Record is the location that the user moved
+// Change Record is the record that it is switched with
+
+// get the record count of the passed in infotable
+
+var tableLength = TripLocationRecords.rows.length;
+
+//  skip the process if there is only one record
+if (tableLength > 1){
+
+    // set base variables
+    var PrevRecordIndex = 0;
+    var MoveRecordFound = false;
+    var MoveRecordIndex = 0;
+    var ChangeRecordIndex = 0;
+
+	// loop through passed in infotable    
+    for (var x = 0; x < tableLength; x++) {
+        var row = TripLocationRecords.rows[x];
+        
+        // check to see if we found the record for the move up situation
+        if (MoveUp == true){
+            if (row.LocationID == LocationIDToChange){
+            	ChangeRecordIndex = PrevRecordIndex;
+                MoveRecordIndex = x;
+        	};
+    	};        
+        
+        // check to see if we found the record for the move down situation
+        if (MoveUp == false){
+            if (row.LocationID == LocationIDToChange){
+                MoveRecordIndex = x;
+        	};
+            if (MoveRecordFound == true){
+                ChangeRecordIndex = x;
+                MoveRecordFound = false;
+        	};
+    	};
+        
+        // check to see if record to be moved was found and we are not on the last record (for moving down)
+        if (x < tableLength - 1){
+            if (row.LocationID == LocationIDToChange)
+            	{MoveRecordFound = true};
+        };
+        
+        //set PrevID = current row id
+        PrevRecordIndex = x
+    }
+
+    // grab the proper rows out of the infotable
+    var MoveRow = TripLocationRecords.rows[MoveRecordIndex];
+    var ChangeRow = TripLocationRecords.rows[ChangeRecordIndex];
+
+    if ( (MoveUp == true && MoveRecordIndex != 0) || (MoveUp == false && MoveRecordIndex != tableLength - 1)){   
+    
+        // update the move record (the one the user selected to move)    
+        var values = Things["TripLocations"].CreateValues();
+
+        // Determine the new sequence number
+        if (MoveUp == true){
+            var NewSequence = MoveRow.Sequence - 1;}
+        else {
+            var NewSequence = MoveRow.Sequence + 1;};      
+
+        // set the values
+        values.LocationDescription = MoveRow.LocationDescription; //STRING
+        values.VehicleDeviceThing = MoveRow.VehicleDeviceThing; //STRING [Primary Key]
+        values.LocationID = MoveRow.LocationID; //INTEGER [Primary Key]
+        values.TripDate = MoveRow.TripDate; //DATETIME [Primary Key]
+        values.LocationAddress = MoveRow.LocationAddress; //STRING
+        values.Location = MoveRow.Location; //LOCATION
+        values.TripID = MoveRow.TripID; //INTEGER [Primary Key]
+        values.Sequence = NewSequence; //INTEGER
+
+        var params = {
+            values: values /* INFOTABLE*/
+        };
+
+        // update the record
+        Things["TripLocations"].UpdateDataTableEntry(params);
+
+        // update the change records (the record affected by the move)
+        var values = Things["TripLocations"].CreateValues();
+
+        // Determine the new sequence number
+        if (MoveUp == true){
+            var NewSequence = ChangeRow.Sequence + 1;}
+        else {
+            var NewSequence = ChangeRow.Sequence - 1;};      
+
+        // set the values
+        values.LocationDescription = ChangeRow.LocationDescription; //STRING
+        values.VehicleDeviceThing = ChangeRow.VehicleDeviceThing; //STRING [Primary Key]
+        values.LocationID = ChangeRow.LocationID; //INTEGER [Primary Key]
+        values.TripDate = ChangeRow.TripDate; //DATETIME [Primary Key]
+        values.LocationAddress = ChangeRow.LocationAddress; //STRING
+        values.Location = ChangeRow.Location; //LOCATION
+        values.TripID = ChangeRow.TripID; //INTEGER [Primary Key]
+        values.Sequence = NewSequence; //INTEGER
+
+        var params = {
+            values: values /* INFOTABLE*/
+        };
+
+        // update the record
+        Things["TripLocations"].UpdateDataTableEntry(params);    
+	};
+};
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="GetRouteDataForTrip">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[// The following function was found at: http://cheateinstein.com/category-php/decoding-polyline-algorithm-format-javascriptphp/
+// no licensing listed, 
+function decodePolyLine(encoded, precision) {
+    precision = Math.pow(10, -precision);
+    var len = encoded.length, index=0, lat=0, lng = 0, array = [];
+    while (index < len) {
+        var b, shift = 0, result = 0;
+        do {
+            b = encoded.charCodeAt(index++) - 63;
+            result |= (b & 0x1f) << shift;
+            shift += 5;
+        } while (b >= 0x20);
+        var dlat = ((result & 1) ? ~(result >> 1) : (result >> 1));
+        lat += dlat;
+        shift = 0;
+        result = 0;
+        do {
+            b = encoded.charCodeAt(index++) - 63;
+            result |= (b & 0x1f) << shift;
+            shift += 5;
+        } while (b >= 0x20);
+        var dlng = ((result & 1) ? ~(result >> 1) : (result >> 1));
+        lng += dlng;
+        array.push( [lat * precision, lng * precision] );
+    }
+    return array;
+}
+
+// start of main cide
+
+// get length of table and determine number of locations
+var tableLength = LocationData.rows.length;
+
+var startingrow = LocationData.rows[0];
+var endingrow = LocationData.rows[tableLength-1];
+
+var origin = "origin=" + startingrow.Location.latitude + "," + startingrow.Location.longitude;
+var destination = "&destination=" + endingrow.Location.latitude + "," + endingrow.Location.longitude;
+var urlLocation = "";  // string passed to google as waypoints
+
+if (tableLength > 2){
+    for (var x = 1; x < tableLength - 1; x++) {
+        var row = LocationData.rows[x];
+
+        if (urlLocation == "") {
+            urlLocation = row.Location.latitude + "," + row.Location.longitude ;	    
+        } else {
+            urlLocation = urlLocation + "|" + row.Location.latitude + "," + row.Location.longitude ;
+        }        
+    }    
+};
+
+var encodedParameters = encodeURIComponent(urlLocation)
+
+if (tableLength > 2){
+	var url = "https://maps.googleapis.com/maps/api/directions/json?" + origin + destination + "&waypoints=" + encodedParameters;
+};
+
+if (tableLength <= 2){
+	var url = "https://maps.googleapis.com/maps/api/directions/json?" + origin + destination
+};
+
+
+var params = {
+	headers: undefined /* JSON */,
+	useProxy: undefined /* BOOLEAN */,
+	proxyHost: undefined /* STRING */,
+	useNTLM: undefined /* BOOLEAN */,
+	ignoreSSLErrors: undefined /* BOOLEAN */,
+	proxyPort: undefined /* INTEGER */,
+	withCookies: undefined /* BOOLEAN */,
+	password: undefined /* STRING */,
+	url: url /* STRING */,
+	workstation: undefined /* STRING */,
+	username: undefined /* STRING */,
+	proxyScheme: undefined /* STRING */,
+	domain: undefined /* STRING */,
+	timeout: undefined /* NUMBER */
+};
+
+// result: JSON
+var googleResult = Resources["ContentLoaderFunctions"].GetJSON(params);
+
+//me.JSONResult = googleResult;
+
+var params = {
+	infoTableName : "InfoTable",
+	dataShapeName : "RouteDataShape"
+};
+
+// CreateInfoTableFromDataShape(infoTableName:STRING("InfoTable"), dataShapeName:STRING):INFOTABLE(RouteDataShape)
+var result = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape(params);
+
+for each (var leg in googleResult.routes[routePreference].legs) {
+    for each (var step in leg.steps) {
+        //logger.warn(step.start_location.lat);
+        var newRow = {};
+        var startLocation = {};
+        startLocation.latitude = step.start_location.lat;
+        startLocation.longitude = step.start_location.lng;
+
+        var endLocation = {};
+        endLocation.latitude = step.end_location.lat;
+        endLocation.longitude = step.end_location.lng;
+
+        newRow.stepStartLocation = startLocation;
+        newRow.stepEndLocation = endLocation;
+        newRow.htmlInstructions = step.html_instructions
+        newRow.durationText = step.duration.text;
+        newRow.duration = step.duration.value;
+        newRow.distance = step.distance.value;
+        newRow.distanceText = step.distance.text;
+
+        result.AddRow(newRow);
+
+        var pathBetweenLocations = decodePolyLine(step.polyline.points, 5);
+        for each (var point in pathBetweenLocations) {
+            var newPoint = {};
+            newPoint.latitude = point[0];
+            newPoint.longitude = point[1];
+
+            var routeRow = {};
+            routeRow.routeLocation = newPoint;
+            result.AddRow(routeRow);
+        }
+	}        
+}]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="GetLocationFromAddress">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var urlString = Address.replace(/ /gi, "+");
+
+var params = {
+    url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + urlString + "&sensor=false"};
+
+// result: JSON
+var JSON = Resources["ContentLoaderFunctions"].LoadJSON(params);
+
+if (JSON.status == "OK") {
+    var result = new Object();
+    result.latitude = JSON.results[0].geometry.location.lat;
+    result.longitude = JSON.results[0].geometry.location.lng;    
+    result.elevation = 0;
+    result.units = "WGSB4";
+};]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions/>
+            </ThingShape>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations/>
+            <ImplementedShapes/>
+            <ThingProperties/>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-11-17T12:08:22.377-05:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </Thing>
+    </Things>
+</Entities>
