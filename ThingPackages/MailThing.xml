@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <ThingPackages>
+        <ThingPackage aspect.isCreatable="true" aspect.isExtensible="false" aspect.isExtension="true" className="com.thingworx.things.mail.MailThing" description="Mail Interface" documentationContent="" homeMashup="" lastModifiedDate="2015-11-17T13:03:12.382-05:00" name="MailThing" tags="">
+            <Owner name="SuperUser" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <HandlerDefinitions>
+                <HandlerDefinition className="com.thingworx.dsl.DSLServiceHandler" description="Script handler" isUserDefinable="true" name="Script"/>
+                <HandlerDefinition className="com.thingworx.handlers.ReflectionServiceHandler" description="Reflection handler" isUserDefinable="false" name="Reflection"/>
+            </HandlerDefinitions>
+            <ImplementedShapes/>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2015-11-17T13:03:12.382-05:00" user="SuperUser"/>
+            </ConfigurationChanges>
+        </ThingPackage>
+    </ThingPackages>
+</Entities>
