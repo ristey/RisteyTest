@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Users>
+        <User aspect.isEditableSystemObject="true" description="Administrator" documentationContent="" enabled="true" homeMashup="" lastModifiedDate="2015-11-17T11:18:42.382-05:00" mobileMashup="" name="Administrator" passwordHash="100000:004112036e725b5030d9a097caab11aef12fa391f96357e43113c37d573837da33ecc6906eef94c1d89a95f120d5e5d3db9335ded55fcbfd176d2000aad31e25:b9932859171187639ee6befbe9eb26c882d4c8f1fda142ab73888075a08f4ab1cd374ae34889c44d679f77db37d830037ea83a92b5dd0f8629f17fbbc289d453" passwordHashAlgorithm="PBKDF2WithHmacSHA512" passwordHashIterationCount="100000" passwordHashSaltSizeInBytes="64" passwordHashSizeInBytes="64" tags="">
+            <Owner name="SuperUser" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables>
+                <ConfigurationTable description="UserExtensions" isMultiRow="false" name="UserExtensions" ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition aspect.defaultValue="" aspect.isPersistent="true" baseType="STRING" category="" description="First name" isLocalOnly="false" name="firstName" ordinal="0"/>
+                            <FieldDefinition aspect.defaultValue="" aspect.isPersistent="true" baseType="STRING" category="" description="Last name" isLocalOnly="false" name="lastName" ordinal="0"/>
+                            <FieldDefinition aspect.defaultValue="" aspect.isPersistent="true" baseType="STRING" category="" description="E-mail address" isLocalOnly="false" name="emailAddress" ordinal="0"/>
+                            <FieldDefinition aspect.defaultValue="" aspect.isPersistent="true" baseType="STRING" category="" description="SMS address" isLocalOnly="false" name="smsAddress" ordinal="0"/>
+                            <FieldDefinition aspect.defaultValue="" aspect.isPersistent="true" baseType="STRING" category="" description="Mobile phone" isLocalOnly="false" name="mobilePhone" ordinal="0"/>
+                            <FieldDefinition aspect.defaultValue="" aspect.isPersistent="true" baseType="STRING" category="" description="Home phone" isLocalOnly="false" name="homePhone" ordinal="0"/>
+                            <FieldDefinition aspect.defaultValue="" aspect.isPersistent="true" baseType="STRING" category="" description="Middle name" isLocalOnly="false" name="middleName" ordinal="0"/>
+                            <FieldDefinition aspect.defaultValue="" aspect.isPersistent="true" baseType="STRING" category="" description="Work phone" isLocalOnly="false" name="workPhone" ordinal="0"/>
+                            <FieldDefinition aspect.defaultValue="" aspect.isPersistent="true" baseType="STRING" category="" description="Title" isLocalOnly="false" name="title" ordinal="0"/>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <firstName/>
+                            <lastName/>
+                            <emailAddress/>
+                            <smsAddress/>
+                            <mobilePhone/>
+                            <homePhone/>
+                            <middleName/>
+                            <workPhone/>
+                            <title/>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable description="Settings" isMultiRow="false" name="Settings" ordinal="2">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition aspect.defaultValue="" aspect.isPrimaryKey="true" baseType="STRING" description="Primary language" name="language" ordinal="0"/>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <language><![CDATA[en]]></language>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <PersistentValues>
+                <PersistentValue name="IDE_History_MRU_Entities"><![CDATA[{"IDE_History_MRU_Entities":[{"entityDescription":"","entityType":"Mashups","entityName":"Github.Home"},{"entityDescription":"","entityType":"Mashups","entityName":"ManageTrips"},{"entityDescription":"","entityType":"ThingTemplates","entityName":"Github.FileRepository"},{"entityDescription":"","entityType":"ThingTemplates","entityName":"Github.Connection"}]}]]></PersistentValue>
+                <PersistentValue name="IDE_LicenseClicked"><![CDATA[{"IDE_LicenseClicked":true}]]></PersistentValue>
+                <PersistentValue name="User_MashupFavorites"><![CDATA[{"rows":[{"items":[]}]}]]></PersistentValue>
+                <PersistentValue name="User_IDE_Favorites"><![CDATA[{"rows":[]}]]></PersistentValue>
+                <PersistentValue name="preferenceLoadTabs"><![CDATA[{"preferenceLoadTabs":"yes"}]]></PersistentValue>
+                <PersistentValue name="IDE_Tabs"><![CDATA[{"IDE_Tabs":[{"entityType":"Mashups","entityName":"Github.Home"}]}]]></PersistentValue>
+            </PersistentValues>
+            <ConfigurationChanges/>
+        </User>
+    </Users>
+</Entities>
