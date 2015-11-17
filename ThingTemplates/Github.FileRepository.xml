@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <ThingTemplates>
+        <ThingTemplate baseThingTemplate="FileRepository" description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" effectiveThingPackage="FileRepositoryThing" homeMashup="" lastModifiedDate="2015-11-17T13:17:05.987-05:00" name="Github.FileRepository" tags="Applications:github" thingPackage="" valueStream="">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations>
+                <AlertDefinitions name="GithubConnection"/>
+                <AlertDefinitions name="TagsToExport"/>
+            </AlertConfigurations>
+            <ThingShape>
+                <PropertyDefinitions>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" aspect.thingTemplate="Github.Connection" baseType="THINGNAME" category="" description="" isLocalOnly="false" name="GithubConnection" ordinal="2"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="STRING" category="" description="" isLocalOnly="false" name="TagsToExport" ordinal="1"/>
+                </PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="ExportSourceCode">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="DATETIME" description="" name="start" ordinal="2"/>
+                            <FieldDefinition baseType="DATETIME" description="" name="end" ordinal="3"/>
+                            <FieldDefinition aspect.tagType="ModelTags" baseType="TAGS" description="" name="tags" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="ApplyVersionTag">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition aspect.defaultValue="1.0.0.1" baseType="STRING" description="" name="versionNumber" ordinal="2"/>
+                            <FieldDefinition aspect.isRequired="true" aspect.tagType="ModelTags" baseType="TAGS" description="" name="tags" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="UploadFileChangesToGithub">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="ExportFullSourceCode">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition aspect.tagType="ModelTags" baseType="TAGS" description="" name="tags" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations>
+                    <ServiceImplementation description="" handlerName="Script" name="ExportSourceCode">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[
+var params = {
+	path: "/" /* STRING */,
+	endDate: end /* DATETIME */,
+	collection: undefined /* STRING */,
+	repositoryName: me.name /* THINGNAME */,
+	startDate: start /* DATETIME */,
+	tags: tags /* TAGS */
+};
+
+// no return
+Resources["SourceControlFunctions"].ExportSourceControlledEntities(params);
+
+//logger.info("Export Completed");]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="ApplyVersionTag">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[
+
+try {
+    var params = {
+        maxItems: undefined /* NUMBER */,
+        types: undefined /* JSON */,
+        aspects: undefined /* JSON */,
+        excludedAspects: undefined /* JSON */,
+        tags: tags /* TAGS */
+    };
+
+    // result: INFOTABLE dataShape: EntityDescriptor
+    var result = Resources["SearchFunctions"].SearchModelTags(params);
+
+    for each(var entity in result.rows) {
+        if(entity.parentType == "Things") {
+            // result: INFOTABLE dataShape: "VocabularyTermList"
+            var tags = Things[entity.name].GetTagsAsInfoTable();
+            for each (var tag in tags.rows) {
+                if(tag.vocabulary == "Version") {
+                    //need to remove the old version tag
+
+                    var params = {
+                        tags: "Version:" + tag.vocabularyTerm /* TAGS */
+                    };
+
+                    Things[entity.name].RemoveTags(params);
+                }
+            }
+            //now add the new version tag
+            var params = {
+                tags: "Version:" + versionNumber /* TAGS */
+            };
+
+            Things[entity.name].AddTags(params);
+
+        } else if(entity.parentType == "ThingTemplates") {
+            // result: INFOTABLE dataShape: "VocabularyTermList"
+            var tags = ThingTemplates[entity.name].GetTagsAsInfoTable();
+            for each (var tag in tags.rows) {
+                if(tag.vocabulary == "Version") {
+                    //need to remove the old version tag
+
+                    var params = {
+                        tags: "Version:" + tag.vocabularyTerm /* TAGS */
+                    };
+
+                    ThingTemplates[entity.name].RemoveTags(params);
+                }
+            }
+            //now add the new version tag
+            var params = {
+                tags: "Version:" + versionNumber /* TAGS */
+            };
+
+            ThingTemplates[entity.name].AddTags(params);
+            
+        } else if(entity.parentType == "ApplicationKeys") {
+            // result: INFOTABLE dataShape: "VocabularyTermList"
+            var tags = ApplicationKeys[entity.name].GetTagsAsInfoTable();
+            for each (var tag in tags.rows) {
+                if(tag.vocabulary == "Version") {
+                    //need to remove the old version tag
+
+                    var params = {
+                        tags: "Version:" + tag.vocabularyTerm /* TAGS */
+                    };
+
+                    ApplicationKeys[entity.name].RemoveTags(params);
+                }
+            }
+            //now add the new version tag
+            var params = {
+                tags: "Version:" + versionNumber /* TAGS */
+            };
+
+            ApplicationKeys[entity.name].AddTags(params);
+            
+        } else if(entity.parentType == "Dashboards") {
+            // result: INFOTABLE dataShape: "VocabularyTermList"
+            var tags = Dashboards[entity.name].GetTagsAsInfoTable();
+            for each (var tag in tags.rows) {
+                if(tag.vocabulary == "Version") {
+                    //need to remove the old version tag
+
+                    var params = {
+                        tags: "Version:" + tag.vocabularyTerm /* TAGS */
+                    };
+
+                    Dashboards[entity.name].RemoveTags(params);
+                }
+            }
+            //now add the new version tag
+            var params = {
+                tags: "Version:" + versionNumber /* TAGS */
+            };
+
+            Dashboards[entity.name].AddTags(params);
+        } else if(entity.parentType == "DataShapes") {
+            // result: INFOTABLE dataShape: "VocabularyTermList"
+            var tags = DataShapes[entity.name].GetTagsAsInfoTable();
+            for each (var tag in tags.rows) {
+                if(tag.vocabulary == "Version") {
+                    //need to remove the old version tag
+
+                    var params = {
+                        tags: "Version:" + tag.vocabularyTerm /* TAGS */
+                    };
+
+                    DataShapes[entity.name].RemoveTags(params);
+                }
+            }
+            //now add the new version tag
+            var params = {
+                tags: "Version:" + versionNumber /* TAGS */
+            };
+
+            DataShapes[entity.name].AddTags(params);
+        } else if(entity.parentType == "DataTags") {
+            // result: INFOTABLE dataShape: "VocabularyTermList"
+            var tags = DataTags[entity.name].GetTagsAsInfoTable();
+            for each (var tag in tags.rows) {
+                if(tag.vocabulary == "Version") {
+                    //need to remove the old version tag
+
+                    var params = {
+                        tags: "Version:" + tag.vocabularyTerm /* TAGS */
+                    };
+
+                    DataTags[entity.name].RemoveTags(params);
+                }
+            }
+            //now add the new version tag
+            var params = {
+                tags: "Version:" + versionNumber /* TAGS */
+            };
+
+            DataTags[entity.name].AddTags(params);
+
+        } else if(entity.parentType == "Groups") {
+            // result: INFOTABLE dataShape: "VocabularyTermList"
+            var tags = Groups[entity.name].GetTagsAsInfoTable();
+            for each (var tag in tags.rows) {
+                if(tag.vocabulary == "Version") {
+                    //need to remove the old version tag
+
+                    var params = {
+                        tags: "Version:" + tag.vocabularyTerm /* TAGS */
+                    };
+
+                    Groups[entity.name].RemoveTags(params);
+                }
+            }
+            //now add the new version tag
+            var params = {
+                tags: "Version:" + versionNumber /* TAGS */
+            };
+
+            Groups[entity.name].AddTags(params);
+            
+        } else if(entity.parentType == "LocalizationTables") {
+            // result: INFOTABLE dataShape: "VocabularyTermList"
+            var tags = LocalizationTables[entity.name].GetTagsAsInfoTable();
+            for each (var tag in tags.rows) {
+                if(tag.vocabulary == "Version") {
+                    //need to remove the old version tag
+
+                    var params = {
+                        tags: "Version:" + tag.vocabularyTerm /* TAGS */
+                    };
+
+                    LocalizationTables[entity.name].RemoveTags(params);
+                }
+            }
+            //now add the new version tag
+            var params = {
+                tags: "Version:" + versionNumber /* TAGS */
+            };
+
+            LocalizationTables[entity.name].AddTags(params);
+        } else if(entity.parentType == "Mashups") {
+            // result: INFOTABLE dataShape: "VocabularyTermList"
+            var tags = Mashups[entity.name].GetTagsAsInfoTable();
+            for each (var tag in tags.rows) {
+                if(tag.vocabulary == "Version") {
+                    //need to remove the old version tag
+
+                    var params = {
+                        tags: "Version:" + tag.vocabularyTerm /* TAGS */
+                    };
+
+                    Mashups[entity.name].RemoveTags(params);
+                }
+            }
+            //now add the new version tag
+            var params = {
+                tags: "Version:" + versionNumber /* TAGS */
+            };
+
+            Mashups[entity.name].AddTags(params);
+        } else if(entity.parentType == "MediaEntities") {
+            // result: INFOTABLE dataShape: "VocabularyTermList"
+            var tags = MediaEntities[entity.name].GetTagsAsInfoTable();
+            for each (var tag in tags.rows) {
+                if(tag.vocabulary == "Version") {
+                    //need to remove the old version tag
+
+                    var params = {
+                        tags: "Version:" + tag.vocabularyTerm /* TAGS */
+                    };
+
+                    MediaEntities[entity.name].RemoveTags(params);
+                }
+            }
+            //now add the new version tag
+            var params = {
+                tags: "Version:" + versionNumber /* TAGS */
+            };
+
+            MediaEntities[entity.name].AddTags(params);
+        } else if(entity.parentType == "Menus") {
+            // result: INFOTABLE dataShape: "VocabularyTermList"
+            var tags = Menus[entity.name].GetTagsAsInfoTable();
+            for each (var tag in tags.rows) {
+                if(tag.vocabulary == "Version") {
+                    //need to remove the old version tag
+
+                    var params = {
+                        tags: "Version:" + tag.vocabularyTerm /* TAGS */
+                    };
+
+                    Menus[entity.name].RemoveTags(params);
+                }
+            }
+            //now add the new version tag
+            var params = {
+                tags: "Version:" + versionNumber /* TAGS */
+            };
+
+            Menus[entity.name].AddTags(params);
+        } else if(entity.parentType == "ModelTags") {
+            // result: INFOTABLE dataShape: "VocabularyTermList"
+            var tags = ModelTags[entity.name].GetTagsAsInfoTable();
+            for each (var tag in tags.rows) {
+                if(tag.vocabulary == "Version") {
+                    //need to remove the old version tag
+
+                    var params = {
+                        tags: "Version:" + tag.vocabularyTerm /* TAGS */
+                    };
+
+                    ModelTags[entity.name].RemoveTags(params);
+                }
+            }
+            //now add the new version tag
+            var params = {
+                tags: "Version:" + versionNumber /* TAGS */
+            };
+
+            ModelTags[entity.name].AddTags(params);
+        } else if(entity.parentType == "Networks") {
+            // result: INFOTABLE dataShape: "VocabularyTermList"
+            var tags = Networks[entity.name].GetTagsAsInfoTable();
+            for each (var tag in tags.rows) {
+                if(tag.vocabulary == "Version") {
+                    //need to remove the old version tag
+
+                    var params = {
+                        tags: "Version:" + tag.vocabularyTerm /* TAGS */
+                    };
+
+                    Networks[entity.name].RemoveTags(params);
+                }
+            }
+            //now add the new version tag
+            var params = {
+                tags: "Version:" + versionNumber /* TAGS */
+            };
+
+            Networks[entity.name].AddTags(params);
+        } else if(entity.parentType == "Organizations") {
+            // result: INFOTABLE dataShape: "VocabularyTermList"
+            var tags = Organizations[entity.name].GetTagsAsInfoTable();
+            for each (var tag in tags.rows) {
+                if(tag.vocabulary == "Version") {
+                    //need to remove the old version tag
+
+                    var params = {
+                        tags: "Version:" + tag.vocabularyTerm /* TAGS */
+                    };
+
+                    Organizations[entity.name].RemoveTags(params);
+                }
+            }
+            //now add the new version tag
+            var params = {
+                tags: "Version:" + versionNumber /* TAGS */
+            };
+
+            Organizations[entity.name].AddTags(params);
+        } else if(entity.parentType == "StateDefinitions") {
+            // result: INFOTABLE dataShape: "VocabularyTermList"
+            var tags = StateDefinitions[entity.name].GetTagsAsInfoTable();
+            for each (var tag in tags.rows) {
+                if(tag.vocabulary == "Version") {
+                    //need to remove the old version tag
+
+                    var params = {
+                        tags: "Version:" + tag.vocabularyTerm /* TAGS */
+                    };
+
+                    StateDefinitions[entity.name].RemoveTags(params);
+                }
+            }
+            //now add the new version tag
+            var params = {
+                tags: "Version:" + versionNumber /* TAGS */
+            };
+
+            StateDefinitions[entity.name].AddTags(params);
+        } else if(entity.parentType == "StyleDefinitions") {
+            // result: INFOTABLE dataShape: "VocabularyTermList"
+            var tags = StyleDefinitions[entity.name].GetTagsAsInfoTable();
+            for each (var tag in tags.rows) {
+                if(tag.vocabulary == "Version") {
+                    //need to remove the old version tag
+
+                    var params = {
+                        tags: "Version:" + tag.vocabularyTerm /* TAGS */
+                    };
+
+                    StyleDefinitions[entity.name].RemoveTags(params);
+                }
+            }
+            //now add the new version tag
+            var params = {
+                tags: "Version:" + versionNumber /* TAGS */
+            };
+
+            StyleDefinitions[entity.name].AddTags(params);
+        } else if(entity.parentType == "ThingShapes") {
+            // result: INFOTABLE dataShape: "VocabularyTermList"
+            var tags = ThingShapes[entity.name].GetTagsAsInfoTable();
+            for each (var tag in tags.rows) {
+                if(tag.vocabulary == "Version") {
+                    //need to remove the old version tag
+
+                    var params = {
+                        tags: "Version:" + tag.vocabularyTerm /* TAGS */
+                    };
+
+                    ThingShapes[entity.name].RemoveTags(params);
+                }
+            }
+            //now add the new version tag
+            var params = {
+                tags: "Version:" + versionNumber /* TAGS */
+            };
+
+            ThingShapes[entity.name].AddTags(params);
+        } else if(entity.parentType == "Users") {
+            // result: INFOTABLE dataShape: "VocabularyTermList"
+            var tags = Users[entity.name].GetTagsAsInfoTable();
+            for each (var tag in tags.rows) {
+                if(tag.vocabulary == "Version") {
+                    //need to remove the old version tag
+
+                    var params = {
+                        tags: "Version:" + tag.vocabularyTerm /* TAGS */
+                    };
+
+                    Users[entity.name].RemoveTags(params);
+                }
+            }
+            //now add the new version tag
+            var params = {
+                tags: "Version:" + versionNumber /* TAGS */
+            };
+
+            Users[entity.name].AddTags(params);
+        } 
+
+    }
+
+} catch(err) {
+    logger.warn("Error occured in applying version tags. Error = " + err);
+}
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="UploadFileChangesToGithub">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[
+var params = {
+	path: "/" /* STRING */
+};
+
+// result: INFOTABLE dataShape: "FileSystemFile"
+var path = me.BrowseFileSystem(params);
+
+for each(var dir in path.rows) {
+ 	//after enumerating thru each directory, need to enumerate thru the files
+
+    var params = {
+        path: dir.path /* STRING */,
+        nameMask: undefined /* STRING */
+    };
+
+    // result: INFOTABLE dataShape: "FileSystemFile"
+    var files = me.GetFileListing(params);
+
+    for each(var file in files.rows) {
+     
+        //now we want to upload the files
+        
+		//start with getting the last updated message (comments added on save) from the exported entity. 
+        //need to see what type of entity it is and call the appropriate service to get the history. 
+        var nameOfFile = file.name.replace(".xml","");
+        //logger.warn("name of file=" + nameOfFile);
+        var changeReason = Things[me.GithubConnection].GithubReportedMessage;
+        //logger.warn("changeReason:" + changeReason);
+        try {
+			
+            if(dir.name == "Things") {
+				var changes = Things[nameOfFile].GetConfigurationChangeHistory();
+        		changeReason = changes[0].changeReason;
+            } else if(dir.name == "ThingTemplates") {
+				var changes = ThingTemplates[nameOfFile].GetConfigurationChangeHistory();
+        		changeReason = changes[0].changeReason;
+            } else if(dir.name == "ApplicationKeys") {
+				var changes = ApplicationKeys[nameOfFile].GetConfigurationChangeHistory();
+        		changeReason = changes[0].changeReason;
+            } else if(dir.name == "Dashboards") {
+				var changes = Dashboards[nameOfFile].GetConfigurationChangeHistory();
+        		changeReason = changes[0].changeReason;
+            } else if(dir.name == "DataShapes") {
+				var changes = DataShapes[nameOfFile].GetConfigurationChangeHistory();
+        		changeReason = changes[0].changeReason;
+            } else if(dir.name == "DataTags") {
+				var changes = DataTags[nameOfFile].GetConfigurationChangeHistory();
+        		changeReason = changes[0].changeReason;
+            } else if(dir.name == "DirectoryServices") {
+				var changes = DirectoryServices[nameOfFile].GetConfigurationChangeHistory();
+        		changeReason = changes[0].changeReason;
+            } else if(dir.name == "Groups") {
+				var changes = Groups[nameOfFile].GetConfigurationChangeHistory();
+        		changeReason = changes[0].changeReason;
+            } else if(dir.name == "LocalizationTables") {
+				var changes = LocalizationTables[nameOfFile].GetConfigurationChangeHistory();
+        		changeReason = changes[0].changeReason;
+            } else if(dir.name == "Mashups") {
+				var changes = Mashups[nameOfFile].GetConfigurationChangeHistory();
+        		changeReason = changes[0].changeReason;
+            } else if(dir.name == "MediaEntities") {
+				var changes = MediaEntities[nameOfFile].GetConfigurationChangeHistory();
+        		changeReason = changes[0].changeReason;
+            } else if(dir.name == "Menus") {
+				var changes = Menus[nameOfFile].GetConfigurationChangeHistory();
+        		changeReason = changes[0].changeReason;
+            } else if(dir.name == "ModelTags") {
+				var changes = ModelTags[nameOfFile].GetConfigurationChangeHistory();
+        		changeReason = changes[0].changeReason;
+            } else if(dir.name == "Networks") {
+				var changes = Networks[nameOfFile].GetConfigurationChangeHistory();
+        		changeReason = changes[0].changeReason;
+            } else if(dir.name == "Organizations") {
+				var changes = Organizations[nameOfFile].GetConfigurationChangeHistory();
+        		changeReason = changes[0].changeReason;
+            } else if(dir.name == "StateDefinitions") {
+				var changes = StateDefinitions[nameOfFile].GetConfigurationChangeHistory();
+        		changeReason = changes[0].changeReason;
+            } else if(dir.name == "StyleDefinitions") {
+				var changes = StyleDefinitions[nameOfFile].GetConfigurationChangeHistory();
+        		changeReason = changes[0].changeReason;
+            } else if(dir.name == "ThingShapes") {
+				var changes = ThingShapes[nameOfFile].GetConfigurationChangeHistory();
+        		changeReason = changes[0].changeReason;
+            } else if(dir.name == "Users") {
+				var changes = Users[nameOfFile].GetConfigurationChangeHistory();
+        		changeReason = changes[0].changeReason;
+            } 
+
+        } catch(err) {
+			logger.warn("Error getting the change history. Error =" + err);
+        }
+        
+        //need to read the file to get the contents
+        var params = {
+            path: file.path /* STRING */
+        };
+
+        // result: STRING
+        var contents = me.LoadText(params);
+
+        
+        //try to extract the version out of the file to append it to the changereason
+        try {
+            	var versionIndex = contents.indexOf("Version:");
+            	if(versionIndex > 0) {
+            		var endOfVersion = contents.substring(versionIndex).indexOf("\"");
+                    if(endOfVersion < 0) {
+                     	   endOfVersion = contents.substring(versionIndex).indexOf(";");
+                    }
+                    endOfVersion = endOfVersion + versionIndex;
+                    versionIndex = versionIndex + 8;
+                    
+                	var version = contents.substring(versionIndex,endOfVersion);
+                    
+                    
+                    changeReason = "Version:" + version + ", Change Comments:" + changeReason ;
+                }
+        } catch (err) {
+
+        }
+        var params = {
+            path: file.path.substring(1) /* STRING */,
+            name : Things[me.GithubConnection].GithubReportedUserID /* STRING */,
+            message: changeReason /* STRING */,
+            email: "N/A" /* STRING */,
+            content: contents /* STRING */
+        };
+
+        // result: JSON
+        var result = Things[me.GithubConnection].CreateOrUpdateGithubFile(params);
+
+		//delete the file from the TW repository now that the file has been created in Git
+        var params = {
+            path: file.path /* STRING */
+        };
+
+        me.DeleteFile(params);
+     
+    }
+}
+//logger.info("Upload to github completed");
+
+
+
+
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="ExportFullSourceCode">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var end = new Date();
+var start = new Date("1970/1/1");
+
+var params = {
+	path: "/" /* STRING */,
+	endDate: end /* DATETIME */,
+	collection: undefined /* STRING */,
+	repositoryName: me.name /* THINGNAME */,
+	startDate: start /* DATETIME */,
+	tags: tags /* TAGS */
+};
+
+// no return
+Resources["SourceControlFunctions"].ExportSourceControlledEntities(params);
+
+logger.info("Full Export Completed");]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions>
+                    <Subscription enabled="true" eventName="Timer" source="GithubTimer" sourceProperty="">
+                        <ServiceImplementation description="" handlerName="Script" name="GithubTimer:Timer">
+                            <ConfigurationTables>
+                                <ConfigurationTable description="" isMultiRow="false" name="Script" ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code><![CDATA[
+me.UploadFileChangesToGithub();
+
+
+
+]]></code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                    <Subscription enabled="true" eventName="ScheduledEvent" source="GithubScheduler" sourceProperty="">
+                        <ServiceImplementation description="" handlerName="Script" name="GithubScheduler:ScheduledEvent">
+                            <ConfigurationTables>
+                                <ConfigurationTable description="" isMultiRow="false" name="Script" ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code><![CDATA[//need to get the github scheduled time in minutes
+
+// result: NUMBER
+var result = Things["GithubScheduler"].GetSchedulerTimeInMinutes();
+
+//want to export data for teh last five minutes
+var StartDate = dateAddMinutes(eventData.timestamp, -result)
+
+var tags = new Array();
+tags = me.TagsToExport;
+var params = {
+	start: StartDate /* DATETIME */,
+	end: eventData.timestamp /* DATETIME */,
+	tags: tags /* TAGS */
+};
+
+// no return
+me.ExportSourceCode(params);
+]]></code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                </Subscriptions>
+            </ThingShape>
+            <ImplementedShapes/>
+            <SharedConfigurationTables/>
+            <InstanceDesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </InstanceDesignTimePermissions>
+            <InstanceRunTimePermissions/>
+            <InstanceVisibilityPermissions>
+                <Visibility/>
+            </InstanceVisibilityPermissions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated&#10;" timestamp="2015-09-09T17:45:28.498-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : GithubConnection : Added&#10;" timestamp="2015-09-09T17:47:52.701-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-09T17:48:06.496-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : UploadFileChangesToGithub : Code Updated&#10;" timestamp="2015-09-09T17:49:58.174-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-09T17:50:25.624-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : UploadFileChangesToGithub : Code Updated&#10;" timestamp="2015-09-11T12:27:39.654-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-11T12:27:43.881-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-09-11T12:28:29.378-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-10-20T14:23:05.913-04:00" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="documentation : updated&#10;subscriptions : GithubScheduler:ScheduledEvent : Code Updated&#10;" timestamp="2015-10-20T14:39:17.611-04:00" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-20T14:40:40.639-04:00" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : UploadFileChangesToGithub : Code Updated&#10;" timestamp="2015-10-20T14:49:59.494-04:00" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-20T14:59:44.552-04:00" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-20T15:00:10.582-04:00" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-20T15:01:21.939-04:00" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-20T15:14:11.959-04:00" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : UploadFileChangesToGithub : Code Updated&#10;" timestamp="2015-10-20T15:07:33.542-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : Test : Output Updated, Code Updated, UploadFileChangesToGithub : Code Updated&#10;" timestamp="2015-10-20T15:10:48.292-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-10-20T15:14:19.741-04:00" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="documentation : updated&#10;" timestamp="2015-10-20T15:16:00.967-04:00" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="documentation : updated&#10;subscriptions : GithubTimer:Timer : Disabled, GithubScheduler:ScheduledEvent : Disabled&#10;" timestamp="2015-11-10T07:57:11.119-05:00" user="JohnRistey"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : GithubTimer:Timer : Enabled, GithubScheduler:ScheduledEvent : Enabled&#10;" timestamp="2015-11-16T13:42:27.622-05:00" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : UploadFileChangesToGithub : Code Updated&#10;" timestamp="2015-11-16T13:51:46.206-05:00" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-16T13:57:43.884-05:00" user="stevea"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : ExportSourceCode : Code Updated, UploadFileChangesToGithub : Code Updated&#10;" timestamp="2015-11-16T14:33:41.327-05:00" user="stevea"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-11-16T15:56:24.214-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-16T16:27:37.641-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T09:13:28.118-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : UploadFileChangesToGithub : Code Updated&#10;" timestamp="2015-11-17T09:15:16.031-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T09:16:08.057-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T09:16:32.412-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T09:16:49.074-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T09:20:11.357-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T09:20:50.133-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-11-17T11:42:13.817-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : GithubScheduler:ScheduledEvent : Code Updated&#10;" timestamp="2015-11-17T12:41:21.876-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : TestSchedule : Code Updated, Service Added&#10;" timestamp="2015-11-17T12:51:24.503-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : TestSchedule : Code Updated&#10;" timestamp="2015-11-17T12:52:17.328-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T12:52:34.645-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T12:52:56.590-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T12:53:49.415-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T12:55:10.390-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T12:55:19.618-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T12:55:56.929-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T12:56:04.150-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T12:56:46.337-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T12:57:44.909-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T12:58:03.778-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T12:58:07.460-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : GithubTimer:Timer : Disabled&#10;" timestamp="2015-11-17T13:03:02.167-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : TestSchedule : removed&#10;subscriptions : GithubTimer:Timer : Enabled&#10;" timestamp="2015-11-17T13:05:42.549-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T13:17:05.987-05:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </ThingTemplate>
+    </ThingTemplates>
+</Entities>
