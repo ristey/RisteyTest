@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <ThingShapes>
+        <ThingShape aspect.isSystemObject="true" aspect.isSystemShape="true" className="" description="Remote thing core functionality" documentationContent="" homeMashup="" lastModifiedDate="2015-11-17T11:27:39.479-05:00" name="Remotable" tags="">
+            <PropertyDefinitions/>
+            <ServiceDefinitions/>
+            <EventDefinitions/>
+            <ServiceMappings/>
+            <ServiceImplementations/>
+            <Subscriptions/>
+            <Owner name="SuperUser" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-11-17T11:18:46.261-05:00" user="SuperUser"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-11-17T11:27:39.479-05:00" user="SuperUser"/>
+            </ConfigurationChanges>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations/>
+            <InstanceRunTimePermissions/>
+        </ThingShape>
+    </ThingShapes>
+</Entities>
