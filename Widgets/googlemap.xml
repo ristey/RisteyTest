@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Widgets>
+        <Widget aspect.isExtension="true" description="" documentationContent="" homeMashup="" lastModifiedDate="2015-11-17T12:07:01.118-05:00" name="googlemap" tags="">
+            <Owner name="SuperUser" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="Importing Extension Package Metadata" timestamp="2015-11-17T12:07:01.118-05:00" user="SuperUser"/>
+            </ConfigurationChanges>
+        </Widget>
+    </Widgets>
+</Entities>
