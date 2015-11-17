@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <DataShapes>
+        <DataShape baseDataShape="" description="" documentationContent="&lt;p&gt;&lt;br&gt;&lt;/p&gt;&#10;" homeMashup="" lastModifiedDate="2015-11-17T12:08:22.340-05:00" name="RouteDataShape" tags="Applications:GoogleTesting;Applications:TripBuilder">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <FieldDefinitions>
+                <FieldDefinition baseType="NUMBER" description="" name="duration" ordinal="6"/>
+                <FieldDefinition baseType="STRING" description="" name="durationText" ordinal="7"/>
+                <FieldDefinition baseType="HTML" description="" name="htmlInstructions" ordinal="5"/>
+                <FieldDefinition baseType="NUMBER" description="" name="distance" ordinal="8"/>
+                <FieldDefinition baseType="LOCATION" description="" name="stepEndLocation" ordinal="5"/>
+                <FieldDefinition baseType="LOCATION" description="" name="routeLocation" ordinal="3"/>
+                <FieldDefinition baseType="LOCATION" description="" name="stepStartLocation" ordinal="4"/>
+                <FieldDefinition baseType="STRING" description="" name="distanceText" ordinal="9"/>
+                <FieldDefinition baseType="LOCATION" description="" name="markerLocation" ordinal="4"/>
+            </FieldDefinitions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated&#10;documentation : updated&#10;fields : startLocation : Added, endLocation : Added&#10;" timestamp="2015-01-12T15:40:24.173-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : routeLocation : Added&#10;" timestamp="2015-01-12T16:51:11.160-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : stepStartLocation : Added, stepEndLocation : Added&#10;" timestamp="2015-01-12T16:57:09.009-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : startLocation : removed, endLocation : removed, markerLocation : Added&#10;" timestamp="2015-01-12T16:57:29.162-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : htmlInstructions : Added&#10;" timestamp="2015-01-12T17:02:15.921-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : duration : Added&#10;" timestamp="2015-01-12T17:03:27.384-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : durationText : Added, duration : Updated&#10;" timestamp="2015-01-12T17:04:04.015-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : distance : Added, distanceText : Added&#10;" timestamp="2015-01-12T17:05:11.946-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : tags : updated&#10;documentation : updated&#10;" timestamp="2015-01-12T17:25:06.120-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : tags : updated&#10;" timestamp="2015-02-05T10:13:49.732-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-02-11T17:00:35.562-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated&#10;documentation : updated&#10;" timestamp="2014-04-27T11:17:39.011-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : Longitude : Added, Latitude : Added, PointID : Added&#10;" timestamp="2014-04-27T11:19:06.668-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2014-04-27T11:19:27.707-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-02-11T17:27:28.210-05:00" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-03-17T12:09:39.182-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : tags : updated&#10;" timestamp="2015-03-17T12:32:10.914-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2015-03-17T13:26:23.647-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : tags : updated&#10;" timestamp="2015-03-17T14:18:30.890-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : tags : updated&#10;" timestamp="2015-03-17T14:20:21.559-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : tags : updated&#10;" timestamp="2015-03-29T13:09:33.904-04:00" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-11-17T12:08:22.340-05:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </DataShape>
+    </DataShapes>
+</Entities>
