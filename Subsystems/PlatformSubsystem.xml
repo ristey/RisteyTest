@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Subsystems>
+        <Subsystem aspect.isCreatable="false" aspect.isEditableSystemObject="true" autoStart="true" className="com.thingworx.system.subsystems.platform.PlatformSubsystem" dependsOn="" description="Overall platform monitoring and configuration" documentationContent="" enabled="true" friendlyName="Platform" homeMashup="MonitoringSubsystemDefaultHomeMashup" lastModifiedDate="2015-11-17T11:18:48.774-05:00" name="PlatformSubsystem" tags="">
+            <Owner name="SuperUser" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables>
+                <ConfigurationTable description="Platform Subsystem Settings" isMultiRow="false" name="PlatformInformation" ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition aspect.defaultValue="ThingworxPersistenceProvider" aspect.friendlyName="Data Persistence Provider" baseType="PERSISTENCEPROVIDERNAME" description="The Persistence Provider that contains the active data provider." name="dataPersistenceProvider" ordinal="1"/>
+                            <FieldDefinition aspect.defaultValue="false" aspect.friendlyName="Allow method switching" baseType="BOOLEAN" description="Allow method switching with request parameters (true is insecure)." name="allowMethodSwitch" ordinal="2"/>
+                            <FieldDefinition aspect.defaultValue="https://precisionlms.ptc.com/ulc/ulc.html" aspect.friendlyName="Learning Connector location" baseType="HYPERLINK" description="The location of the Universal Learning Connector" name="learningConnectorSystem" ordinal="5"/>
+                            <FieldDefinition aspect.defaultValue="true" aspect.friendlyName="Enable Learning Connector" baseType="BOOLEAN" description="Enable support for the Learning Connector" name="learningConnectorEnabled" ordinal="4"/>
+                            <FieldDefinition aspect.defaultValue="true" aspect.friendlyName="Filter content type" baseType="BOOLEAN" description="Filter content type on requests (false is insecure)" name="filterContentType" ordinal="3"/>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <dataPersistenceProvider><![CDATA[ThingworxPersistenceProvider]]></dataPersistenceProvider>
+                            <allowMethodSwitch>false</allowMethodSwitch>
+                            <learningConnectorSystem><![CDATA[https://precisionlms.ptc.com/ulc/ulc.html]]></learningConnectorSystem>
+                            <learningConnectorEnabled>true</learningConnectorEnabled>
+                            <filterContentType>true</filterContentType>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-11-17T11:18:48.774-05:00" user="SuperUser"/>
+            </ConfigurationChanges>
+        </Subsystem>
+    </Subsystems>
+</Entities>
