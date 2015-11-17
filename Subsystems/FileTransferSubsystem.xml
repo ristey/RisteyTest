@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Subsystems>
+        <Subsystem aspect.isCreatable="false" aspect.isEditableSystemObject="true" autoStart="true" className="com.thingworx.system.subsystems.filetransfer.FileTransferSubsystem" dependsOn="" description="Handles File Transfers between Edge Things, Connected Things, File Repositories and Federated Servers" documentationContent="" enabled="true" friendlyName="File Transfer" homeMashup="MonitoringFileTransferSubsystem" lastModifiedDate="2015-11-17T11:18:48.792-05:00" name="FileTransferSubsystem" tags="">
+            <Owner name="SuperUser" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables>
+                <ConfigurationTable description="File transfer settings" isMultiRow="false" name="FileTransferSettings" ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition aspect.defaultValue="128000.0" aspect.friendlyName="Max FileTransfer block size (bytes)" baseType="NUMBER" description="Maximum block size to transfer in bytes" name="maxBlockSize" ordinal="5"/>
+                            <FieldDefinition aspect.defaultValue="100.0" aspect.friendlyName="Max Queue Entries Before Adding New Working Thread" baseType="NUMBER" description="Maximum number of entries to queue before adding an additional worker thread to the pool" name="maximumQueueSize" ordinal="2"/>
+                            <FieldDefinition aspect.defaultValue="10.0" aspect.friendlyName="Min Threads Allocated to File Transfer Pool" baseType="NUMBER" description="Minimum number of threads allocated to the file fransfer thread pool" name="minimumThreadPoolSize" ordinal="0"/>
+                            <FieldDefinition aspect.defaultValue="600000.0" aspect.friendlyName="Idle Thread Timeout (sec)" baseType="NUMBER" description="How long idle threads should remain in the pool in seconds" name="maximumThreadLife" ordinal="3"/>
+                            <FieldDefinition aspect.defaultValue="30.0" aspect.friendlyName="FileTransfer Idle Timeout (sec)" baseType="NUMBER" description="Idle timeout for file transfers in seconds" name="idleTimeout" ordinal="4"/>
+                            <FieldDefinition aspect.defaultValue="1.0E8" aspect.friendlyName="Max FileTransfer size (bytes)" baseType="NUMBER" description="Maximum file size to transfer in bytes" name="maxFileSize" ordinal="6"/>
+                            <FieldDefinition aspect.defaultValue="10.0" aspect.friendlyName="Max Threads Allocated to File Transfer Pool" baseType="NUMBER" description="Maximum number of threads allocated to the file fransfer thread pool" name="maximumThreadPoolSize" ordinal="1"/>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <maxBlockSize>128000.0</maxBlockSize>
+                            <maximumQueueSize>100.0</maximumQueueSize>
+                            <minimumThreadPoolSize>10.0</minimumThreadPoolSize>
+                            <maximumThreadLife>600000.0</maximumThreadLife>
+                            <idleTimeout>30.0</idleTimeout>
+                            <maxFileSize>1.0E8</maxFileSize>
+                            <maximumThreadPoolSize>10.0</maximumThreadPoolSize>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="" timestamp="2015-11-17T11:18:48.792-05:00" user="SuperUser"/>
+            </ConfigurationChanges>
+        </Subsystem>
+    </Subsystems>
+</Entities>
