@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Things>
+        <Thing aspect.isSystemObject="false" description="Test Gitter" documentationContent="" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2015-11-17T13:18:05.687-05:00" name="TestGithubConnector" published="false" tags="" thingTemplate="Github.Connection" valueStream="">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ThingShape>
+                <PropertyDefinitions/>
+                <ServiceDefinitions/>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations/>
+                <Subscriptions/>
+            </ThingShape>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations/>
+            <ImplementedShapes/>
+            <ThingProperties>
+                <GithubRepo/>
+                <GithubReportedUserID><![CDATA[ThingWorx System]]></GithubReportedUserID>
+                <GithubReportedMessage><![CDATA[System Update]]></GithubReportedMessage>
+                <GithubUserID><![CDATA[ristey]]></GithubUserID>
+                <GithubAccessToken><![CDATA[+he7eyuv+Vu81nY40tkJj4VRAJ/4QpKGU1EZWB5TK6q3rKZDJimsrJb+nhGkBt2o]]></GithubAccessToken>
+            </ThingProperties>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="Thing TestGithubConnector created programatically" timestamp="2015-11-17T13:18:05.687-05:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </Thing>
+    </Things>
+</Entities>
